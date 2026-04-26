@@ -463,6 +463,22 @@ html { scroll-behavior: smooth; }
   height: 100%;
 }
 
+/* ── Leaflet zoom control: middle right ── */
+.leaflet-top.leaflet-right { top: 50%; transform: translateY(-50%); }
+.leaflet-control-zoom {
+  border: 1px solid var(--line) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.leaflet-control-zoom a {
+  background: white !important;
+  color: var(--gt-navy) !important;
+  font-weight: 600;
+  font-size: 18px;
+}
+.leaflet-control-zoom a:hover { background: var(--gt-gold) !important; color: white !important; }
+
 /* ── Leaflet popup styling ── */
 .leaflet-popup-content { font-family: inherit; margin: 12px 14px; min-width: 220px; }
 .leaflet-popup-content .pop-name { font-weight: 700; font-size: 15px; margin-bottom: 4px; color: var(--gt-navy); }

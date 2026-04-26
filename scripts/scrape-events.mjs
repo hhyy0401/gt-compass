@@ -29,17 +29,14 @@ async function fetchBraves() {
       const dayET = gd.toLocaleDateString('en-US', { weekday: 'short', timeZone: 'America/New_York' });
       if (dayET !== 'Sat') continue;
       const dateStr = gd.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
-      const localTime = gd.toLocaleTimeString('en-US', {
-        hour: 'numeric', minute: '2-digit', hour12: true, timeZone: 'America/New_York',
-      });
       events.push({
         id: `braves-${g.gamePk}`,
-        title: `⚾ Braves vs ${g.teams.away.team.name} (Sat 🎁)`,
+        title: `⚾ Braves vs ${g.teams.away.team.name}`,
         start: dateStr,
         category: 'braves',
         source: 'MLB',
         url: 'https://www.mlb.com/braves/tickets/promotions',
-        desc: `Truist Park · ${localTime} · 토요일은 giveaway 가능성 높음`,
+        desc: 'Truist Park · 토요일 giveaway 가능성 높음',
       });
     }
   }
@@ -71,7 +68,16 @@ async function fetchASO() {
     };
   }).filter(e => e.start);
   const classical = all.filter(e => e._classical);
-  return (classical.length ? classical : all).map(({ _classical, ...rest }) => rest);
+  const picked = (classical.length ? classical : all);
+  // 같은 제목 중복 제거 (가장 빠른 날짜만 남김)
+  const byTitle = new Map();
+  for (const e of picked) {
+    const key = e.title.replace(/^[🎻🎵]\s/, '').trim();
+    if (!byTitle.has(key) || e.start < byTitle.get(key).start) {
+      byTitle.set(key, e);
+    }
+  }
+  return [...byTitle.values()].map(({ _classical, ...rest }) => rest);
 }
 
 // ── 3. High Museum (Second Sundays, 12개월) ─────
