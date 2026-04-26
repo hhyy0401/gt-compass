@@ -4,8 +4,8 @@
   const links = [
     { href: 'index.html',    label: '홈' },
     { href: 'checklist.html',label: '신입생 길잡이' },
-    { href: 'atlanta.html',  label: 'Atlanta Map' },
     { href: 'life.html',     label: '생활' },
+    { href: 'atlanta.html',  label: 'Atlanta Map' },
     { href: 'events.html',   label: "What's on Atlanta" },
   ];
   const html = `

@@ -10,7 +10,9 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 
-// ── 1. Atlanta Braves (MLB Stats API) ─────────────────
+// ── 1. Atlanta Braves (MLB Stats API)
+//    홈 게임 중 토요일만 — 보통 토요일 야간이 giveaway 있음.
+//    실제 giveaway 정보는 mlb.com/braves/tickets/promotions 에서 확인.
 async function fetchBraves() {
   try {
     const today = new Date();
@@ -25,23 +27,24 @@ async function fetchBraves() {
       for (const g of d.games || []) {
         const home = g.teams?.home?.team?.name;
         const away = g.teams?.away?.team?.name;
-        const isHome = home === 'Atlanta Braves';
-        if (!isHome) continue;  // 홈경기만 (Truist Park)
-        const dateStr = (g.gameDate || '').slice(0, 10);
-        if (!dateStr) continue;
-        const localTime = g.gameDate
-          ? new Date(g.gameDate).toLocaleTimeString('en-US', {
-              hour: 'numeric', minute: '2-digit', hour12: true, timeZone: 'America/New_York'
-            })
-          : '';
+        if (home !== 'Atlanta Braves') continue;
+        const gd = g.gameDate ? new Date(g.gameDate) : null;
+        if (!gd) continue;
+        // 토요일 (Saturday)만 — Atlanta time
+        const dayET = gd.toLocaleDateString('en-US', { weekday:'short', timeZone:'America/New_York' });
+        if (dayET !== 'Sat') continue;
+        const dateStr = gd.toLocaleDateString('en-CA', { timeZone: 'America/New_York' }); // YYYY-MM-DD
+        const localTime = gd.toLocaleTimeString('en-US', {
+          hour: 'numeric', minute: '2-digit', hour12: true, timeZone: 'America/New_York'
+        });
         events.push({
           id: `braves-${g.gamePk}`,
-          title: `⚾ Braves vs ${away}`,
+          title: `⚾ Braves vs ${away} (Sat 🎁)`,
           start: dateStr,
           category: 'braves',
           source: 'MLB',
-          url: 'https://www.mlb.com/braves/schedule',
-          desc: `Truist Park${localTime ? ' · ' + localTime : ''}`,
+          url: 'https://www.mlb.com/braves/tickets/promotions',
+          desc: `Truist Park · ${localTime} · 토요일은 giveaway 가능성 높음`,
         });
       }
     }
@@ -52,32 +55,47 @@ async function fetchBraves() {
   }
 }
 
-// ── 2. Atlanta Symphony Orchestra (Ticketmaster) ──────
+// ── 2. Atlanta Symphony Orchestra
+//    ASO는 Tessitura 자체 티케팅이라 Ticketmaster에 거의 없음.
+//    aso.org는 봇 차단(406)이라 스크레이핑 불가.
+//    → keyword 광범위 검색으로 일부 잡고, 나머지는 events-manual.json fallback.
 async function fetchASO() {
   const key = process.env.TICKETMASTER_API_KEY;
-  if (!key) {
-    console.warn('TICKETMASTER_API_KEY 없음, ASO 스킵');
-    return [];
-  }
+  if (!key) return [];
   try {
-    const url = `https://app.ticketmaster.com/discovery/v2/events.json?keyword=Atlanta+Symphony&dmaId=302&size=50&sort=date,asc&apikey=${key}`;
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`ASO TM HTTP ${res.status}`);
-    const data = await res.json();
-    const items = data?._embedded?.events || [];
-    return items.map(ev => {
-      const start = ev.dates?.start?.dateTime || ev.dates?.start?.localDate;
-      const venue = ev._embedded?.venues?.[0]?.name || '';
-      return {
-        id: `aso-${ev.id}`,
-        title: `🎻 ${ev.name}`,
-        start,
-        category: 'aso',
-        source: 'Ticketmaster',
-        url: ev.url,
-        desc: venue,
-      };
-    }).filter(e => e.start);
+    const queries = [
+      'keyword=Atlanta+Symphony',
+      'keyword=Symphony+Hall+Atlanta',
+      'keyword=ASO',
+    ];
+    const seen = new Set();
+    const out = [];
+    for (const qs of queries) {
+      const url = `https://app.ticketmaster.com/discovery/v2/events.json?${qs}&stateCode=GA&size=50&sort=date,asc&apikey=${key}`;
+      const r = await fetch(url);
+      if (!r.ok) continue;
+      const j = await r.json();
+      const items = j?._embedded?.events || [];
+      for (const ev of items) {
+        if (seen.has(ev.id)) continue;
+        seen.add(ev.id);
+        const start = ev.dates?.start?.dateTime || ev.dates?.start?.localDate;
+        if (!start) continue;
+        const venue = ev._embedded?.venues?.[0]?.name || '';
+        // 진짜 ASO 공연만 — 이름/장소에 Symphony 포함
+        if (!/symphony/i.test(`${ev.name} ${venue}`)) continue;
+        out.push({
+          id: `aso-${ev.id}`,
+          title: `🎻 ${ev.name}`,
+          start,
+          category: 'aso',
+          source: 'Ticketmaster',
+          url: ev.url,
+          desc: venue,
+        });
+      }
+    }
+    return out;
   } catch (e) {
     console.warn('ASO fetch failed:', e.message);
     return [];
@@ -108,34 +126,43 @@ function fetchHighMuseum(months = 12) {
   return events;
 }
 
-// ── 4. K-pop (Ticketmaster) ───────────────────────────
+// ── 4. K-pop (Ticketmaster, 광범위 검색)
 async function fetchKpop() {
   const key = process.env.TICKETMASTER_API_KEY;
   if (!key) return [];
   try {
-    // K-Pop classification 우선, 결과 없으면 keyword 검색 fallback
-    const tryFetch = async (qs) => {
-      const url = `https://app.ticketmaster.com/discovery/v2/events.json?${qs}&dmaId=302&size=50&sort=date,asc&apikey=${key}`;
+    // GA 전체 + 여러 키워드/분류로 시도
+    const queries = [
+      'classificationName=K-Pop',
+      'keyword=k-pop',
+      'keyword=kpop',
+    ];
+    const seen = new Set();
+    const out = [];
+    for (const qs of queries) {
+      const url = `https://app.ticketmaster.com/discovery/v2/events.json?${qs}&stateCode=GA&size=50&sort=date,asc&apikey=${key}`;
       const r = await fetch(url);
-      if (!r.ok) return [];
+      if (!r.ok) continue;
       const j = await r.json();
-      return j?._embedded?.events || [];
-    };
-    let items = await tryFetch('classificationName=K-Pop');
-    if (!items.length) items = await tryFetch('keyword=k-pop');
-    return items.map(ev => {
-      const start = ev.dates?.start?.dateTime || ev.dates?.start?.localDate;
-      const venue = ev._embedded?.venues?.[0]?.name || '';
-      return {
-        id: `kpop-${ev.id}`,
-        title: `🎤 ${ev.name}`,
-        start,
-        category: 'kpop',
-        source: 'Ticketmaster',
-        url: ev.url,
-        desc: venue,
-      };
-    }).filter(e => e.start);
+      const items = j?._embedded?.events || [];
+      for (const ev of items) {
+        if (seen.has(ev.id)) continue;
+        seen.add(ev.id);
+        const start = ev.dates?.start?.dateTime || ev.dates?.start?.localDate;
+        if (!start) continue;
+        const venue = ev._embedded?.venues?.[0]?.name || '';
+        out.push({
+          id: `kpop-${ev.id}`,
+          title: `🎤 ${ev.name}`,
+          start,
+          category: 'kpop',
+          source: 'Ticketmaster',
+          url: ev.url,
+          desc: venue,
+        });
+      }
+    }
+    return out;
   } catch (e) {
     console.warn('K-pop fetch failed:', e.message);
     return [];
