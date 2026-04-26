@@ -313,7 +313,7 @@ const PLACES = [
     transport: ["car", "marta"],
     category: ["food", "korea", "shop"],
     meta: "차로 20분 · 🚇 Doraville 역",
-    desc: "H Mart, Mega Mart, 한식당 밀집. 가까운 한인타운.<br/><br/>🚇 <b>MARTA Gold Line 종점</b> Doraville 역, 차 없는 신입생도 장보러 갈 수 있어요.",
+    desc: "H Mart, 한식당 밀집. 가까운 한인타운.<br/><br/>🚇 <b>MARTA Gold Line 종점</b> Doraville 역, 차 없는 신입생도 장보러 갈 수 있어요.",
   },
   {
     name: "Duluth (둘루쓰)",
