@@ -232,6 +232,16 @@ const PLACES = [
     desc: "광장 중심의 작은 가게들. 유럽 같은 분위기. 주말 산책 코스로 굿.",
   },
 
+  // ── Fox Bros @ The Works (Chattahoochee Row) ─────
+  {
+    name: "Fox Bros Bar-B-Q (The Works)",
+    lat: 33.8002, lng: -84.4322,
+    transport: ["car"],
+    category: ["food"],
+    meta: "차로 10분",
+    desc: "Atlanta 대표 BBQ. The Works 푸드홀 안 (204 Chattahoochee Row NW). 양 많고 분위기 좋음.",
+  },
+
   // ── 자연/외곽 ─────────────────────────
   {
     name: "Stone Mountain Park",
@@ -248,6 +258,24 @@ const PLACES = [
     category: ["nature", "active"],
     meta: "차로 20분",
     desc: "강변 트레일(Cochran Shoals)에서 산책/러닝. 여름엔 튜빙(tubing)으로 강 떠내려가는 게 명물.",
+  },
+
+  // ── Day trip (멀지만 가볼만) ─────────────────────────
+  {
+    name: "Athens (UGA)",
+    lat: 33.9519, lng: -83.3576,
+    transport: ["car"],
+    category: ["food", "photo"],
+    meta: "차로 1시간 15분",
+    desc: "UGA 캠퍼스가 있는 대학 도시. 다운타운 Athens에 카페·바·라이브 음악. 가을 풋볼 시즌이 절정.",
+  },
+  {
+    name: "Helen, GA",
+    lat: 34.7012, lng: -83.7224,
+    transport: ["car"],
+    category: ["nature", "photo"],
+    meta: "차로 1시간 30분",
+    desc: "독일 바이에른풍 산골 마을. 가을엔 옥토버페스트, 겨울엔 크리스마스 분위기. 근처 폭포(Anna Ruby Falls)도 추천.",
   },
 
   // ── 한인/푸드 코리더 ─────────────────────────
