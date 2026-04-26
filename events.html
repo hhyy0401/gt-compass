@@ -134,7 +134,7 @@ function demoEvents() {
     { id:'demo-high-1', title:'🎨 High Museum 무료 입장 (Second Sundays)', start:iso(y,m,secondSun), category:'high', source:'예시', url:'https://high.org/visit', desc:'매월 둘째 일요일 무료 입장' },
     { id:'demo-braves-1', title:'⚾ Braves vs Mets · Bobblehead Night', start:iso(y,m,Math.min(15, 28)), category:'braves', source:'예시', url:'https://www.mlb.com/braves', desc:'Truist Park · 7:20 PM' },
     { id:'demo-aso-1', title:'🎻 Mahler Symphony No. 5', start:iso(y,m,Math.min(20, 28)), category:'aso', source:'예시', url:'https://www.aso.org', desc:'Atlanta Symphony Hall · 8:00 PM' },
-    { id:'demo-kpop-1', title:'🎤 IVE WORLD TOUR Atlanta', start:iso(y,m,Math.min(25, 28)), category:'kpop', source:'예시', url:'#', desc:'State Farm Arena' },
+    { id:'demo-kpop-1', title:'🎤 IVE WORLD TOUR Atlanta', start:iso(y,m,Math.min(25, 28)), category:'kpop', source:'예시', url:'https://www.ticketmaster.com/search?q=k-pop+atlanta', desc:'State Farm Arena' },
     { id:'demo-aso-2', title:'🎻 Beethoven Piano Concerto No. 3', start:iso(y, m+1, 5), category:'aso', source:'예시', url:'https://www.aso.org', desc:'Atlanta Symphony Hall' },
     { id:'demo-braves-2', title:'⚾ Braves vs Phillies · Fireworks Night', start:iso(y, m+1, 12), category:'braves', source:'예시', url:'https://www.mlb.com/braves' },
   ];
@@ -217,5 +217,6 @@ document.addEventListener('DOMContentLoaded', () => {
   loadEvents();
 });
 </script>
+<script src="assets/nav.js"></script>
 </body>
 </html>

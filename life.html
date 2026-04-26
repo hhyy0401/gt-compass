@@ -6,41 +6,62 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="assets/style.css" />
 <style>
-  .toc { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 24px; }
-  .toc a {
-    padding:6px 14px; border-radius:999px; background:white;
-    border:1px solid var(--line); font-size:13px; font-weight:500;
-    color:var(--gt-navy);
-  }
-  .toc a:hover { background:var(--gt-navy); color:white; text-decoration:none; }
   .anchor { display:block; position:relative; top:-72px; visibility:hidden; }
-  .timeline {
-    position:relative; padding-left:28px; margin:14px 0;
-  }
-  .timeline::before {
-    content:""; position:absolute; left:10px; top:8px; bottom:8px;
-    width:2px; background:var(--gt-gold);
-  }
+  .steps { display:flex; flex-direction:column; gap:14px; margin:18px 0; }
   .step {
-    position:relative; margin-bottom:18px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--gt-gold);
+    border-radius: 12px;
+    padding: 18px 22px;
+    transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+    position: relative;
   }
-  .step::before {
-    content:""; position:absolute; left:-22px; top:6px;
-    width:14px; height:14px; border-radius:50%;
-    background:var(--gt-navy); border:3px solid white;
-    box-shadow:0 0 0 2px var(--gt-gold);
+  .step:hover {
+    transform: translateX(2px);
+    border-left-color: var(--gt-navy);
+    box-shadow: 0 4px 14px rgba(0,48,87,0.06);
   }
-  .step h4 { margin:0 0 4px; font-size:15px; color:var(--gt-navy); }
-  .step .when { font-size:12px; color:var(--muted); margin-bottom:6px; }
-  .step ul { margin:6px 0 0; padding-left:18px; }
-  .step ul li { font-size:14px; margin-bottom:3px; }
+  .step .step-num {
+    display:inline-flex; align-items:center; justify-content:center;
+    width:26px; height:26px; border-radius:50%;
+    background: var(--gt-navy); color: white;
+    font-size: 13px; font-weight: 700;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .step h4 {
+    margin: 0 0 6px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--gt-navy);
+    letter-spacing: -0.012em;
+  }
+  .step .when {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .step ul { margin: 8px 0 0; padding-left: 20px; }
+  .step ul li { font-size: 15px; line-height: 1.65; margin-bottom: 4px; }
   .io {
-    display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-top:6px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 10px; margin-top: 10px;
   }
   .io-box {
-    background:#f8f7f2; padding:8px 10px; border-radius:8px; font-size:12.5px;
+    background: #f8f7f2;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    line-height: 1.55;
   }
-  .io-box b { color:var(--gt-navy); display:block; margin-bottom:2px; font-size:11px; letter-spacing:0.5px; }
+  .io-box b {
+    color: var(--gt-navy);
+    display: block; margin-bottom: 3px;
+    font-size: 11px; letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
   @media (max-width: 600px) { .io { grid-template-columns: 1fr; } }
 </style>
 </head>
@@ -49,12 +70,6 @@
 <main class="page page-narrow">
   <h2 class="section" style="margin-top:0;">📚 생활 가이드</h2>
   <p>학기 시작 전·중에 자주 들여다볼 것들. 은행 계좌, 수강신청, 그리고 매년 돌아오는 세금 신고.</p>
-
-  <div class="toc">
-    <a href="#banking">🏦 은행 계좌</a>
-    <a href="#courses">📖 수강신청 · 수업</a>
-    <a href="#taxes">💰 세금 신고</a>
-  </div>
 
   <!-- ── 은행 ── -->
   <span id="banking" class="anchor"></span>
@@ -132,14 +147,14 @@
     ⚠️ 본 페이지는 안내용. 본인 상황에 따라 다르므로 OIE / Sprintax 안내문을 반드시 함께 확인하세요. 거주자 신분(Resident vs Non-Resident)은 보통 5년차부터 바뀝니다.
   </div>
 
-  <div class="timeline">
+  <div class="steps">
     <div class="step">
-      <h4>1️⃣ GLACIER 등록</h4>
-      <div class="when">시점: <b>연말 ~ 연초</b> (TA/RA 시작 시)</div>
+      <h4><span class="step-num">1</span>GLACIER 등록</h4>
+      <div class="when">📅 연말 ~ 연초 (TA/RA 시작 시)</div>
       <p>학교에서 GLACIER 가입 메일이 옵니다. 정보 입력 후 W-4 / Form 8233 등을 출력해서 iStart에 업로드.</p>
       <div class="io">
-        <div class="io-box"><b>INPUT</b>Passport · I-20 · I-94 · SSN</div>
-        <div class="io-box"><b>OUTPUT</b>W-4 · Form 8233 · Tax Summary Report (Glacier)</div>
+        <div class="io-box"><b>Input</b>Passport · I-20 · I-94 · SSN</div>
+        <div class="io-box"><b>Output</b>W-4 · Form 8233 · Tax Summary Report</div>
       </div>
       <ul>
         <li>이후 <b>iStart → Tax Document Upload</b> 제출</li>
@@ -147,8 +162,8 @@
     </div>
 
     <div class="step">
-      <h4>2️⃣ 소득 문서 자동 생성</h4>
-      <div class="when">시점: <b>다음해 1월 말 ~ 2월</b></div>
+      <h4><span class="step-num">2</span>소득 문서 자동 생성</h4>
+      <div class="when">📅 다음해 1월 말 ~ 2월</div>
       <ul>
         <li><b>W-2</b> — OneUSG Payroll에서 발급 (급여 소득)</li>
         <li><b>1042-S</b> — GLACIER에서 발급 (장학금/조세조약 소득)</li>
@@ -156,8 +171,8 @@
     </div>
 
     <div class="step">
-      <h4>3️⃣ Sprintax 코드 받기</h4>
-      <div class="when">시점: <b>2월 ~ 3월</b></div>
+      <h4><span class="step-num">3</span>Sprintax 코드 받기</h4>
+      <div class="when">📅 2월 ~ 3월</div>
       <ul>
         <li><b>iStart → Sprintax Access Request</b> 제출</li>
         <li>학교에서 <b>Sprintax access code</b> 메일로 발송 (Federal 무료 / State는 본인 부담)</li>
@@ -165,20 +180,20 @@
     </div>
 
     <div class="step">
-      <h4>4️⃣ Sprintax로 세금 신고서 작성</h4>
-      <div class="when">시점: <b>2월 ~ 4월</b> (마감 4월 15일)</div>
+      <h4><span class="step-num">4</span>Sprintax로 세금 신고서 작성</h4>
+      <div class="when">📅 2월 ~ 4월 (마감 4월 15일)</div>
       <div class="io">
-        <div class="io-box"><b>INPUT</b>W-2 · 1042-S · Visa 정보</div>
-        <div class="io-box"><b>OUTPUT</b>Form 1040-NR · Form 8843 · GA State Return</div>
+        <div class="io-box"><b>Input</b>W-2 · 1042-S · Visa 정보</div>
+        <div class="io-box"><b>Output</b>Form 1040-NR · Form 8843 · GA State Return</div>
       </div>
     </div>
 
     <div class="step">
-      <h4>5️⃣ 제출</h4>
-      <div class="when">시점: <b>4월 15일까지</b></div>
+      <h4><span class="step-num">5</span>제출</h4>
+      <div class="when">📅 4월 15일까지</div>
       <ul>
-        <li><b>Federal (IRS)</b>: Form 1040-NR + Form 8843 → <b>우편 제출</b> (Sprintax가 봉투 라벨까지 출력해줌)</li>
-        <li><b>Georgia State</b>: GA state return → <b>e-file</b> (Sprintax에서 바로)</li>
+        <li><b>Federal (IRS)</b> — Form 1040-NR + Form 8843 → <b>우편 제출</b> (Sprintax가 봉투 라벨까지 출력)</li>
+        <li><b>Georgia State</b> — GA state return → <b>e-file</b> (Sprintax에서 바로)</li>
       </ul>
     </div>
   </div>
