@@ -55,7 +55,7 @@ const FOOD_PLACES = [
   { type:"food", name:"9292",                   lat:34.0515, lng:-84.0713, tags:["korean"],          note:"Suwanee" },
   { type:"food", name:"불타는 곱창",            lat:34.0029, lng:-84.1446, tags:["korean","bbq"],    note:"Duluth" },
   { type:"food", name:"나주면옥",               lat:34.0029, lng:-84.1446, tags:["korean"],          note:"Duluth, 면" },
-  { type:"food", name:"무봉리 순대국밥",        lat:33.9000, lng:-84.2700, tags:["korean"],          note:"Doraville/Duluth" },
+  { type:"food", name:"무봉리 순대국밥",        lat:33.9920, lng:-84.1480, tags:["korean"],          note:"Duluth, Pleasant Hill" },
   { type:"food", name:"유미카츠",               lat:34.0515, lng:-84.0713, tags:["korean"],          note:"Suwanee, 카츠" },
   { type:"food", name:"Katz by Ozen",           lat:33.8500, lng:-84.3700, tags:["korean"],          note:"Buckhead 한식 퓨전" },
   { type:"food", name:"Wagaya",                 lat:33.7843, lng:-84.3833, tags:["japanese"],        note:"Midtown 이자카야" },
@@ -77,7 +77,7 @@ const FOOD_PLACES = [
   { type:"food", name:"a mano",                 lat:33.7619, lng:-84.3537, tags:["italian"],         note:"Inman Park" },
   { type:"food", name:"Barcelona Wine Bar",     lat:33.7615, lng:-84.3530, tags:["spanish","bar"],   note:"Inman Park, 스페인 와인바" },
   { type:"food", name:"Park 27",                lat:34.0515, lng:-84.0713, tags:["korean"],          note:"Suwanee" },
-  { type:"food", name:"Pho King",               lat:33.8730, lng:-84.2960, tags:["vietnamese"],      note:"Buford Hwy" },
+  { type:"food", name:"Pho King",               lat:33.7900, lng:-84.3870, tags:["vietnamese"],      note:"Midtown" },
   { type:"food", name:"New Realm Brewing",      lat:33.7700, lng:-84.3650, tags:["bar"],             note:"Old Fourth Ward, 브루어리" },
 
   // ── 🍰 디저트 ─────
