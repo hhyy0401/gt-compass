@@ -78,7 +78,42 @@ function buildHighMuseum(months = 12) {
   return events;
 }
 
-// ── 4. K-pop (Ticketmaster) ─────
+// ── 4b. Fox Theatre Musicals (Ticketmaster venueId)
+async function fetchFoxMusical() {
+  if (!KEY) throw new Error('TICKETMASTER_API_KEY missing');
+  const url = `https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAdnvEA&size=200&sort=date,asc&apikey=${KEY}`;
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`Fox HTTP ${r.status}`);
+  const j = await r.json();
+  const items = j?._embedded?.events || [];
+  const out = [];
+  for (const ev of items) {
+    const cls = ev.classifications?.[0] || {};
+    if (cls.subGenre?.name !== 'Musical') continue;
+    const start = ev.dates?.start?.dateTime || ev.dates?.start?.localDate;
+    if (!start) continue;
+    out.push({
+      id: `fox-${ev.id}`,
+      title: `🎭 ${ev.name}`,
+      start,
+      category: 'musical',
+      source: 'Ticketmaster',
+      url: ev.url,
+      desc: 'Fox Theatre Atlanta',
+    });
+  }
+  // 같은 뮤지컬 여러 날짜 → 가장 빠른 날짜 1개만
+  const byTitle = new Map();
+  for (const e of out) {
+    const key = e.title.replace(/^🎭\s/, '').trim();
+    if (!byTitle.has(key) || e.start < byTitle.get(key).start) {
+      byTitle.set(key, e);
+    }
+  }
+  return [...byTitle.values()];
+}
+
+// ── 5. K-pop (Ticketmaster) ─────
 async function fetchKpop() {
   if (!KEY) throw new Error('TICKETMASTER_API_KEY missing');
   const queries = [
@@ -126,6 +161,7 @@ async function main() {
   const sources = {
     braves: fetchBraves,
     aso: fetchASO,
+    musical: fetchFoxMusical,
     high: () => Promise.resolve(buildHighMuseum(12)),
     kpop: fetchKpop,
   };

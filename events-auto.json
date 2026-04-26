@@ -4,9 +4,10 @@
     "braves": "ok (0)",
     "aso": "ok (11)",
     "high": "ok (11)",
-    "kpop": "ok (4)"
+    "kpop": "ok (4)",
+    "musical": "ok (9)"
   },
-  "count": 26,
+  "count": 35,
   "events": [
     {
       "id": "aso-vvG1zZ_dR4GQkJ",
@@ -16,6 +17,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/the-georgia-boy-choir-international-festival-atlanta-georgia-04-26-2026/event/0E00643BD531A1A6",
       "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "fox-Z7r9jZ1A7fv7K",
+      "title": "🎭 Six (Touring)",
+      "start": "2026-04-28T23:30:00Z",
+      "category": "musical",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7fv7K",
+      "desc": "Fox Theatre Atlanta"
     },
     {
       "id": "aso-vvG1zZbcJN8dHB",
@@ -70,6 +80,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/georgia-symphony-orchestra-75th-anniversary-concert-atlanta-georgia-05-23-2026/event/0E0062F0B5362A13",
       "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "fox-Z7r9jZ1A74aCk",
+      "title": "🎭 Beauty And The Beast (Touring)",
+      "start": "2026-05-26T23:30:00Z",
+      "category": "musical",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74aCk",
+      "desc": "Fox Theatre Atlanta"
     },
     {
       "id": "aso-vvG1zZbcJpxxJz",
@@ -135,6 +154,15 @@
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
     },
     {
+      "id": "fox-Z7r9jZ1A74Ka3",
+      "title": "🎭 Monty Python Spamalot (Touring)",
+      "start": "2026-07-21T23:30:00Z",
+      "category": "musical",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74Ka3",
+      "desc": "Fox Theatre Atlanta"
+    },
+    {
       "id": "high-secondsun-2026-08-09",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
       "start": "2026-08-09",
@@ -151,6 +179,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/idle-world-tour-syncopation-atlanta-georgia-08-08-2026/event/0E006463AB4AAAA4",
       "desc": "State Farm Arena"
+    },
+    {
+      "id": "fox-Z7r9jZ1A7-v7p",
+      "title": "🎭 Hamilton (Touring)",
+      "start": "2026-09-02T23:30:00Z",
+      "category": "musical",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-v7p",
+      "desc": "Fox Theatre Atlanta"
     },
     {
       "id": "high-secondsun-2026-09-13",
@@ -216,6 +253,15 @@
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
     },
     {
+      "id": "fox-Z7r9jZ1A7OPaF",
+      "title": "🎭 Mrs. Doubtfire (Touring)",
+      "start": "2026-12-16T00:30:00Z",
+      "category": "musical",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OPaF",
+      "desc": "Fox Theatre Atlanta"
+    },
+    {
       "id": "high-secondsun-2027-01-10",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
       "start": "2027-01-10",
@@ -223,6 +269,15 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "fox-Z7r9jZ1A7-vFF",
+      "title": "🎭 Water for Elephants (Touring)",
+      "start": "2027-02-03T00:30:00Z",
+      "category": "musical",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-vFF",
+      "desc": "Fox Theatre Atlanta"
     },
     {
       "id": "high-secondsun-2027-02-14",
@@ -234,6 +289,15 @@
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
     },
     {
+      "id": "fox-Z7r9jZ1A7-vF_",
+      "title": "🎭 Wicked (Touring)",
+      "start": "2027-03-04T00:30:00Z",
+      "category": "musical",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-vF_",
+      "desc": "Fox Theatre Atlanta"
+    },
+    {
       "id": "high-secondsun-2027-03-14",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
       "start": "2027-03-14",
@@ -241,6 +305,24 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "fox-Z7r9jZ1A7-ee4",
+      "title": "🎭 The Notebook (Touring)",
+      "start": "2027-04-13T23:30:00Z",
+      "category": "musical",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-ee4",
+      "desc": "Fox Theatre Atlanta"
+    },
+    {
+      "id": "fox-Z7r9jZ1A7OSZO",
+      "title": "🎭 Beetlejuice (Touring)",
+      "start": "2027-06-11T23:30:00Z",
+      "category": "musical",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OSZO",
+      "desc": "Fox Theatre Atlanta"
     }
   ]
 }
