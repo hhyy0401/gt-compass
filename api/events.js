@@ -56,34 +56,46 @@ async function fetchBraves() {
 }
 
 // ── 2. Atlanta Symphony Hall (ASO + 클래식 공연)
-//    venueId(KovZpZAJedlA) + Classical genre 필터로 ASO 공연 잡기
+//    venueId(KovZpZAJedlA)로 모든 공연 가져오고, Classical 우선, 없으면 전체 표시
 async function fetchASO() {
   const key = process.env.TICKETMASTER_API_KEY;
-  if (!key) return [];
+  if (!key) {
+    console.warn('[ASO] no key');
+    return [];
+  }
   try {
     const url = `https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAJedlA&size=100&sort=date,asc&apikey=${key}`;
     const r = await fetch(url);
-    if (!r.ok) return [];
+    console.log('[ASO] HTTP', r.status);
+    if (!r.ok) {
+      const txt = await r.text();
+      console.warn('[ASO] not ok body:', txt.slice(0, 200));
+      return [];
+    }
     const j = await r.json();
     const items = j?._embedded?.events || [];
-    return items.map(ev => {
+    console.log('[ASO] received', items.length, 'events');
+    const all = items.map(ev => {
       const start = ev.dates?.start?.dateTime || ev.dates?.start?.localDate;
       const cls = ev.classifications?.[0] || {};
       const genre = cls.genre?.name || '';
-      // Classical만 (ASO/오케스트라/클래식 공연)
-      if (genre !== 'Classical') return null;
+      const isClassical = genre === 'Classical';
       return {
         id: `aso-${ev.id}`,
-        title: `🎻 ${ev.name}`,
+        title: isClassical ? `🎻 ${ev.name}` : `🎵 ${ev.name}`,
         start,
         category: 'aso',
         source: 'Ticketmaster',
         url: ev.url,
-        desc: 'Atlanta Symphony Hall',
+        desc: `Atlanta Symphony Hall · ${genre || 'Music'}`,
+        _classical: isClassical,
       };
-    }).filter(e => e && e.start);
+    }).filter(e => e.start);
+    // Classical이 있으면 Classical만, 아니면 전부
+    const classical = all.filter(e => e._classical);
+    return (classical.length ? classical : all).map(({_classical, ...rest}) => rest);
   } catch (e) {
-    console.warn('ASO fetch failed:', e.message);
+    console.warn('[ASO] fetch failed:', e.message);
     return [];
   }
 }
