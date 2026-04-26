@@ -56,25 +56,21 @@ async function fetchBraves() {
 }
 
 // ── 2. Atlanta Symphony Hall (ASO + 클래식 공연)
-//    venueId(KovZpZAJedlA)로 모든 공연 가져오고, Classical 우선, 없으면 전체 표시
+let _asoDebug = '';
 async function fetchASO() {
   const key = process.env.TICKETMASTER_API_KEY;
-  if (!key) {
-    console.warn('[ASO] no key');
-    return [];
-  }
+  if (!key) { _asoDebug = 'no-key'; return []; }
   try {
     const url = `https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAJedlA&size=100&sort=date,asc&apikey=${key}`;
     const r = await fetch(url);
-    console.log('[ASO] HTTP', r.status);
     if (!r.ok) {
       const txt = await r.text();
-      console.warn('[ASO] not ok body:', txt.slice(0, 200));
+      _asoDebug = `http ${r.status} ${txt.slice(0, 100)}`;
       return [];
     }
     const j = await r.json();
     const items = j?._embedded?.events || [];
-    console.log('[ASO] received', items.length, 'events');
+    _asoDebug = `received ${items.length} items, page totalElements=${j?.page?.totalElements}`;
     const all = items.map(ev => {
       const start = ev.dates?.start?.dateTime || ev.dates?.start?.localDate;
       const cls = ev.classifications?.[0] || {};
@@ -91,11 +87,10 @@ async function fetchASO() {
         _classical: isClassical,
       };
     }).filter(e => e.start);
-    // Classical이 있으면 Classical만, 아니면 전부
     const classical = all.filter(e => e._classical);
     return (classical.length ? classical : all).map(({_classical, ...rest}) => rest);
   } catch (e) {
-    console.warn('[ASO] fetch failed:', e.message);
+    _asoDebug = `error: ${e.message}`;
     return [];
   }
 }
@@ -205,7 +200,8 @@ export default async function handler(req, res) {
   res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate=86400');
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.status(200).json({
-    _version: 'v3-aso-fallback',
+    _version: 'v4-aso-debug',
+    _asoDebug,
     fetchedAt: new Date().toISOString(),
     sourceStatus: {
       braves: bravesR.status === 'fulfilled' ? `ok (${bravesR.value.length})` : `failed: ${bravesR.reason?.message || ''}`,
