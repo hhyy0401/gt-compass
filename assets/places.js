@@ -338,7 +338,6 @@ const TAG_LABELS = {
     walk:    { emoji: "🚶", label: "도보",    cls: "tx-walk" },
     marta:   { emoji: "🚇", label: "MARTA",   cls: "tx-marta" },
     car:     { emoji: "🚗", label: "차",      cls: "tx-car" },
-    stinger: { emoji: "🚌", label: "Stinger", cls: "tx-stinger" },
   },
   category: {
     food:    { emoji: "🍽", label: "음식",       cls: "cat-food" },
