@@ -237,26 +237,35 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 }).addTo(foodMap);
 
 const foodMarkers = [];
-function makePin(p) {
+function makePin(p, loc) {
   const color = FOOD_TYPE_LABELS[p.type].color;
   const emoji = FOOD_TYPE_LABELS[p.type].emoji;
   const html = `<div class="marker-pin" style="background:${color}"><span>${emoji}</span></div>`;
   const icon = L.divIcon({ className:'', html, iconSize:[28,28], iconAnchor:[14,28], popupAnchor:[0,-28] });
-  const m = L.marker([p.lat, p.lng], { icon }).addTo(foodMap);
+  const m = L.marker([loc.lat, loc.lng], { icon }).addTo(foodMap);
   const tagHtml = p.tags.map(t => {
     const info = FOOD_TAGS[p.type][t];
     return info ? `<span class="chip" style="background:#f1f1ee;font-size:11px;padding:2px 8px;">${info.emoji} ${info.label}</span>` : '';
   }).join(' ');
-  const gmapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name + ' Atlanta')}`;
+  // 구글맵: 가게 이름 + 동네 + 도시로 정확한 지점 검색
+  const query = encodeURIComponent(`${p.name} ${loc.area || ''} Atlanta GA`);
+  const gmapUrl = `https://www.google.com/maps/search/?api=1&query=${query}`;
+  const areaLabel = loc.area || p.note || '';
   m.bindPopup(`
-    <div class="pop-name">${p.name}</div>
-    <div class="pop-meta">${FOOD_TYPE_LABELS[p.type].label} · ${p.note || ''}</div>
+    <div class="pop-name">${p.name}${loc.area && p.chainLocations ? ' (' + loc.area + ')' : ''}</div>
+    <div class="pop-meta">${FOOD_TYPE_LABELS[p.type].label}${areaLabel ? ' · ' + areaLabel : ''}</div>
     <div class="pop-tags">${tagHtml}</div>
     <a href="${gmapUrl}" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#1a73e8;color:white;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">🗺️ 구글맵에서 열기 ↗</a>
   `);
   return m;
 }
-FOOD_PLACES.forEach(p => foodMarkers.push({ place: p, marker: makePin(p) }));
+FOOD_PLACES.forEach(p => {
+  // 메인 위치 + 추가 체인 지점들 모두 핀 생성
+  const allLocs = [{ lat: p.lat, lng: p.lng, area: p.note }, ...(p.chainLocations || [])];
+  allLocs.forEach(loc => {
+    foodMarkers.push({ place: p, location: loc, marker: makePin(p, loc) });
+  });
+});
 
 // 타입 버튼 (3개) — 켜고 끄기 (토글)
 const typeContainer = document.getElementById('food-type');

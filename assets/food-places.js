@@ -15,7 +15,10 @@ const FOOD_PLACES = [
   { type:"cafe", name:"Hodgepodge Coffee",      lat:33.7409, lng:-84.3580, tags:["coffee","study"],        note:"East Atlanta Village" },
   { type:"cafe", name:"Land of A Thousand Hills", lat:33.7607, lng:-84.3520, tags:["study"],               note:"Inman Park" },
   { type:"cafe", name:"Bellwoods Cafe",         lat:33.7905, lng:-84.4120, tags:["vibe"],                  note:"West Midtown" },
-  { type:"cafe", name:"For Five Coffee",        lat:33.7790, lng:-84.3893, tags:["study","vibe"],          note:"Tech Square (체인)" },
+  { type:"cafe", name:"For Five Coffee",        lat:33.7790, lng:-84.3893, tags:["study","vibe"],          note:"Tech Square",
+    chainLocations:[
+      {lat:33.8475, lng:-84.3622, area:"Buckhead"}
+    ]},
   { type:"cafe", name:"Mend Coffee",            lat:33.7805, lng:-84.3815, tags:["coffee"],                note:"Midtown" },
   { type:"cafe", name:"Finca to Filter",        lat:33.7515, lng:-84.3580, tags:["coffee"],                note:"Reynoldstown" },
   { type:"cafe", name:"Chrome Yellow Trading",  lat:33.7693, lng:-84.3700, tags:["coffee"],                note:"Old Fourth Ward" },
@@ -30,9 +33,21 @@ const FOOD_PLACES = [
   // ── 🍴 식당 ─────
   { type:"food", name:"Antico Pizza",           lat:33.7805, lng:-84.4145, tags:["italian"],          note:"West Midtown" },
   { type:"food", name:"Atwoods Pizza Cafe",     lat:33.7615, lng:-84.3500, tags:["italian"],          note:"Inman Park" },
-  { type:"food", name:"Mister O1",              lat:33.7843, lng:-84.3818, tags:["italian"],          note:"Midtown 등 (체인)" },
-  { type:"food", name:"Cafe Intermezzo",        lat:33.7837, lng:-84.3833, tags:["italian","brunch"], note:"Midtown 등 (체인)" },
-  { type:"food", name:"Rumi's Kitchen",         lat:33.8748, lng:-84.3550, tags:["persian"],          note:"Buckhead 등 (체인)" },
+  { type:"food", name:"Mister O1",              lat:33.7843, lng:-84.3818, tags:["italian"],          note:"Midtown",
+    chainLocations:[
+      {lat:33.7619, lng:-84.3537, area:"Inman Park"},
+      {lat:33.8485, lng:-84.3712, area:"Buckhead"}
+    ]},
+  { type:"food", name:"Cafe Intermezzo",        lat:33.7837, lng:-84.3833, tags:["italian","brunch"], note:"Midtown",
+    chainLocations:[
+      {lat:33.8485, lng:-84.3712, area:"Buckhead"},
+      {lat:34.0700, lng:-84.2800, area:"Avalon (Alpharetta)"}
+    ]},
+  { type:"food", name:"Rumi's Kitchen",         lat:33.8748, lng:-84.3550, tags:["persian"],          note:"Buckhead",
+    chainLocations:[
+      {lat:33.7619, lng:-84.3537, area:"Inman Park"},
+      {lat:34.0700, lng:-84.2800, area:"Avalon (Alpharetta)"}
+    ]},
   { type:"food", name:"Delbar",                 lat:33.7626, lng:-84.3520, tags:["persian"],          note:"Inman Park" },
   { type:"food", name:"Yalda",                  lat:33.8485, lng:-84.3712, tags:["persian"],          note:"Buckhead" },
   { type:"food", name:"Cypress Street Pint",    lat:33.7855, lng:-84.3825, tags:["bar"],              note:"Midtown" },
@@ -60,10 +75,21 @@ const FOOD_PLACES = [
   { type:"food", name:"Blue India",             lat:33.8050, lng:-84.3550, tags:["indian"],           note:"Buckhead" },
   { type:"food", name:"Botiwalla",              lat:33.7727, lng:-84.3656, tags:["indian"],           note:"Ponce City Market" },
   { type:"food", name:"El Rey del Taco",        lat:33.8730, lng:-84.2960, tags:["mexican"],          note:"Buford Hwy" },
-  { type:"food", name:"Superica",               lat:33.7553, lng:-84.3636, tags:["mexican"],          note:"Krog Street 외 (체인)" },
-  { type:"food", name:"Rreal Tacos",            lat:33.7843, lng:-84.3835, tags:["mexican"],          note:"Midtown 등 (체인)" },
+  { type:"food", name:"Superica",               lat:33.7553, lng:-84.3636, tags:["mexican"],          note:"Krog Street",
+    chainLocations:[
+      {lat:33.7900, lng:-84.4140, area:"Westside"},
+      {lat:33.8485, lng:-84.3712, area:"Buckhead"}
+    ]},
+  { type:"food", name:"Rreal Tacos",            lat:33.7843, lng:-84.3835, tags:["mexican"],          note:"Midtown",
+    chainLocations:[
+      {lat:33.7740, lng:-84.2963, area:"Decatur"},
+      {lat:33.8485, lng:-84.3712, area:"Buckhead"}
+    ]},
   { type:"food", name:"El Felix",               lat:33.7919, lng:-84.3989, tags:["mexican"],          note:"Atlantic Station" },
-  { type:"food", name:"Fox Bros Bar-B-Q",       lat:33.8002, lng:-84.4322, tags:["bbq"],              note:"The Works (지점 여러개)" },
+  { type:"food", name:"Fox Bros Bar-B-Q",       lat:33.8002, lng:-84.4322, tags:["bbq"],              note:"The Works (Westside)",
+    chainLocations:[
+      {lat:33.7711, lng:-84.3680, area:"Boulevard (Original)"}
+    ]},
   { type:"food", name:"Lady Bird",              lat:33.7726, lng:-84.3700, tags:["bbq","american"],   note:"BeltLine" },
   { type:"food", name:"Hattie B's",             lat:33.7900, lng:-84.4080, tags:["american"],         note:"Westside, 핫치킨 샌드위치" },
   { type:"food", name:"Yard House",             lat:33.7919, lng:-84.3989, tags:["american"],         note:"Atlantic Station" },
@@ -99,9 +125,16 @@ const FOOD_PLACES = [
   { type:"dessert", name:"San Germain",         lat:33.9300, lng:-84.3500, tags:["bakery"],           note:"Sandy Springs" },
   { type:"dessert", name:"Alon's Bakery",       lat:33.8700, lng:-84.3700, tags:["bakery"],           note:"Buckhead/Brookhaven" },
   { type:"dessert", name:"Revolution Doughnuts",lat:33.7560, lng:-84.3620, tags:["doughnut"],         note:"Krog/Decatur" },
-  { type:"dessert", name:"Pop-up Bagels",       lat:33.7820, lng:-84.4000, tags:["bagel"],            note:"Westside" },
+  { type:"dessert", name:"Five Daughters Bakery", lat:33.7820, lng:-84.4180, tags:["doughnut"],       note:"Westside (체인)",
+    chainLocations:[{lat:33.7553, lng:-84.3636, area:"Krog Street Market"}] },
+  { type:"dessert", name:"The Salty Donut",     lat:33.7842, lng:-84.4197, tags:["doughnut"],         note:"Westside" },
+  { type:"dessert", name:"Pop-up Bagels",       lat:33.7837, lng:-84.4180, tags:["bagel"],            note:"Westside (West Marietta St)" },
   { type:"dessert", name:"Big Softie",          lat:33.7843, lng:-84.3833, tags:["icecream"],         note:"Midtown (체인)" },
-  { type:"dessert", name:"Jeni's Splendid",     lat:33.7820, lng:-84.4180, tags:["icecream"],         note:"Westside (애틀랜타 한정)" },
+  { type:"dessert", name:"Jeni's Splendid",     lat:33.7820, lng:-84.4180, tags:["icecream"],         note:"Westside",
+    chainLocations:[
+      {lat:33.7727, lng:-84.3656, area:"Ponce City Market"},
+      {lat:33.7553, lng:-84.3636, area:"Krog Street Market"}
+    ]},
   { type:"dessert", name:"Van Leeuwen",         lat:33.7727, lng:-84.3656, tags:["icecream"],         note:"Ponce City Market (한정)" },
   { type:"dessert", name:"Arte",                lat:34.0029, lng:-84.1446, tags:["shavedice"],        note:"Duluth, 빙수" },
   { type:"dessert", name:"Two Ha's",            lat:34.0029, lng:-84.1446, tags:["shavedice"],        note:"Duluth, 빙수" },
@@ -144,7 +177,7 @@ const FOOD_TAGS = {
 };
 
 const FOOD_TYPE_LABELS = {
-  food:    { emoji:"🍴", label:"맛집",    color:"#dc2626" },
-  cafe:    { emoji:"☕", label:"카페",    color:"#7c3aed" },
-  dessert: { emoji:"🍰", label:"디저트",  color:"#d97706" },
+  food:    { emoji:"🍴", label:"맛집",    color:"#34d399" },  // mint green
+  cafe:    { emoji:"☕", label:"카페",    color:"#60a5fa" },  // sky blue
+  dessert: { emoji:"🍰", label:"디저트",  color:"#f9a8d4" },  // pastel pink
 };
