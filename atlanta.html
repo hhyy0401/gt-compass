@@ -38,6 +38,27 @@
     <div id="map"></div>
   </div>
 
+  <h2 class="section">🍴 맛집 · 카페 · 디저트</h2>
+  <p style="color:var(--muted); font-size:14.5px;">
+    학생회 추천 + 잘 알려진 곳들. 타입 + 태그로 필터링. 핀 클릭하면 상세.
+  </p>
+
+  <div class="filter-bar">
+    <div class="filter-group">
+      <div class="label">타입</div>
+      <div class="filter-row" id="food-type"></div>
+    </div>
+    <div class="filter-group">
+      <div class="label">태그</div>
+      <div class="filter-row" id="food-tag">
+        <button class="filter-clear" id="food-clear">전체 초기화</button>
+      </div>
+    </div>
+    <div class="filter-summary" id="food-summary"></div>
+  </div>
+
+  <div id="food-map" style="height:600px;border-radius:14px;border:1px solid var(--line);overflow:hidden;"></div>
+
 </main>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -189,6 +210,103 @@ function applyFilter() {
 }
 
 applyFilter();
+</script>
+
+<script src="assets/food-places.js"></script>
+<script>
+// ── Food / Cafe / Dessert 지도 ──
+const foodState = { types: new Set(['cafe','food','dessert']), tags: new Set() };
+const foodMap = L.map('food-map').setView([33.82, -84.36], 11);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution:'&copy; OpenStreetMap &copy; CARTO', maxZoom: 19
+}).addTo(foodMap);
+
+const foodMarkers = [];
+function makePin(p) {
+  const color = FOOD_TYPE_LABELS[p.type].color;
+  const emoji = FOOD_TYPE_LABELS[p.type].emoji;
+  const html = `<div class="marker-pin" style="background:${color}"><span>${emoji}</span></div>`;
+  const icon = L.divIcon({ className:'', html, iconSize:[28,28], iconAnchor:[14,28], popupAnchor:[0,-28] });
+  const m = L.marker([p.lat, p.lng], { icon }).addTo(foodMap);
+  const tagHtml = p.tags.map(t => {
+    const info = FOOD_TAGS[p.type][t];
+    return info ? `<span class="chip" style="background:#f1f1ee;font-size:11px;padding:2px 8px;">${info.emoji} ${info.label}</span>` : '';
+  }).join(' ');
+  m.bindPopup(`
+    <div class="pop-name">${p.name}</div>
+    <div class="pop-meta">${FOOD_TYPE_LABELS[p.type].label} · ${p.note || ''}</div>
+    <div class="pop-tags">${tagHtml}</div>
+  `);
+  return m;
+}
+FOOD_PLACES.forEach(p => foodMarkers.push({ place: p, marker: makePin(p) }));
+
+// 타입 버튼 (3개)
+const typeContainer = document.getElementById('food-type');
+Object.entries(FOOD_TYPE_LABELS).forEach(([k, v]) => {
+  const btn = document.createElement('button');
+  btn.className = 'filter-tag active';
+  btn.dataset.type = k;
+  btn.innerHTML = `${v.emoji} ${v.label}`;
+  btn.style.borderColor = v.color;
+  btn.onclick = () => {
+    if (foodState.types.has(k)) { foodState.types.delete(k); btn.classList.remove('active'); }
+    else { foodState.types.add(k); btn.classList.add('active'); }
+    rebuildFoodTags();
+    applyFoodFilter();
+  };
+  typeContainer.appendChild(btn);
+});
+
+// 태그 버튼 (선택된 타입에 따라 동적)
+const tagContainer = document.getElementById('food-tag');
+const clearBtn = document.getElementById('food-clear');
+function rebuildFoodTags() {
+  // 기존 태그 버튼 제거 (clear 버튼은 유지)
+  [...tagContainer.querySelectorAll('.filter-tag')].forEach(b => b.remove());
+  // 선택된 타입의 태그만 표시
+  const tagsToShow = new Map();
+  foodState.types.forEach(t => {
+    Object.entries(FOOD_TAGS[t] || {}).forEach(([k, info]) => tagsToShow.set(k, info));
+  });
+  // 무효해진 선택 태그 제거
+  [...foodState.tags].forEach(t => { if (!tagsToShow.has(t)) foodState.tags.delete(t); });
+  tagsToShow.forEach((info, k) => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-tag' + (foodState.tags.has(k) ? ' active' : '');
+    btn.dataset.tag = k;
+    btn.innerHTML = `${info.emoji} ${info.label}`;
+    btn.onclick = () => {
+      if (foodState.tags.has(k)) { foodState.tags.delete(k); btn.classList.remove('active'); }
+      else { foodState.tags.add(k); btn.classList.add('active'); }
+      applyFoodFilter();
+    };
+    tagContainer.insertBefore(btn, clearBtn);
+  });
+}
+clearBtn.onclick = () => {
+  foodState.tags.clear();
+  rebuildFoodTags();
+  applyFoodFilter();
+};
+rebuildFoodTags();
+
+function applyFoodFilter() {
+  let shown = 0;
+  foodMarkers.forEach(({ place, marker }) => {
+    const ok =
+      foodState.types.has(place.type) &&
+      (foodState.tags.size === 0 || place.tags.some(t => foodState.tags.has(t)));
+    if (ok) {
+      if (!foodMap.hasLayer(marker)) marker.addTo(foodMap);
+      shown++;
+    } else if (foodMap.hasLayer(marker)) {
+      foodMap.removeLayer(marker);
+    }
+  });
+  document.getElementById('food-summary').textContent = `${FOOD_PLACES.length}곳 중 ${shown}곳 표시`;
+}
+applyFoodFilter();
 </script>
 <script src="assets/nav.js"></script>
 </body>
