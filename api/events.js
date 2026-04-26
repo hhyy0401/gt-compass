@@ -205,12 +205,13 @@ export default async function handler(req, res) {
   res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate=86400');
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.status(200).json({
+    _version: 'v3-aso-fallback',
     fetchedAt: new Date().toISOString(),
     sourceStatus: {
-      braves: bravesR.status === 'fulfilled' ? `ok (${bravesR.value.length})` : 'failed',
-      aso: asoR.status === 'fulfilled' ? `ok (${asoR.value.length})` : 'failed',
+      braves: bravesR.status === 'fulfilled' ? `ok (${bravesR.value.length})` : `failed: ${bravesR.reason?.message || ''}`,
+      aso: asoR.status === 'fulfilled' ? `ok (${asoR.value.length})` : `failed: ${asoR.reason?.message || ''}`,
       high: highR.status === 'fulfilled' ? `ok (${highR.value.length})` : 'failed',
-      kpop: kpopR.status === 'fulfilled' ? `ok (${kpopR.value.length})` : 'failed',
+      kpop: kpopR.status === 'fulfilled' ? `ok (${kpopR.value.length})` : `failed: ${kpopR.reason?.message || ''}`,
     },
     count: events.length,
     events,
