@@ -30,12 +30,21 @@
   `;
   document.body.appendChild(footer);
 
-  // 누적 방문자 카운터 (abacus.jasoncameron.dev)
-  fetch('https://abacus.jasoncameron.dev/hit/gt-compass/visits')
+  // 누적 방문자 카운터 (브라우저 기준 하루 1회만 카운트)
+  const updateVisitCount = (val) => {
+    const el = document.getElementById('visit-count');
+    if (el && val != null) el.innerHTML = `누적 방문 <b>${val.toLocaleString()}</b>회`;
+  };
+  const today = new Date().toDateString();
+  const lastCounted = localStorage.getItem('gt-compass-counted');
+  const endpoint = (lastCounted === today)
+    ? 'https://abacus.jasoncameron.dev/get/gt-compass/visits'   // 이미 카운트됨, 읽기만
+    : 'https://abacus.jasoncameron.dev/hit/gt-compass/visits';  // 오늘 첫 방문, 카운트 증가
+  fetch(endpoint)
     .then(r => r.json())
     .then(d => {
-      const el = document.getElementById('visit-count');
-      if (el && d.value != null) el.innerHTML = `누적 방문 <b>${d.value.toLocaleString()}</b>회`;
+      updateVisitCount(d.value);
+      if (lastCounted !== today) localStorage.setItem('gt-compass-counted', today);
     })
     .catch(() => {});
 
