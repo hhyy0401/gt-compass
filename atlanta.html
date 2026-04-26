@@ -5,6 +5,8 @@
 <title>Atlanta Overview · GTKSA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -74,6 +76,7 @@
 </main>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="assets/places.js"></script>
 <script>
 const state = {
@@ -238,13 +241,21 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
   attribution:'&copy; OpenStreetMap &copy; CARTO', maxZoom: 19
 }).addTo(foodMap);
 
+const foodCluster = L.markerClusterGroup({
+  showCoverageOnHover: false,
+  maxClusterRadius: 35,
+  spiderfyOnMaxZoom: true,
+  disableClusteringAtZoom: 17,
+});
+foodMap.addLayer(foodCluster);
 const foodMarkers = [];
 function makePin(p, loc) {
   const color = FOOD_TYPE_LABELS[p.type].color;
   const emoji = FOOD_TYPE_LABELS[p.type].emoji;
   const html = `<div class="marker-pin" style="background:${color}"><span>${emoji}</span></div>`;
   const icon = L.divIcon({ className:'', html, iconSize:[28,28], iconAnchor:[14,28], popupAnchor:[0,-28] });
-  const m = L.marker([loc.lat, loc.lng], { icon }).addTo(foodMap);
+  const m = L.marker([loc.lat, loc.lng], { icon });
+  foodCluster.addLayer(m);
   const tagHtml = p.tags.map(t => {
     const info = FOOD_TAGS[p.type][t];
     return info ? `<span class="chip" style="background:#f1f1ee;font-size:11px;padding:2px 8px;">${info.emoji} ${info.label}</span>` : '';
@@ -327,10 +338,10 @@ function applyFoodFilter() {
       foodState.types.has(place.type) &&
       (foodState.tags.size === 0 || place.tags.some(t => foodState.tags.has(t)));
     if (ok) {
-      if (!foodMap.hasLayer(marker)) marker.addTo(foodMap);
+      if (!foodCluster.hasLayer(marker)) foodCluster.addLayer(marker);
       shown++;
-    } else if (foodMap.hasLayer(marker)) {
-      foodMap.removeLayer(marker);
+    } else if (foodCluster.hasLayer(marker)) {
+      foodCluster.removeLayer(marker);
     }
   });
   document.getElementById('food-summary').textContent = `${FOOD_PLACES.length}곳 중 ${shown}곳 표시`;
