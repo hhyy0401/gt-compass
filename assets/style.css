@@ -111,6 +111,25 @@ a:hover { text-decoration: underline; }
   backdrop-filter: blur(4px);
 }
 
+/* ── Page TOC (Atlanta 페이지 상단) ── */
+.page-toc {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 0 0 20px;
+}
+.page-toc a {
+  padding: 8px 16px; border-radius: 999px;
+  background: white; border: 1px solid var(--line);
+  font-size: 14px; font-weight: 600;
+  color: var(--gt-navy);
+  text-decoration: none;
+  transition: all .15s ease;
+}
+.page-toc a:hover {
+  background: var(--gt-navy); color: white;
+  border-color: var(--gt-navy);
+  text-decoration: none;
+}
+
 /* ── Sidebar TOC (생활 페이지) ── */
 .life-layout {
   display: grid;

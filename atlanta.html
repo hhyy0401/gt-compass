@@ -12,10 +12,13 @@
 <main class="page" style="max-width:1280px;">
 
   <div style="margin-bottom:18px;">
-    <h2 class="section" style="margin-top:0;">🍑 Atlanta Map</h2>
+    <div class="page-toc">
+      <a href="#atl-map">🍑 Atlanta Map</a>
+      <a href="#food-section">🍴 맛집 · 카페 · 디저트</a>
+    </div>
+    <h2 class="section" id="atl-map" style="margin-top:0; scroll-margin-top:80px;">🍑 Atlanta Map</h2>
     <p style="color:var(--muted); font-size:14.5px;">
-      태그를 눌러서 필터링하세요. 같은 줄(이동수단/카테고리) 안에서는 <b>OR</b>, 줄 사이에는 <b>AND</b>로 동작해요.
-      예) <span class="chip tx-marta">🚇 MARTA</span> + <span class="chip cat-food">🍽 음식</span> = MARTA로 갈 수 있는 음식점
+      태그를 눌러서 필터링. 같은 줄에서는 <b>OR</b>, 줄 사이에는 <b>AND</b>.
     </p>
   </div>
 
@@ -38,19 +41,27 @@
     <div id="map"></div>
   </div>
 
-  <h2 class="section">🍴 맛집 · 카페 · 디저트</h2>
+  <h2 class="section" id="food-section" style="scroll-margin-top:80px;">🍴 맛집 · 카페 · 디저트</h2>
   <p style="color:var(--muted); font-size:14.5px;">
-    학생회 추천 + 잘 알려진 곳들. 타입 + 태그로 필터링. 핀 클릭하면 상세.
+    학생회 추천 + 잘 알려진 곳들. 타입 토글로 켜고 끄고, 태그로 좁히기.
   </p>
 
   <div class="filter-bar">
     <div class="filter-group">
-      <div class="label">타입</div>
+      <div class="label">타입 (켜고 끄기)</div>
       <div class="filter-row" id="food-type"></div>
     </div>
-    <div class="filter-group">
-      <div class="label">태그</div>
-      <div class="filter-row" id="food-tag">
+    <div class="filter-group" data-type="cafe">
+      <div class="label" style="color:#7c3aed">☕ 카페 태그</div>
+      <div class="filter-row" id="food-tag-cafe"></div>
+    </div>
+    <div class="filter-group" data-type="food">
+      <div class="label" style="color:#dc2626">🍴 식당 태그</div>
+      <div class="filter-row" id="food-tag-food"></div>
+    </div>
+    <div class="filter-group" data-type="dessert">
+      <div class="label" style="color:#db2777">🍰 디저트 태그</div>
+      <div class="filter-row" id="food-tag-dessert">
         <button class="filter-clear" id="food-clear">전체 초기화</button>
       </div>
     </div>
@@ -241,39 +252,29 @@ function makePin(p) {
 }
 FOOD_PLACES.forEach(p => foodMarkers.push({ place: p, marker: makePin(p) }));
 
-// 타입 버튼 (3개)
+// 타입 버튼 (3개) — 켜고 끄기 (토글)
 const typeContainer = document.getElementById('food-type');
 Object.entries(FOOD_TYPE_LABELS).forEach(([k, v]) => {
   const btn = document.createElement('button');
   btn.className = 'filter-tag active';
   btn.dataset.type = k;
   btn.innerHTML = `${v.emoji} ${v.label}`;
-  btn.style.borderColor = v.color;
   btn.onclick = () => {
     if (foodState.types.has(k)) { foodState.types.delete(k); btn.classList.remove('active'); }
     else { foodState.types.add(k); btn.classList.add('active'); }
-    rebuildFoodTags();
+    updateTagRowVisibility();
     applyFoodFilter();
   };
   typeContainer.appendChild(btn);
 });
 
-// 태그 버튼 (선택된 타입에 따라 동적)
-const tagContainer = document.getElementById('food-tag');
+// 태그 버튼 — 타입별 3줄로 분리
 const clearBtn = document.getElementById('food-clear');
-function rebuildFoodTags() {
-  // 기존 태그 버튼 제거 (clear 버튼은 유지)
-  [...tagContainer.querySelectorAll('.filter-tag')].forEach(b => b.remove());
-  // 선택된 타입의 태그만 표시
-  const tagsToShow = new Map();
-  foodState.types.forEach(t => {
-    Object.entries(FOOD_TAGS[t] || {}).forEach(([k, info]) => tagsToShow.set(k, info));
-  });
-  // 무효해진 선택 태그 제거
-  [...foodState.tags].forEach(t => { if (!tagsToShow.has(t)) foodState.tags.delete(t); });
-  tagsToShow.forEach((info, k) => {
+['cafe','food','dessert'].forEach(typeKey => {
+  const row = document.getElementById('food-tag-' + typeKey);
+  Object.entries(FOOD_TAGS[typeKey] || {}).forEach(([k, info]) => {
     const btn = document.createElement('button');
-    btn.className = 'filter-tag' + (foodState.tags.has(k) ? ' active' : '');
+    btn.className = 'filter-tag';
     btn.dataset.tag = k;
     btn.innerHTML = `${info.emoji} ${info.label}`;
     btn.onclick = () => {
@@ -281,15 +282,26 @@ function rebuildFoodTags() {
       else { foodState.tags.add(k); btn.classList.add('active'); }
       applyFoodFilter();
     };
-    tagContainer.insertBefore(btn, clearBtn);
+    if (typeKey === 'dessert') row.insertBefore(btn, clearBtn);
+    else row.appendChild(btn);
+  });
+});
+
+// 타입이 꺼지면 해당 태그 줄을 흐리게
+function updateTagRowVisibility() {
+  document.querySelectorAll('.filter-group[data-type]').forEach(g => {
+    const t = g.dataset.type;
+    g.style.opacity = foodState.types.has(t) ? '1' : '0.35';
   });
 }
+
 clearBtn.onclick = () => {
   foodState.tags.clear();
-  rebuildFoodTags();
+  document.querySelectorAll('#food-tag-cafe .filter-tag, #food-tag-food .filter-tag, #food-tag-dessert .filter-tag')
+    .forEach(b => b.classList.remove('active'));
   applyFoodFilter();
 };
-rebuildFoodTags();
+updateTagRowVisibility();
 
 function applyFoodFilter() {
   let shown = 0;
