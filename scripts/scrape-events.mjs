@@ -92,13 +92,14 @@ async function fetchFoxMusical() {
     if (cls.subGenre?.name !== 'Musical') continue;
     const start = ev.dates?.start?.dateTime || ev.dates?.start?.localDate;
     if (!start) continue;
+    const attractionUrl = ev._embedded?.attractions?.[0]?.url;
     out.push({
       id: `fox-${ev.id}`,
       title: `🎭 ${ev.name}`,
       start,
       category: 'musical',
       source: 'Ticketmaster',
-      url: ev.url,
+      url: attractionUrl || ev.url,
       desc: 'Fox Theatre Atlanta',
     });
   }
