@@ -144,7 +144,7 @@ const FOOD_TAGS = {
 };
 
 const FOOD_TYPE_LABELS = {
+  food:    { emoji:"🍴", label:"맛집",    color:"#dc2626" },
   cafe:    { emoji:"☕", label:"카페",    color:"#7c3aed" },
-  food:    { emoji:"🍴", label:"식당",    color:"#dc2626" },
   dessert: { emoji:"🍰", label:"디저트",  color:"#db2777" },
 };

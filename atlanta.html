@@ -51,13 +51,13 @@
       <div class="label">타입 (켜고 끄기)</div>
       <div class="filter-row" id="food-type"></div>
     </div>
+    <div class="filter-group" data-type="food">
+      <div class="label" style="color:#dc2626">🍴 맛집 태그</div>
+      <div class="filter-row" id="food-tag-food"></div>
+    </div>
     <div class="filter-group" data-type="cafe">
       <div class="label" style="color:#7c3aed">☕ 카페 태그</div>
       <div class="filter-row" id="food-tag-cafe"></div>
-    </div>
-    <div class="filter-group" data-type="food">
-      <div class="label" style="color:#dc2626">🍴 식당 태그</div>
-      <div class="filter-row" id="food-tag-food"></div>
     </div>
     <div class="filter-group" data-type="dessert">
       <div class="label" style="color:#db2777">🍰 디저트 태그</div>
@@ -270,7 +270,7 @@ Object.entries(FOOD_TYPE_LABELS).forEach(([k, v]) => {
 
 // 태그 버튼 — 타입별 3줄로 분리
 const clearBtn = document.getElementById('food-clear');
-['cafe','food','dessert'].forEach(typeKey => {
+['food','cafe','dessert'].forEach(typeKey => {
   const row = document.getElementById('food-tag-' + typeKey);
   Object.entries(FOOD_TAGS[typeKey] || {}).forEach(([k, info]) => {
     const btn = document.createElement('button');
@@ -297,7 +297,7 @@ function updateTagRowVisibility() {
 
 clearBtn.onclick = () => {
   foodState.tags.clear();
-  document.querySelectorAll('#food-tag-cafe .filter-tag, #food-tag-food .filter-tag, #food-tag-dessert .filter-tag')
+  document.querySelectorAll('#food-tag-food .filter-tag, #food-tag-cafe .filter-tag, #food-tag-dessert .filter-tag')
     .forEach(b => b.classList.remove('active'));
   applyFoodFilter();
 };
