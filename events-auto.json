@@ -1,12 +1,12 @@
 {
-  "fetchedAt": "2026-04-26T15:56:36.799Z",
+  "fetchedAt": "2026-04-26T16:02:03.001Z",
   "sourceStatus": {
     "braves": "ok (8)",
-    "aso": "ok (20)",
+    "aso": "ok (11)",
     "high": "ok (11)",
     "kpop": "ok (5)"
   },
-  "count": 44,
+  "count": 35,
   "events": [
     {
       "id": "aso-vvG1zZ_dR4GQkJ",
@@ -24,15 +24,6 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/america250-spano-conducts-rachmaninoff-atlanta-georgia-04-30-2026/event/0E0062D9A3403F3A",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
-    {
-      "id": "aso-vvG1zZbcJN8SW6",
-      "title": "🎻 America@250: Spano conducts Rachmaninoff",
-      "start": "2026-05-03T00:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/america250-spano-conducts-rachmaninoff-atlanta-georgia-05-02-2026/event/0E0062D9A3433F47",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
@@ -54,15 +45,6 @@
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
     },
     {
-      "id": "aso-vvG1zZbcJNHSTU",
-      "title": "🎻 America@250: Spano Conducts Bernstein",
-      "start": "2026-05-10T00:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/america250-spano-conducts-bernstein-atlanta-georgia-05-09-2026/event/0E0062D9A3F33FF6",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
-    {
       "id": "aso-vvG1zZbcJ0c0A5",
       "title": "🎻 Mozart's Jupiter Symphony + ASO ",
       "start": "2026-05-15T00:00:00Z",
@@ -73,21 +55,12 @@
     },
     {
       "id": "braves-824924",
-      "title": "⚾ Braves vs Boston Red Sox (Sat 🎁)",
+      "title": "⚾ Braves vs Boston Red Sox",
       "start": "2026-05-16",
       "category": "braves",
       "source": "MLB",
       "url": "https://www.mlb.com/braves/tickets/promotions",
-      "desc": "Truist Park · 7:15 PM · 토요일은 giveaway 가능성 높음"
-    },
-    {
-      "id": "aso-vvG1zZbcJ0m0A3",
-      "title": "🎻 Mozart's Jupiter Symphony + ASO ",
-      "start": "2026-05-16T00:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/mozarts-jupiter-symphony-aso-atlanta-georgia-05-15-2026/event/0E0062D9A4BA4152",
-      "desc": "Atlanta Symphony Hall · Classical"
+      "desc": "Truist Park · 토요일 giveaway 가능성 높음"
     },
     {
       "id": "kpop-rZ7HnEZ1AfqoOK",
@@ -109,12 +82,12 @@
     },
     {
       "id": "braves-824920",
-      "title": "⚾ Braves vs Washington Nationals (Sat 🎁)",
+      "title": "⚾ Braves vs Washington Nationals",
       "start": "2026-05-23",
       "category": "braves",
       "source": "MLB",
       "url": "https://www.mlb.com/braves/tickets/promotions",
-      "desc": "Truist Park · 4:10 PM · 토요일은 giveaway 가능성 높음"
+      "desc": "Truist Park · 토요일 giveaway 가능성 높음"
     },
     {
       "id": "aso-vvG1zZbReguxIK",
@@ -135,24 +108,6 @@
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
-      "id": "aso-vvG1zZ_kMxXujE",
-      "title": "🎻 Stutzmann Conducts Tchaikovsky",
-      "start": "2026-05-30T00:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/stutzmann-conducts-tchaikovsky-atlanta-georgia-05-29-2026/event/0E00646DE2F8D727",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
-    {
-      "id": "aso-vvG1zZbcJpNeIP",
-      "title": "🎻 Stutzmann Conducts Tchaikovsky",
-      "start": "2026-05-31T00:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/stutzmann-conducts-tchaikovsky-atlanta-georgia-05-30-2026/event/0E0062D9968C2A25",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
-    {
       "id": "aso-vvG1zZbcJ9rwz5",
       "title": "🎻 Stutzmann + Mahler's Second Symphony",
       "start": "2026-06-05T00:00:00Z",
@@ -163,12 +118,12 @@
     },
     {
       "id": "braves-824915",
-      "title": "⚾ Braves vs Pittsburgh Pirates (Sat 🎁)",
+      "title": "⚾ Braves vs Pittsburgh Pirates",
       "start": "2026-06-06",
       "category": "braves",
       "source": "MLB",
       "url": "https://www.mlb.com/braves/tickets/promotions",
-      "desc": "Truist Park · 4:10 PM · 토요일은 giveaway 가능성 높음"
+      "desc": "Truist Park · 토요일 giveaway 가능성 높음"
     },
     {
       "id": "kpop-vvG1zZ_kUE_b2x",
@@ -178,24 +133,6 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/kpop-night-atlanta-georgia-06-05-2026/event/0E00646DA76583E2",
       "desc": "Vinyl"
-    },
-    {
-      "id": "aso-vvG1zZbcJ9L3zm",
-      "title": "🎻 Stutzmann + Mahler's Second Symphony",
-      "start": "2026-06-07T00:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/stutzmann-mahlers-second-symphony-atlanta-georgia-06-06-2026/event/0E0062D9977D2E2E",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
-    {
-      "id": "aso-vvG1zZbcJ9OeyX",
-      "title": "🎻 Stutzmann + Mahler's Second Symphony",
-      "start": "2026-06-07T19:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/stutzmann-mahlers-second-symphony-atlanta-georgia-06-07-2026/event/0E0062D997802E7E",
-      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "aso-vvG1zZ_7VGx0DY",
@@ -217,21 +154,21 @@
     },
     {
       "id": "braves-824909",
-      "title": "⚾ Braves vs Milwaukee Brewers (Sat 🎁)",
+      "title": "⚾ Braves vs Milwaukee Brewers",
       "start": "2026-06-20",
       "category": "braves",
       "source": "MLB",
       "url": "https://www.mlb.com/braves/tickets/promotions",
-      "desc": "Truist Park · 4:10 PM · 토요일은 giveaway 가능성 높음"
+      "desc": "Truist Park · 토요일 giveaway 가능성 높음"
     },
     {
       "id": "braves-824903",
-      "title": "⚾ Braves vs New York Mets (Sat 🎁)",
+      "title": "⚾ Braves vs New York Mets",
       "start": "2026-07-04",
       "category": "braves",
       "source": "MLB",
       "url": "https://www.mlb.com/braves/tickets/promotions",
-      "desc": "Truist Park · 8:08 PM · 토요일은 giveaway 가능성 높음"
+      "desc": "Truist Park · 토요일 giveaway 가능성 높음"
     },
     {
       "id": "kpop-vvG1zZ_FLbemAt",
@@ -253,21 +190,21 @@
     },
     {
       "id": "braves-824899",
-      "title": "⚾ Braves vs Texas Rangers (Sat 🎁)",
+      "title": "⚾ Braves vs Texas Rangers",
       "start": "2026-07-18",
       "category": "braves",
       "source": "MLB",
       "url": "https://www.mlb.com/braves/tickets/promotions",
-      "desc": "Truist Park · 4:10 PM · 토요일은 giveaway 가능성 높음"
+      "desc": "Truist Park · 토요일 giveaway 가능성 높음"
     },
     {
       "id": "braves-824890",
-      "title": "⚾ Braves vs Washington Nationals (Sat 🎁)",
+      "title": "⚾ Braves vs Washington Nationals",
       "start": "2026-08-01",
       "category": "braves",
       "source": "MLB",
       "url": "https://www.mlb.com/braves/tickets/promotions",
-      "desc": "Truist Park · 7:15 PM · 토요일은 giveaway 가능성 높음"
+      "desc": "Truist Park · 토요일 giveaway 가능성 높음"
     },
     {
       "id": "high-secondsun-2026-08-09",
@@ -289,12 +226,12 @@
     },
     {
       "id": "braves-824884",
-      "title": "⚾ Braves vs Arizona Diamondbacks (Sat 🎁)",
+      "title": "⚾ Braves vs Arizona Diamondbacks",
       "start": "2026-08-15",
       "category": "braves",
       "source": "MLB",
       "url": "https://www.mlb.com/braves/tickets/promotions",
-      "desc": "Truist Park · 7:15 PM · 토요일은 giveaway 가능성 높음"
+      "desc": "Truist Park · 토요일 giveaway 가능성 높음"
     },
     {
       "id": "high-secondsun-2026-09-13",
@@ -312,15 +249,6 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/la-la-land-live-with-the-atlanta-georgia-09-26-2026/event/0E00636EE10CCDB3",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
-    {
-      "id": "aso-vvG1zZbUDPTc6A",
-      "title": "🎻 La La Land: Live With The Atlanta Symphony Orchestra",
-      "start": "2026-09-27T19:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/la-la-land-live-with-the-atlanta-georgia-09-27-2026/event/0E00636EE5FED1C5",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
@@ -357,15 +285,6 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/elf-in-concert-live-with-the-atlanta-georgia-11-28-2026/event/0E00646AE00DD0CC",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
-    {
-      "id": "aso-vvG1zZ_klO7udo",
-      "title": "🎻 Elf In Concert: Live With The Atlanta Symphony Orchestra",
-      "start": "2026-11-29T20:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/elf-in-concert-live-with-the-atlanta-georgia-11-29-2026/event/0E00646AE010D0D1",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
