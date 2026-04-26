@@ -148,6 +148,26 @@ const PLACES = [
     beltline: "west",
   },
 
+  // ── North Beltline (Northeast Trail, 부분 개통) ─────
+  {
+    name: "Tanyard Creek Park",
+    lat: 33.8085, lng: -84.3947,
+    transport: ["car"],
+    category: ["nature", "active"],
+    meta: "North Beltline · Northeast Trail",
+    desc: "Atlanta Memorial Park 옆 자연 산책로. Buckhead 가는 길의 첫 트레일 구간.",
+    beltline: "north",
+  },
+  {
+    name: "Northeast Trail",
+    lat: 33.7980, lng: -84.3850,
+    transport: ["car"],
+    category: ["active"],
+    meta: "North Beltline · 산책로",
+    desc: "Piedmont Park 북쪽에서 Buckhead 방향으로 이어지는 Beltline. 부분 개통 상태로 구간별 산책 가능.",
+    beltline: "north",
+  },
+
   // ── South Beltline (개발 중) ─────────────────────────
   {
     name: "Southside Trail (개발 중)",

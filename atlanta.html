@@ -88,8 +88,10 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 const eastBL = [[33.7905,-84.3702],[33.7860,-84.3680],[33.7800,-84.3670],[33.7765,-84.3662],[33.7726,-84.3657],[33.7685,-84.3651],[33.7639,-84.3645],[33.7595,-84.3640],[33.7553,-84.3636],[33.7515,-84.3640],[33.7475,-84.3660],[33.7440,-84.3690]];
 const westBL = [[33.7625,-84.4280],[33.7570,-84.4250],[33.7520,-84.4220],[33.7480,-84.4200],[33.7440,-84.4175],[33.7404,-84.4143],[33.7370,-84.4130],[33.7330,-84.4120],[33.7290,-84.4110]];
 const southBL = [[33.7290,-84.4110],[33.7270,-84.4000],[33.7280,-84.3880],[33.7300,-84.3850],[33.7320,-84.3760],[33.7340,-84.3700],[33.7400,-84.3680],[33.7440,-84.3690]];
+const northBL = [[33.7905,-84.3702],[33.7935,-84.3735],[33.7970,-84.3790],[33.7995,-84.3850],[33.8030,-84.3905],[33.8085,-84.3947],[33.8140,-84.4020],[33.8190,-84.4090]];
 L.polyline(eastBL, { color:"#c2410c", weight:5, opacity:0.85 }).bindTooltip("East Beltline (완공)", {sticky:true}).addTo(map);
 L.polyline(westBL, { color:"#0e7490", weight:5, opacity:0.85 }).bindTooltip("West Beltline (완공)", {sticky:true}).addTo(map);
+L.polyline(northBL, { color:"#16a34a", weight:5, opacity:0.85, dashArray:"10,4" }).bindTooltip("North Beltline (부분 개통)", {sticky:true}).addTo(map);
 L.polyline(southBL, { color:"#9ca3af", weight:4, opacity:0.7, dashArray:"6,8" }).bindTooltip("South Beltline (개발 중)", {sticky:true}).addTo(map);
 
 // ── 마커 / 카드 빌드 ──
