@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>이벤트 캘린더 · GTKSA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="assets/style.css" />
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet" />
+<style>
+  .cal-legend { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
+  .cal-legend .leg {
+    display:inline-flex; align-items:center; gap:7px;
+    padding:7px 14px; border-radius:999px;
+    font-size:13px; font-weight:500;
+    border:1.5px solid var(--line); background:white;
+    cursor:pointer; user-select:none;
+    transition: all .15s ease;
+  }
+  .cal-legend .leg:hover { border-color:var(--gt-gold); transform: translateY(-1px); }
+  .cal-legend .leg.off { opacity:0.35; }
+  .cal-legend .dot {
+    width:12px; height:12px; border-radius:50%;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.5), 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .cal-status {
+    font-size:12.5px; color:var(--muted); margin-bottom:12px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .cal-status .demo-pill {
+    background:#fef3c7; color:#92400e;
+    padding:3px 9px; border-radius:999px;
+    font-size:11px; font-weight:600;
+  }
+  #calendar {
+    background:white;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:20px;
+    box-shadow: 0 2px 8px rgba(0,48,87,0.04);
+  }
+  .fc .fc-toolbar { margin-bottom: 18px !important; }
+  .fc .fc-toolbar-title {
+    font-size:22px; color:var(--gt-navy);
+    font-weight:700; letter-spacing:-0.02em;
+  }
+  .fc .fc-button-primary {
+    background:var(--gt-navy); border-color:var(--gt-navy);
+    text-transform:none;
+    font-weight:500; font-size:13px;
+    padding: 6px 14px;
+    border-radius: 8px;
+    box-shadow:none;
+    transition: all .15s ease;
+  }
+  .fc .fc-button-primary:hover {
+    background:var(--gt-navy-light); border-color:var(--gt-navy-light);
+    transform: translateY(-1px);
+  }
+  .fc .fc-button-primary:disabled { background:#94a3b8; border-color:#94a3b8; }
+  .fc .fc-button-active { background:var(--gt-gold) !important; border-color:var(--gt-gold) !important; color:white !important; }
+  .fc-col-header-cell-cushion {
+    color: var(--gt-navy); font-weight:600; font-size:12.5px;
+    text-decoration:none !important; padding: 8px 4px;
+  }
+  .fc-daygrid-day-number { color:var(--ink-soft); font-size:13px; padding:6px 8px !important; }
+  .fc-event {
+    cursor:pointer;
+    border:none !important;
+    padding:3px 6px !important;
+    font-size:12px;
+    border-radius:6px !important;
+    margin: 1px 2px !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+  .fc-event:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  }
+  .fc-day-today { background-color: #fffbeb !important; }
+  .fc-day-today .fc-daygrid-day-number {
+    background: var(--gt-gold); color: white; border-radius: 50%;
+    width: 24px; height: 24px; display: inline-flex;
+    align-items: center; justify-content: center;
+    font-weight:600;
+  }
+</style>
+</head>
+<body>
+
+<main class="page" style="max-width:1280px;">
+  <h2 class="section" style="margin-top:0;">📅 애틀랜타 이벤트 캘린더</h2>
+  <p style="color:var(--muted); font-size:14.5px;">
+    Atlanta Braves 경기·giveaway, ASO 공연, High Museum 무료일, K-pop 콘서트가 자동으로 모입니다. 매일 새벽 자동 업데이트.
+  </p>
+
+  <div class="cal-legend" id="legend">
+    <span class="leg" data-cat="braves"><span class="dot" style="background:#dc2626"></span>⚾ Braves</span>
+    <span class="leg" data-cat="aso"><span class="dot" style="background:#7c3aed"></span>🎻 Symphony</span>
+    <span class="leg" data-cat="high"><span class="dot" style="background:#2563eb"></span>🎨 High Museum</span>
+    <span class="leg" data-cat="kpop"><span class="dot" style="background:#db2777"></span>🎤 K-pop</span>
+  </div>
+
+  <div class="cal-status" id="cal-status">불러오는 중…</div>
+  <div id="calendar"></div>
+
+  <div class="info" style="margin-top:24px;">
+    💡 클릭하면 원본 페이지(예매/정보)로 이동해요. 정보가 누락되면 <a href="mailto:webmaster@gtksa.net">학생회</a>에 알려주세요.
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+<script>
+const COLORS = {
+  braves: '#dc2626',
+  aso:    '#7c3aed',
+  high:   '#2563eb',
+  kpop:   '#db2777',
+};
+const enabled = new Set(Object.keys(COLORS));
+
+let calendar;
+let allEvents = [];
+
+function demoEvents() {
+  // Vercel 배포 전 로컬에서 보는 용도의 예시 데이터
+  const today = new Date();
+  const y = today.getFullYear(), m = today.getMonth();
+  const iso = (yr, mo, d) => new Date(yr, mo, d).toISOString().slice(0,10);
+  // 이번달 둘째 일요일
+  const firstSun = (7 - new Date(y, m, 1).getDay()) % 7 + 1;
+  const secondSun = firstSun + 7;
+  return [
+    { id:'demo-high-1', title:'🎨 High Museum 무료 입장 (Second Sundays)', start:iso(y,m,secondSun), category:'high', source:'예시', url:'https://high.org/visit', desc:'매월 둘째 일요일 무료 입장' },
+    { id:'demo-braves-1', title:'⚾ Braves vs Mets · Bobblehead Night', start:iso(y,m,Math.min(15, 28)), category:'braves', source:'예시', url:'https://www.mlb.com/braves', desc:'Truist Park · 7:20 PM' },
+    { id:'demo-aso-1', title:'🎻 Mahler Symphony No. 5', start:iso(y,m,Math.min(20, 28)), category:'aso', source:'예시', url:'https://www.aso.org', desc:'Atlanta Symphony Hall · 8:00 PM' },
+    { id:'demo-kpop-1', title:'🎤 IVE WORLD TOUR Atlanta', start:iso(y,m,Math.min(25, 28)), category:'kpop', source:'예시', url:'#', desc:'State Farm Arena' },
+    { id:'demo-aso-2', title:'🎻 Beethoven Piano Concerto No. 3', start:iso(y, m+1, 5), category:'aso', source:'예시', url:'https://www.aso.org', desc:'Atlanta Symphony Hall' },
+    { id:'demo-braves-2', title:'⚾ Braves vs Phillies · Fireworks Night', start:iso(y, m+1, 12), category:'braves', source:'예시', url:'https://www.mlb.com/braves' },
+  ];
+}
+
+function applyEvents(events, isDemo, meta) {
+  allEvents = events.map(e => ({
+    id: e.id,
+    title: e.title,
+    start: e.start,
+    end: e.end,
+    url: e.url,
+    backgroundColor: COLORS[e.category] || '#6b7280',
+    borderColor: COLORS[e.category] || '#6b7280',
+    extendedProps: { category: e.category, desc: e.desc, source: e.source, isDemo },
+  }));
+  refresh();
+  const status = document.getElementById('cal-status');
+  if (isDemo) {
+    status.innerHTML = `<span class="demo-pill">예시</span>로컬 미리보기 — 실제 데이터는 Vercel 배포 후 자동으로 채워집니다.`;
+  } else {
+    const fetched = meta?.fetchedAt ? new Date(meta.fetchedAt).toLocaleString('ko-KR') : '';
+    const ss = meta?.sourceStatus || {};
+    const failed = Object.entries(ss).filter(([,v]) => v !== 'fulfilled').map(([k]) => k);
+    status.textContent =
+      `${meta.count}개 이벤트 · 마지막 업데이트 ${fetched}` +
+      (failed.length ? ` · ⚠ 실패: ${failed.join(', ')}` : '');
+  }
+}
+
+async function loadEvents() {
+  try {
+    const res = await fetch('/api/events');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    if (!data.events || data.events.length === 0) throw new Error('empty');
+    applyEvents(data.events, false, data);
+  } catch (e) {
+    // 로컬 미리보기용 fallback
+    applyEvents(demoEvents(), true);
+  }
+}
+
+function refresh() {
+  if (!calendar) return;
+  calendar.removeAllEventSources();
+  calendar.addEventSource(allEvents.filter(ev => enabled.has(ev.extendedProps.category)));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+    initialView: 'dayGridMonth',
+    height: 720,
+    headerToolbar: { left:'prev,next today', center:'title', right:'dayGridMonth,listWeek' },
+    locale: 'ko',
+    buttonText: { today:'오늘', month:'월', week:'주', day:'일', list:'리스트' },
+    eventClick: (info) => {
+      if (info.event.url) {
+        info.jsEvent.preventDefault();
+        window.open(info.event.url, '_blank', 'noopener');
+      }
+    },
+    eventDidMount: (info) => {
+      const desc = info.event.extendedProps.desc || '';
+      const src = info.event.extendedProps.source || '';
+      info.el.title = `${info.event.title}\n${desc}\n— ${src}`;
+    },
+  });
+  calendar.render();
+
+  document.querySelectorAll('#legend .leg').forEach(el => {
+    el.addEventListener('click', () => {
+      const cat = el.dataset.cat;
+      if (enabled.has(cat)) { enabled.delete(cat); el.classList.add('off'); }
+      else { enabled.add(cat); el.classList.remove('off'); }
+      refresh();
+    });
+  });
+
+  loadEvents();
+});
+</script>
+</body>
+</html>

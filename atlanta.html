@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>Atlanta Overview · GTKSA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<main class="page" style="max-width:1280px;">
+
+  <div style="margin-bottom:18px;">
+    <h2 class="section" style="margin-top:0;">🍑 Atlanta Overview</h2>
+    <p style="color:var(--muted); font-size:14.5px;">
+      태그를 눌러서 필터링하세요. 같은 줄(이동수단/카테고리) 안에서는 <b>OR</b>, 줄 사이에는 <b>AND</b>로 동작해요.
+      예) <span class="chip tx-marta">🚇 MARTA</span> + <span class="chip cat-food">🍽 음식</span> = MARTA로 갈 수 있는 음식점
+    </p>
+  </div>
+
+  <div class="filter-bar">
+    <div class="filter-group">
+      <div class="label">이동수단</div>
+      <div class="filter-row" id="filter-transport"></div>
+    </div>
+    <div class="filter-group">
+      <div class="label">카테고리</div>
+      <div class="filter-row" id="filter-category">
+        <button class="filter-clear" id="filter-clear">전체 초기화</button>
+      </div>
+    </div>
+    <div class="filter-summary" id="filter-summary"></div>
+  </div>
+
+  <div class="atl-layout">
+    <div class="atl-list" id="place-list"></div>
+    <div id="map"></div>
+  </div>
+
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/places.js"></script>
+<script>
+const state = {
+  transport: new Set(),
+  category: new Set(),
+};
+
+// ── 필터 버튼 렌더 ──
+function renderFilterButtons(groupKey, containerId) {
+  const container = document.getElementById(containerId);
+  const labels = TAG_LABELS[groupKey];
+  Object.entries(labels).forEach(([key, info]) => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-tag';
+    btn.dataset.key = key;
+    btn.dataset.group = groupKey;
+    btn.innerHTML = `${info.emoji} ${info.label}`;
+    btn.onclick = () => {
+      const set = state[groupKey];
+      if (set.has(key)) { set.delete(key); btn.classList.remove('active'); }
+      else { set.add(key); btn.classList.add('active'); }
+      applyFilter();
+    };
+    container.appendChild(btn);
+  });
+}
+renderFilterButtons('transport', 'filter-transport');
+renderFilterButtons('category', 'filter-category');
+
+document.getElementById('filter-clear').onclick = () => {
+  state.transport.clear();
+  state.category.clear();
+  document.querySelectorAll('.filter-tag.active').forEach(b => b.classList.remove('active'));
+  applyFilter();
+};
+
+// ── 지도 ──
+const map = L.map('map').setView([33.82, -84.36], 11);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution:'&copy; OpenStreetMap &copy; CARTO',
+  maxZoom: 19
+}).addTo(map);
+
+// Beltline 라인
+const eastBL = [[33.7905,-84.3702],[33.7860,-84.3680],[33.7800,-84.3670],[33.7765,-84.3662],[33.7726,-84.3657],[33.7685,-84.3651],[33.7639,-84.3645],[33.7595,-84.3640],[33.7553,-84.3636],[33.7515,-84.3640],[33.7475,-84.3660],[33.7440,-84.3690]];
+const westBL = [[33.7625,-84.4280],[33.7570,-84.4250],[33.7520,-84.4220],[33.7480,-84.4200],[33.7440,-84.4175],[33.7404,-84.4143],[33.7370,-84.4130],[33.7330,-84.4120],[33.7290,-84.4110]];
+const southBL = [[33.7290,-84.4110],[33.7270,-84.4000],[33.7280,-84.3880],[33.7300,-84.3850],[33.7320,-84.3760],[33.7340,-84.3700],[33.7400,-84.3680],[33.7440,-84.3690]];
+L.polyline(eastBL, { color:"#c2410c", weight:5, opacity:0.85 }).bindTooltip("East Beltline (완공)", {sticky:true}).addTo(map);
+L.polyline(westBL, { color:"#0e7490", weight:5, opacity:0.85 }).bindTooltip("West Beltline (완공)", {sticky:true}).addTo(map);
+L.polyline(southBL, { color:"#9ca3af", weight:4, opacity:0.7, dashArray:"6,8" }).bindTooltip("South Beltline (개발 중)", {sticky:true}).addTo(map);
+
+// ── 마커 / 카드 빌드 ──
+const markers = []; // { place, marker }
+
+function tagChips(place) {
+  const ts = (place.transport || []).map(k => {
+    const i = TAG_LABELS.transport[k]; return i ? `<span class="chip ${i.cls}">${i.emoji} ${i.label}</span>` : '';
+  }).join('');
+  const cs = (place.category || []).map(k => {
+    const i = TAG_LABELS.category[k]; return i ? `<span class="chip ${i.cls}">${i.emoji} ${i.label}</span>` : '';
+  }).join('');
+  return ts + cs;
+}
+
+PLACES.forEach(place => {
+  const color = pinColorFor(place);
+  const iconLetter = place.icon || '•';
+  const html = `<div class="marker-pin" style="background:${color}"><span>${iconLetter}</span></div>`;
+  const icon = L.divIcon({ className:'', html, iconSize:[28,28], iconAnchor:[14,28], popupAnchor:[0,-28] });
+  const m = L.marker([place.lat, place.lng], { icon }).addTo(map);
+  m.bindPopup(`
+    <div class="pop-name">${place.name}</div>
+    <div class="pop-meta">${place.meta || ''}</div>
+    <div class="pop-desc">${place.desc || ''}</div>
+    <div class="pop-tags">${tagChips(place)}</div>
+  `);
+  markers.push({ place, marker: m });
+});
+
+// 중심 마커 자동 팝업
+const center = markers.find(x => x.place.isCenter);
+if (center) center.marker.openPopup();
+
+// ── 카드 리스트 빌드 (사이드) ──
+const listEl = document.getElementById('place-list');
+function buildList(filteredPlaces) {
+  listEl.innerHTML = '';
+  if (!filteredPlaces.length) {
+    listEl.innerHTML = `<div style="padding:20px; text-align:center; color:var(--muted); font-size:14px;">선택한 조건에 해당하는 장소가 없어요.</div>`;
+    return;
+  }
+  filteredPlaces.forEach(({place, marker}) => {
+    const card = document.createElement('div');
+    card.className = 'place-card';
+    card.innerHTML = `
+      <div class="name">${place.name}</div>
+      <div class="meta">${place.meta || ''}</div>
+      <div class="tags">${tagChips(place)}</div>
+    `;
+    card.onclick = () => {
+      map.flyTo([place.lat, place.lng], 14, { duration: 0.7 });
+      setTimeout(() => marker.openPopup(), 750);
+    };
+    listEl.appendChild(card);
+  });
+}
+
+// ── 필터 적용 ──
+function matches(place) {
+  if (place.isCenter) return true;
+  const tx = state.transport, ct = state.category;
+  if (tx.size > 0) {
+    const has = (place.transport || []).some(t => tx.has(t));
+    if (!has) return false;
+  }
+  if (ct.size > 0) {
+    const has = (place.category || []).some(c => ct.has(c));
+    if (!has) return false;
+  }
+  return true;
+}
+
+function applyFilter() {
+  const filtered = markers.filter(({place}) => matches(place));
+  // 마커 표시/숨김
+  markers.forEach(({place, marker}) => {
+    if (matches(place)) {
+      if (!map.hasLayer(marker)) marker.addTo(map);
+    } else {
+      if (map.hasLayer(marker)) map.removeLayer(marker);
+    }
+  });
+  // 리스트 업데이트
+  buildList(filtered);
+  // 요약
+  const sum = document.getElementById('filter-summary');
+  const totalNonCenter = markers.filter(x => !x.place.isCenter).length;
+  const shownNonCenter = filtered.filter(x => !x.place.isCenter).length;
+  sum.textContent = `${totalNonCenter}곳 중 ${shownNonCenter}곳 표시`;
+}
+
+applyFilter();
+</script>
+</body>
+</html>
