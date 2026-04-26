@@ -313,7 +313,7 @@ const PLACES = [
     transport: ["car", "marta"],
     category: ["food", "korea", "shop"],
     meta: "차로 20분 · 🚇 Doraville 역",
-    desc: "H Mart, Super H Mart, 한식당 밀집. 가까운 한인타운.<br/><br/>🚇 <b>MARTA Gold Line 종점</b> Doraville 역, 차 없는 신입생도 장보러 갈 수 있어요.",
+    desc: "H Mart, Mega Mart, 한식당 밀집. 가까운 한인타운.<br/><br/>🚇 <b>MARTA Gold Line 종점</b> Doraville 역, 차 없는 신입생도 장보러 갈 수 있어요.",
   },
   {
     name: "Duluth (둘루쓰)",
@@ -321,7 +321,7 @@ const PLACES = [
     transport: ["car"],
     category: ["food", "korea", "shop"],
     meta: "차로 30분",
-    desc: "애틀랜타 한인 커뮤니티의 중심. H Mart 대형, 한식·중식·분식 다 있음.",
+    desc: "애틀랜타 한인 커뮤니티의 중심. H Mart, Mega Mart 대형, 한식·중식·분식 다 있음.",
   },
   {
     name: "Suwanee (스와니)",
