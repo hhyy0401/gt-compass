@@ -344,7 +344,8 @@ function applyFoodFilter() {
       foodCluster.removeLayer(marker);
     }
   });
-  document.getElementById('food-summary').textContent = `${FOOD_PLACES.length}곳 중 ${shown}곳 표시`;
+  const totalPins = foodMarkers.length;
+  document.getElementById('food-summary').textContent = `총 ${FOOD_PLACES.length}곳 (체인 지점 포함 ${totalPins}핀) · ${shown}핀 표시`;
 }
 applyFoodFilter();
 </script>

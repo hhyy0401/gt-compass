@@ -20,6 +20,7 @@ const FOOD_PLACES = [
   { type:"cafe", name:"Mend Coffee",            lat:33.8545, lng:-84.3826, tags:["coffee"],          note:"Buckhead" },
   { type:"cafe", name:"Chattahoochee Coffee Co.", lat:33.7868, lng:-84.4139, tags:["vibe","study"],  note:"Westside",
     chainLocations:[ {lat:33.8966, lng:-84.4452, area:"Riverside"} ]},
+  { type:"cafe", name:"GONGGAN ATL",            lat:33.9756, lng:-84.1602, tags:["new","vibe"],      note:"Duluth, 신상" },
 
   // ── 🍴 맛집 ─────
   { type:"food", name:"Rumi's Kitchen",         lat:33.7868, lng:-84.3829, tags:["persian"],         note:"Colony Square",
@@ -84,6 +85,10 @@ const FOOD_PLACES = [
   { type:"food", name:"Park 27",                lat:33.7802, lng:-84.3874, tags:["korean"],          note:"Midtown" },
   { type:"food", name:"Pho King",               lat:33.7802, lng:-84.3875, tags:["vietnamese"],      note:"Midtown" },
   { type:"food", name:"New Realm Brewing",      lat:33.7705, lng:-84.3624, tags:["bar"],             note:"Beltline, 브루어리" },
+  { type:"food", name:"Daebal House 2 (대발이네 2)", lat:33.9691, lng:-84.1428, tags:["korean"],     note:"Duluth" },
+  { type:"food", name:"한신포차",                lat:33.9606, lng:-84.1313, tags:["korean"],          note:"Duluth" },
+  { type:"food", name:"THE 901",                lat:33.9575, lng:-84.1288, tags:["korean"],          note:"Duluth" },
+  { type:"food", name:"Bread and Butterfly",    lat:33.7624, lng:-84.3582, tags:["brunch"],          note:"Inman Park" },
 
   // ── 🍰 디저트 ─────
   { type:"dessert", name:"Little Tart Bakery",  lat:33.7553, lng:-84.3636, tags:["bakery"],          note:"Krog Street",
@@ -102,7 +107,9 @@ const FOOD_PLACES = [
   { type:"dessert", name:"Cafe Comma",          lat:33.8653, lng:-84.4727, tags:["bakery"],          note:"Vinings/Cobb, 한국 베이커리" },
   { type:"dessert", name:"Breadville",          lat:34.0248, lng:-84.0445, tags:["bakery"],          note:"Suwanee, 한국 베이커리" },
   { type:"dessert", name:"Chicha San Chen",     lat:33.9588, lng:-84.1344, tags:["bubbletea"],       note:"Duluth, 버블티" },
-  { type:"dessert", name:"Molly Tea",           lat:33.9576, lng:-84.1337, tags:["bubbletea"],       note:"Duluth, 버블티" },
+  { type:"dessert", name:"Molly Tea",           lat:33.9576, lng:-84.1337, tags:["bubbletea"],       note:"Duluth, 버블티",
+    chainLocations:[ {lat:33.9062, lng:-84.2896, area:"Doraville"} ]},
+  { type:"dessert", name:"손커피 (Son Coffee)",  lat:33.9617, lng:-84.1345, tags:["shavedice"],      note:"Duluth, 빙수" },
   { type:"dessert", name:"Arte",                lat:33.9521, lng:-84.1460, tags:["shavedice"],       note:"Duluth, 빙수" },
   { type:"dessert", name:"Two Ha's",            lat:33.9734, lng:-84.1566, tags:["shavedice"],       note:"Duluth, 빙수" },
   { type:"dessert", name:"PopUp Bagels",        lat:33.7570, lng:-84.3663, tags:["bagel"],           note:"Beltline" },
