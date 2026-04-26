@@ -1,0 +1,408 @@
+{
+  "fetchedAt": "2026-04-26T15:54:19.657956Z",
+  "sourceStatus": {
+    "braves": "ok (8)",
+    "aso": "ok (20)",
+    "high": "ok (11)",
+    "kpop": "ok (5)"
+  },
+  "count": 44,
+  "events": [
+    {
+      "id": "aso-vvG1zZ_dR4GQkJ",
+      "title": "🎻 The Georgia Boy Choir International Festival",
+      "start": "2026-04-26T20:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/the-georgia-boy-choir-international-festival-atlanta-georgia-04-26-2026/event/0E00643BD531A1A6",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZbcJN8dHB",
+      "title": "🎻 America@250: Spano conducts Rachmaninoff",
+      "start": "2026-05-01T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/america250-spano-conducts-rachmaninoff-atlanta-georgia-04-30-2026/event/0E0062D9A3403F3A",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZbcJN8SW6",
+      "title": "🎻 America@250: Spano conducts Rachmaninoff",
+      "start": "2026-05-03T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/america250-spano-conducts-rachmaninoff-atlanta-georgia-05-02-2026/event/0E0062D9A3433F47",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZbcJNDNTV",
+      "title": "🎻 America@250: Spano Conducts Bernstein",
+      "start": "2026-05-08T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/america250-spano-conducts-bernstein-atlanta-georgia-05-07-2026/event/0E0062D9A3EE3FF4",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "high-secondsun-2026-05-10",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2026-05-10",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "aso-vvG1zZbcJNHSTU",
+      "title": "🎻 America@250: Spano Conducts Bernstein",
+      "start": "2026-05-10T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/america250-spano-conducts-bernstein-atlanta-georgia-05-09-2026/event/0E0062D9A3F33FF6",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZbcJ0c0A5",
+      "title": "🎻 Mozart's Jupiter Symphony + ASO ",
+      "start": "2026-05-15T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/mozarts-jupiter-symphony-aso-atlanta-georgia-05-14-2026/event/0E0062D9A4B6414B",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "braves-824924",
+      "title": "⚾ Braves vs Boston Red Sox (Sat 🎁)",
+      "start": "2026-05-16",
+      "category": "braves",
+      "source": "MLB",
+      "url": "https://www.mlb.com/braves/tickets/promotions",
+      "desc": "Truist Park · 7:15 PM · 토요일은 giveaway 가능성 높음"
+    },
+    {
+      "id": "aso-vvG1zZbcJ0m0A3",
+      "title": "🎻 Mozart's Jupiter Symphony + ASO ",
+      "start": "2026-05-16T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/mozarts-jupiter-symphony-aso-atlanta-georgia-05-15-2026/event/0E0062D9A4BA4152",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "kpop-rZ7HnEZ1AfqoOK",
+      "title": "🎤 YVES TOUR 2026: THE AMERICAS",
+      "start": "2026-05-17T23:30:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketweb.com/event/yves-tour-2026-the-americas-center-stage-theater-tickets/14751813",
+      "desc": "Center Stage Theater"
+    },
+    {
+      "id": "kpop-vvG1zZ_kJfJUi2",
+      "title": "🎤 YVES TOUR 2026: THE AMERICAS",
+      "start": "2026-05-17T23:30:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/yves-tour-2026-the-americas-atlanta-georgia-05-17-2026/event/0E006469949B6B0F",
+      "desc": "Center Stage Theater"
+    },
+    {
+      "id": "braves-824920",
+      "title": "⚾ Braves vs Washington Nationals (Sat 🎁)",
+      "start": "2026-05-23",
+      "category": "braves",
+      "source": "MLB",
+      "url": "https://www.mlb.com/braves/tickets/promotions",
+      "desc": "Truist Park · 4:10 PM · 토요일은 giveaway 가능성 높음"
+    },
+    {
+      "id": "aso-vvG1zZbReguxIK",
+      "title": "🎻 Georgia Symphony Orchestra: 75th Anniversary Concert",
+      "start": "2026-05-23T23:30:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/georgia-symphony-orchestra-75th-anniversary-concert-atlanta-georgia-05-23-2026/event/0E0062F0B5362A13",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZbcJpxxJz",
+      "title": "🎻 Stutzmann Conducts Tchaikovsky",
+      "start": "2026-05-29T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/stutzmann-conducts-tchaikovsky-atlanta-georgia-05-28-2026/event/0E0062D9968A29B8",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_kMxXujE",
+      "title": "🎻 Stutzmann Conducts Tchaikovsky",
+      "start": "2026-05-30T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/stutzmann-conducts-tchaikovsky-atlanta-georgia-05-29-2026/event/0E00646DE2F8D727",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZbcJpNeIP",
+      "title": "🎻 Stutzmann Conducts Tchaikovsky",
+      "start": "2026-05-31T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/stutzmann-conducts-tchaikovsky-atlanta-georgia-05-30-2026/event/0E0062D9968C2A25",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZbcJ9rwz5",
+      "title": "🎻 Stutzmann + Mahler's Second Symphony",
+      "start": "2026-06-05T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/stutzmann-mahlers-second-symphony-atlanta-georgia-06-04-2026/event/0E0062D9977B2E0B",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "braves-824915",
+      "title": "⚾ Braves vs Pittsburgh Pirates (Sat 🎁)",
+      "start": "2026-06-06",
+      "category": "braves",
+      "source": "MLB",
+      "url": "https://www.mlb.com/braves/tickets/promotions",
+      "desc": "Truist Park · 4:10 PM · 토요일은 giveaway 가능성 높음"
+    },
+    {
+      "id": "kpop-vvG1zZ_kUE_b2x",
+      "title": "🎤 KPop Night",
+      "start": "2026-06-06T01:00:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/kpop-night-atlanta-georgia-06-05-2026/event/0E00646DA76583E2",
+      "desc": "Vinyl"
+    },
+    {
+      "id": "aso-vvG1zZbcJ9L3zm",
+      "title": "🎻 Stutzmann + Mahler's Second Symphony",
+      "start": "2026-06-07T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/stutzmann-mahlers-second-symphony-atlanta-georgia-06-06-2026/event/0E0062D9977D2E2E",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZbcJ9OeyX",
+      "title": "🎻 Stutzmann + Mahler's Second Symphony",
+      "start": "2026-06-07T19:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/stutzmann-mahlers-second-symphony-atlanta-georgia-06-07-2026/event/0E0062D997802E7E",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_7VGx0DY",
+      "title": "🎻 Max Richter with the American Contemporary Music Ensemble",
+      "start": "2026-06-12T23:30:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/max-richter-with-the-american-contemporary-atlanta-georgia-06-12-2026/event/0E00644D0C8A4EF0",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "high-secondsun-2026-06-14",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2026-06-14",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "braves-824909",
+      "title": "⚾ Braves vs Milwaukee Brewers (Sat 🎁)",
+      "start": "2026-06-20",
+      "category": "braves",
+      "source": "MLB",
+      "url": "https://www.mlb.com/braves/tickets/promotions",
+      "desc": "Truist Park · 4:10 PM · 토요일은 giveaway 가능성 높음"
+    },
+    {
+      "id": "braves-824903",
+      "title": "⚾ Braves vs New York Mets (Sat 🎁)",
+      "start": "2026-07-04",
+      "category": "braves",
+      "source": "MLB",
+      "url": "https://www.mlb.com/braves/tickets/promotions",
+      "desc": "Truist Park · 8:08 PM · 토요일은 giveaway 가능성 높음"
+    },
+    {
+      "id": "kpop-vvG1zZ_FLbemAt",
+      "title": "🎤 KPOP CLUB NIGHT WITH DJ CHEN | 18+",
+      "start": "2026-07-11T01:00:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/kpop-club-night-with-dj-chen-atlanta-georgia-07-10-2026/event/0E006487D80AE169",
+      "desc": "The Masquerade - Hell"
+    },
+    {
+      "id": "high-secondsun-2026-07-12",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2026-07-12",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "braves-824899",
+      "title": "⚾ Braves vs Texas Rangers (Sat 🎁)",
+      "start": "2026-07-18",
+      "category": "braves",
+      "source": "MLB",
+      "url": "https://www.mlb.com/braves/tickets/promotions",
+      "desc": "Truist Park · 4:10 PM · 토요일은 giveaway 가능성 높음"
+    },
+    {
+      "id": "braves-824890",
+      "title": "⚾ Braves vs Washington Nationals (Sat 🎁)",
+      "start": "2026-08-01",
+      "category": "braves",
+      "source": "MLB",
+      "url": "https://www.mlb.com/braves/tickets/promotions",
+      "desc": "Truist Park · 7:15 PM · 토요일은 giveaway 가능성 높음"
+    },
+    {
+      "id": "high-secondsun-2026-08-09",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2026-08-09",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "kpop-vvG1zZ_kCl3nn0",
+      "title": "🎤 i-dle WORLD TOUR [Syncopation]",
+      "start": "2026-08-09T00:00:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/idle-world-tour-syncopation-atlanta-georgia-08-08-2026/event/0E006463AB4AAAA4",
+      "desc": "State Farm Arena"
+    },
+    {
+      "id": "braves-824884",
+      "title": "⚾ Braves vs Arizona Diamondbacks (Sat 🎁)",
+      "start": "2026-08-15",
+      "category": "braves",
+      "source": "MLB",
+      "url": "https://www.mlb.com/braves/tickets/promotions",
+      "desc": "Truist Park · 7:15 PM · 토요일은 giveaway 가능성 높음"
+    },
+    {
+      "id": "high-secondsun-2026-09-13",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2026-09-13",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "aso-vvG1zZbUD-dGUS",
+      "title": "🎻 La La Land: Live With The Atlanta Symphony Orchestra",
+      "start": "2026-09-26T23:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/la-la-land-live-with-the-atlanta-georgia-09-26-2026/event/0E00636EE10CCDB3",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZbUDPTc6A",
+      "title": "🎻 La La Land: Live With The Atlanta Symphony Orchestra",
+      "start": "2026-09-27T19:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/la-la-land-live-with-the-atlanta-georgia-09-27-2026/event/0E00636EE5FED1C5",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "high-secondsun-2026-10-11",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2026-10-11",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "high-secondsun-2026-11-08",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2026-11-08",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "aso-vvG1zZ_aQnj5YI",
+      "title": "🎻 Art Space Production Presents Swan Lake: Symphony of Lights",
+      "start": "2026-11-22T21:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/art-space-production-presents-swan-lake-atlanta-georgia-11-22-2026/event/0E006496AA70BC28",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_klOdqdG",
+      "title": "🎻 Elf In Concert: Live With The Atlanta Symphony Orchestra",
+      "start": "2026-11-29T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/elf-in-concert-live-with-the-atlanta-georgia-11-28-2026/event/0E00646AE00DD0CC",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_klO7udo",
+      "title": "🎻 Elf In Concert: Live With The Atlanta Symphony Orchestra",
+      "start": "2026-11-29T20:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/elf-in-concert-live-with-the-atlanta-georgia-11-29-2026/event/0E00646AE010D0D1",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "high-secondsun-2026-12-13",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2026-12-13",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "high-secondsun-2027-01-10",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2027-01-10",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "high-secondsun-2027-02-14",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2027-02-14",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "high-secondsun-2027-03-14",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2027-03-14",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    }
+  ]
+}

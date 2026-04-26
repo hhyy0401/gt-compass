@@ -1,0 +1,176 @@
+// scripts/scrape-events.mjs
+// 매일 GitHub Actions에서 실행되어 events-auto.json을 갱신.
+//
+// 환경 변수:
+//   TICKETMASTER_API_KEY  Ticketmaster 키 (K-pop, ASO용)
+//
+// 출력: events-auto.json
+//   { fetchedAt, sourceStatus, events: [...] }
+
+import { writeFile } from 'node:fs/promises';
+
+const KEY = process.env.TICKETMASTER_API_KEY || '';
+
+// ── 1. Atlanta Braves (MLB Stats API) — 토요일 홈경기만 ─────
+async function fetchBraves() {
+  const today = new Date();
+  const start = today.toISOString().slice(0, 10);
+  const end = new Date(today.getTime() + 120 * 86400000).toISOString().slice(0, 10);
+  const url = `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=144&startDate=${start}&endDate=${end}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Braves HTTP ${res.status}`);
+  const data = await res.json();
+  const events = [];
+  for (const d of data.dates || []) {
+    for (const g of d.games || []) {
+      if (g.teams?.home?.team?.name !== 'Atlanta Braves') continue;
+      const gd = g.gameDate ? new Date(g.gameDate) : null;
+      if (!gd) continue;
+      const dayET = gd.toLocaleDateString('en-US', { weekday: 'short', timeZone: 'America/New_York' });
+      if (dayET !== 'Sat') continue;
+      const dateStr = gd.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+      const localTime = gd.toLocaleTimeString('en-US', {
+        hour: 'numeric', minute: '2-digit', hour12: true, timeZone: 'America/New_York',
+      });
+      events.push({
+        id: `braves-${g.gamePk}`,
+        title: `⚾ Braves vs ${g.teams.away.team.name} (Sat 🎁)`,
+        start: dateStr,
+        category: 'braves',
+        source: 'MLB',
+        url: 'https://www.mlb.com/braves/tickets/promotions',
+        desc: `Truist Park · ${localTime} · 토요일은 giveaway 가능성 높음`,
+      });
+    }
+  }
+  return events;
+}
+
+// ── 2. Atlanta Symphony Hall (Ticketmaster venueId) ─────
+async function fetchASO() {
+  if (!KEY) throw new Error('TICKETMASTER_API_KEY missing');
+  const url = `https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAJedlA&size=100&sort=date,asc&apikey=${KEY}`;
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`ASO HTTP ${r.status}: ${(await r.text()).slice(0, 100)}`);
+  const j = await r.json();
+  const items = j?._embedded?.events || [];
+  const all = items.map(ev => {
+    const start = ev.dates?.start?.dateTime || ev.dates?.start?.localDate;
+    const cls = ev.classifications?.[0] || {};
+    const genre = cls.genre?.name || '';
+    const isClassical = genre === 'Classical';
+    return {
+      id: `aso-${ev.id}`,
+      title: isClassical ? `🎻 ${ev.name}` : `🎵 ${ev.name}`,
+      start,
+      category: 'aso',
+      source: 'Ticketmaster',
+      url: ev.url,
+      desc: `Atlanta Symphony Hall · ${genre || 'Music'}`,
+      _classical: isClassical,
+    };
+  }).filter(e => e.start);
+  const classical = all.filter(e => e._classical);
+  return (classical.length ? classical : all).map(({ _classical, ...rest }) => rest);
+}
+
+// ── 3. High Museum (Second Sundays, 12개월) ─────
+function buildHighMuseum(months = 12) {
+  const events = [];
+  const now = new Date();
+  for (let m = 0; m < months; m++) {
+    const d = new Date(now.getFullYear(), now.getMonth() + m, 1);
+    const firstSundayOffset = (7 - d.getDay()) % 7;
+    const secondSundayDate = 1 + firstSundayOffset + 7;
+    const dt = new Date(d.getFullYear(), d.getMonth(), secondSundayDate);
+    if (dt < new Date(now.toDateString())) continue;
+    const iso = dt.toISOString().slice(0, 10);
+    events.push({
+      id: `high-secondsun-${iso}`,
+      title: '🎨 High Museum 무료 입장 (Second Sundays)',
+      start: iso,
+      category: 'high',
+      source: 'high.org',
+      url: 'https://high.org/visit',
+      desc: '매월 둘째 일요일 무료 입장 (사전 예약 권장).',
+    });
+  }
+  return events;
+}
+
+// ── 4. K-pop (Ticketmaster) ─────
+async function fetchKpop() {
+  if (!KEY) throw new Error('TICKETMASTER_API_KEY missing');
+  const queries = [
+    'classificationName=K-Pop',
+    'keyword=k-pop',
+    'keyword=kpop',
+  ];
+  const seen = new Set();
+  const out = [];
+  for (const qs of queries) {
+    const url = `https://app.ticketmaster.com/discovery/v2/events.json?${qs}&stateCode=GA&size=50&sort=date,asc&apikey=${KEY}`;
+    const r = await fetch(url);
+    if (!r.ok) continue;
+    const j = await r.json();
+    const items = j?._embedded?.events || [];
+    for (const ev of items) {
+      if (seen.has(ev.id)) continue;
+      seen.add(ev.id);
+      const start = ev.dates?.start?.dateTime || ev.dates?.start?.localDate;
+      if (!start) continue;
+      out.push({
+        id: `kpop-${ev.id}`,
+        title: `🎤 ${ev.name}`,
+        start,
+        category: 'kpop',
+        source: 'Ticketmaster',
+        url: ev.url,
+        desc: ev._embedded?.venues?.[0]?.name || '',
+      });
+    }
+  }
+  return out;
+}
+
+// ── 메인 ─────
+async function main() {
+  const sources = {
+    braves: fetchBraves,
+    aso: fetchASO,
+    high: () => Promise.resolve(buildHighMuseum(12)),
+    kpop: fetchKpop,
+  };
+  const results = {};
+  const all = [];
+  for (const [name, fn] of Object.entries(sources)) {
+    try {
+      const events = await fn();
+      all.push(...events);
+      results[name] = `ok (${events.length})`;
+      console.log(`[${name}] ok ${events.length}`);
+    } catch (e) {
+      results[name] = `failed: ${e.message}`;
+      console.warn(`[${name}] failed:`, e.message);
+    }
+  }
+  // 중복 제거
+  const seen = new Set();
+  const events = all.filter(e => {
+    if (!e?.id || seen.has(e.id)) return false;
+    seen.add(e.id);
+    return true;
+  });
+  events.sort((a, b) => (a.start || '').localeCompare(b.start || ''));
+
+  const output = {
+    fetchedAt: new Date().toISOString(),
+    sourceStatus: results,
+    count: events.length,
+    events,
+  };
+  await writeFile('events-auto.json', JSON.stringify(output, null, 2) + '\n');
+  console.log(`\nTotal: ${events.length} events written to events-auto.json`);
+}
+
+main().catch(e => { console.error(e); process.exit(1); });
