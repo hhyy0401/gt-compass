@@ -60,11 +60,12 @@
       <div class="filter-row" id="food-tag-cafe"></div>
     </div>
     <div class="filter-group" data-type="dessert">
-      <div class="label" style="color:#db2777">🍰 디저트 태그</div>
+      <div class="label" style="color:#d97706">🍰 디저트 태그</div>
       <div class="filter-row" id="food-tag-dessert">
         <button class="filter-clear" id="food-clear">전체 초기화</button>
       </div>
     </div>
+    <div class="filter-summary" style="font-size:11.5px; color:var(--muted); margin-top:6px;">💡 핀 클릭하면 구글맵 길찾기 링크가 떠요</div>
     <div class="filter-summary" id="food-summary"></div>
   </div>
 
@@ -149,11 +150,14 @@ PLACES.forEach(place => {
   const html = `<div class="marker-pin" style="background:${color}"><span>${iconLetter}</span></div>`;
   const icon = L.divIcon({ className:'', html, iconSize:[28,28], iconAnchor:[14,28], popupAnchor:[0,-28] });
   const m = L.marker([place.lat, place.lng], { icon }).addTo(map);
+  const gmap = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place.name + ' Atlanta')}`;
+  const gmapLink = place.isCenter ? '' : `<a href="${gmap}" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#1a73e8;color:white;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">🗺️ 구글맵에서 열기 ↗</a>`;
   m.bindPopup(`
     <div class="pop-name">${place.name}</div>
     <div class="pop-meta">${place.meta || ''}</div>
     <div class="pop-desc">${place.desc || ''}</div>
     <div class="pop-tags">${tagChips(place)}</div>
+    ${gmapLink}
   `);
   markers.push({ place, marker: m });
 });
@@ -243,10 +247,12 @@ function makePin(p) {
     const info = FOOD_TAGS[p.type][t];
     return info ? `<span class="chip" style="background:#f1f1ee;font-size:11px;padding:2px 8px;">${info.emoji} ${info.label}</span>` : '';
   }).join(' ');
+  const gmapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name + ' Atlanta')}`;
   m.bindPopup(`
     <div class="pop-name">${p.name}</div>
     <div class="pop-meta">${FOOD_TYPE_LABELS[p.type].label} · ${p.note || ''}</div>
     <div class="pop-tags">${tagHtml}</div>
+    <a href="${gmapUrl}" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#1a73e8;color:white;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">🗺️ 구글맵에서 열기 ↗</a>
   `);
   return m;
 }
