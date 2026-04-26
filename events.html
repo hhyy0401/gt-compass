@@ -160,14 +160,12 @@ function applyEvents(events, isDemo, meta) {
   refresh();
   const status = document.getElementById('cal-status');
   if (isDemo) {
-    status.innerHTML = `<span class="demo-pill">예시</span>로컬 미리보기 — 실제 데이터는 Vercel 배포 후 자동으로 채워집니다.`;
+    status.innerHTML = `<span class="demo-pill">예시</span>로컬 미리보기, 실제 데이터는 Vercel 배포 후 자동으로 채워집니다.`;
   } else {
     const fetched = meta?.fetchedAt ? new Date(meta.fetchedAt).toLocaleString('ko-KR') : '';
     const ss = meta?.sourceStatus || {};
-    const failed = Object.entries(ss).filter(([,v]) => v !== 'fulfilled').map(([k]) => k);
-    status.textContent =
-      `${meta.count}개 이벤트 · 마지막 업데이트 ${fetched}` +
-      (failed.length ? ` · ⚠ 실패: ${failed.join(', ')}` : '');
+    const summary = Object.entries(ss).map(([k,v]) => `${k} ${v}`).join(', ');
+    status.textContent = `${meta.count}개 이벤트 · ${fetched} · ${summary}`;
   }
 }
 
@@ -206,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     eventDidMount: (info) => {
       const desc = info.event.extendedProps.desc || '';
       const src = info.event.extendedProps.source || '';
-      info.el.title = `${info.event.title}\n${desc}\n— ${src}`;
+      info.el.title = `${info.event.title}\n${desc}\n${src}`;
     },
   });
   calendar.render();

@@ -1,4 +1,4 @@
-// Atlanta Overview — 장소 데이터
+// Atlanta Overview, 장소 데이터
 // transport: walk | marta | car | stinger
 // category: food | shop | nature | art | sport | photo | korea | active
 
@@ -174,7 +174,7 @@ const PLACES = [
     transport: ["car", "marta"],
     category: ["shop", "food"],
     meta: "차로 15-20분 · 🚇 Lenox 역",
-    desc: "벅헤드 핵심 쇼핑. Lenox는 메이시스 등 메인스트림, Phipps는 더 럭셔리 (구찌, 루이비통). 같은 블록.<br/><br/>🚇 <b>MARTA Red Line</b> Lenox 역에서 도보 1분 — 차 없어도 OK.",
+    desc: "벅헤드 핵심 쇼핑. Lenox는 메이시스 등 메인스트림, Phipps는 더 럭셔리 (구찌, 루이비통). 같은 블록.<br/><br/>🚇 <b>MARTA Red Line</b> Lenox 역에서 도보 1분, 차 없어도 OK.",
   },
   {
     name: "Truist Park",
@@ -226,7 +226,7 @@ const PLACES = [
     transport: ["car", "marta"],
     category: ["food", "korea", "shop"],
     meta: "차로 20분 · 🚇 Doraville 역",
-    desc: "H Mart, Super H Mart, 한식당 밀집. 가까운 한인타운.<br/><br/>🚇 <b>MARTA Gold Line 종점</b> Doraville 역 — 차 없는 신입생도 장보러 갈 수 있어요.",
+    desc: "H Mart, Super H Mart, 한식당 밀집. 가까운 한인타운.<br/><br/>🚇 <b>MARTA Gold Line 종점</b> Doraville 역, 차 없는 신입생도 장보러 갈 수 있어요.",
   },
   {
     name: "Duluth (둘루쓰)",
