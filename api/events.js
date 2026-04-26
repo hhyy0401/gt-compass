@@ -55,47 +55,33 @@ async function fetchBraves() {
   }
 }
 
-// ── 2. Atlanta Symphony Orchestra
-//    ASO는 Tessitura 자체 티케팅이라 Ticketmaster에 거의 없음.
-//    aso.org는 봇 차단(406)이라 스크레이핑 불가.
-//    → keyword 광범위 검색으로 일부 잡고, 나머지는 events-manual.json fallback.
+// ── 2. Atlanta Symphony Hall (ASO + 클래식 공연)
+//    venueId(KovZpZAJedlA) + Classical genre 필터로 ASO 공연 잡기
 async function fetchASO() {
   const key = process.env.TICKETMASTER_API_KEY;
   if (!key) return [];
   try {
-    const queries = [
-      'keyword=Atlanta+Symphony',
-      'keyword=Symphony+Hall+Atlanta',
-      'keyword=ASO',
-    ];
-    const seen = new Set();
-    const out = [];
-    for (const qs of queries) {
-      const url = `https://app.ticketmaster.com/discovery/v2/events.json?${qs}&stateCode=GA&size=50&sort=date,asc&apikey=${key}`;
-      const r = await fetch(url);
-      if (!r.ok) continue;
-      const j = await r.json();
-      const items = j?._embedded?.events || [];
-      for (const ev of items) {
-        if (seen.has(ev.id)) continue;
-        seen.add(ev.id);
-        const start = ev.dates?.start?.dateTime || ev.dates?.start?.localDate;
-        if (!start) continue;
-        const venue = ev._embedded?.venues?.[0]?.name || '';
-        // 진짜 ASO 공연만 — 이름/장소에 Symphony 포함
-        if (!/symphony/i.test(`${ev.name} ${venue}`)) continue;
-        out.push({
-          id: `aso-${ev.id}`,
-          title: `🎻 ${ev.name}`,
-          start,
-          category: 'aso',
-          source: 'Ticketmaster',
-          url: ev.url,
-          desc: venue,
-        });
-      }
-    }
-    return out;
+    const url = `https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAJedlA&size=100&sort=date,asc&apikey=${key}`;
+    const r = await fetch(url);
+    if (!r.ok) return [];
+    const j = await r.json();
+    const items = j?._embedded?.events || [];
+    return items.map(ev => {
+      const start = ev.dates?.start?.dateTime || ev.dates?.start?.localDate;
+      const cls = ev.classifications?.[0] || {};
+      const genre = cls.genre?.name || '';
+      // Classical만 (ASO/오케스트라/클래식 공연)
+      if (genre !== 'Classical') return null;
+      return {
+        id: `aso-${ev.id}`,
+        title: `🎻 ${ev.name}`,
+        start,
+        category: 'aso',
+        source: 'Ticketmaster',
+        url: ev.url,
+        desc: 'Atlanta Symphony Hall',
+      };
+    }).filter(e => e && e.start);
   } catch (e) {
     console.warn('ASO fetch failed:', e.message);
     return [];
