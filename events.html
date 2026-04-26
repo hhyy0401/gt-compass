@@ -169,7 +169,7 @@ function applyEvents(events, isDemo, meta) {
     const fetched = meta?.fetchedAt ? new Date(meta.fetchedAt).toLocaleDateString('ko-KR') : '';
     const labels = { braves:'⚾ Braves', worldcup:'⚽ World Cup', aso:'🎻 Symphony', musical:'🎭 Musical', high:'🎨 High Museum', kpop:'🎤 K-pop' };
     const counts = {};
-    for (const e of events) counts[e.extendedProps.category] = (counts[e.extendedProps.category] || 0) + 1;
+    for (const e of events) counts[e.category] = (counts[e.category] || 0) + 1;
     const summary = Object.entries(labels)
       .filter(([k]) => counts[k])
       .map(([k, lbl]) => `${lbl} ${counts[k]}`)
