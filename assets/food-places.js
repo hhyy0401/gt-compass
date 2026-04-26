@@ -22,7 +22,7 @@ const FOOD_PLACES = [
   { type:"cafe", name:"Chattahoochee Coffee Co.", lat:33.8730, lng:-84.4640, tags:["vibe","study"],  note:"Vinings, 강변 분위기" },
 
   // ── 🍴 맛집 ─────
-  { type:"food", name:"Rumi's Kitchen",         lat:33.7619, lng:-84.3537, tags:["persian"],         note:"Inman Park",
+  { type:"food", name:"Rumi's Kitchen",         lat:33.7868, lng:-84.3829, tags:["persian"],         note:"Colony Square (Midtown)",
     chainLocations:[ {lat:34.0700, lng:-84.2800, area:"Avalon"} ]},
   { type:"food", name:"Cypress",                lat:33.7855, lng:-84.3825, tags:["bar"],             note:"Midtown" },
   { type:"food", name:"Cafe Intermezzo",        lat:33.7837, lng:-84.3833, tags:["italian","brunch"],note:"Midtown",
