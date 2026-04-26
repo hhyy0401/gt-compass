@@ -60,7 +60,7 @@ const FOOD_PLACES = [
   { type:"food", name:"Katsu by Ouzen",         lat:34.0399, lng:-84.0541, tags:["korean","japanese"], note:"Suwanee, 한식 카츠" },
   { type:"food", name:"Wagaya",                 lat:33.7843, lng:-84.3833, tags:["japanese"],        note:"Midtown 이자카야" },
   { type:"food", name:"Golden Buddha",          lat:33.8101, lng:-84.3084, tags:["chinese"],         note:"Cheshire Bridge" },
-  { type:"food", name:"Urban Hai",              lat:34.0029, lng:-84.1446, tags:["chinese"],         note:"Duluth" },
+  { type:"food", name:"Urban Hai",              lat:33.7841, lng:-84.3846, tags:["chinese"],         note:"Midtown" },
   { type:"food", name:"Urban Wu",               lat:33.8730, lng:-84.2960, tags:["chinese"],         note:"Buford Hwy" },
   { type:"food", name:"Murphy's Restaurant",    lat:33.7796, lng:-84.3537, tags:["brunch","american"],note:"Virginia Highland" },
   { type:"food", name:"Srithai",                lat:33.7740, lng:-84.2963, tags:["thai"],            note:"Decatur" },
