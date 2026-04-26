@@ -504,6 +504,128 @@ footer {
   color: var(--muted); font-size: 13px;
 }
 
+/* ── Rank cards (US News 순위) ── */
+.rank-hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 14px;
+  margin: 16px 0 10px;
+}
+.rank-big {
+  background: linear-gradient(135deg, var(--gt-navy) 0%, #001f3a 100%);
+  color: white;
+  padding: 28px 24px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.rank-big::after {
+  content: "🥇"; position: absolute; right: 14px; top: 14px;
+  font-size: 28px; opacity: 0.9;
+}
+.rank-big .num {
+  font-size: 64px; font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--gt-gold), #f5e7b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.04em;
+}
+.rank-big .label {
+  font-size: 18px; font-weight: 600;
+  margin-top: 4px;
+  color: white;
+}
+.rank-big .sub {
+  font-size: 13px; color: #c8d3e3;
+  margin-top: 6px;
+}
+.rank-overall {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 24px 20px;
+  border-radius: 16px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.rank-overall .num {
+  font-size: 56px; font-weight: 800;
+  color: var(--gt-navy);
+  line-height: 1; letter-spacing: -0.04em;
+}
+.rank-overall .label {
+  font-size: 16px; font-weight: 600;
+  color: var(--ink-soft); margin-top: 4px;
+}
+.rank-overall .sub {
+  font-size: 12.5px; color: var(--muted);
+  margin-top: 4px;
+}
+
+.rank-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 6px 0 12px;
+}
+.rank-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 14px 12px;
+  border-radius: 12px;
+  text-align: center;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.rank-card:hover { border-color: var(--gt-gold); transform: translateY(-2px); }
+.rank-card .num {
+  font-size: 28px; font-weight: 800;
+  color: var(--gt-navy);
+  line-height: 1; letter-spacing: -0.025em;
+}
+.rank-card .label {
+  font-size: 12.5px; color: var(--ink-soft);
+  margin-top: 4px; line-height: 1.3;
+}
+@media (max-width: 700px) {
+  .rank-hero { grid-template-columns: 1fr; }
+  .rank-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── GTKSA quick info cards ── */
+.gtksa-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 14px 0 10px;
+}
+.gtksa-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 16px 18px;
+  border-radius: 14px;
+  display: flex; gap: 14px; align-items: flex-start;
+  transition: border-color .15s ease;
+}
+.gtksa-card:hover { border-color: var(--gt-gold); }
+.gtksa-card .icon {
+  font-size: 26px; line-height: 1;
+}
+.gtksa-card .body { flex: 1; }
+.gtksa-card h4 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  color: var(--gt-navy);
+  font-weight: 600;
+}
+.gtksa-card p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+.gtksa-card a { color: var(--gt-navy); font-weight: 600; }
+@media (max-width: 600px) { .gtksa-grid { grid-template-columns: 1fr; } }
+
 /* ── Tables ── */
 table.simple {
   width: 100%;

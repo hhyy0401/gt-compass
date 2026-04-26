@@ -232,14 +232,14 @@ const PLACES = [
     desc: "광장 중심의 작은 가게들. 유럽 같은 분위기. 주말 산책 코스로 굿.",
   },
 
-  // ── Fox Bros @ The Works (Chattahoochee Row) ─────
+  // ── The Works (West Midtown 푸드홀) ─────
   {
-    name: "Fox Bros Bar-B-Q (The Works)",
+    name: "The Works",
     lat: 33.8002, lng: -84.4322,
     transport: ["car"],
-    category: ["food"],
+    category: ["food", "shop"],
     meta: "차로 10분",
-    desc: "Atlanta 대표 BBQ. The Works 푸드홀 안 (204 Chattahoochee Row NW). 양 많고 분위기 좋음.",
+    desc: "West Midtown(Upper Westside)의 분위기 좋은 푸드홀 + 쇼핑 단지. Fox Bros Bar-B-Q, 카페, 부티크. 야외 좌석 많고 한적해서 편함. 204 Chattahoochee Row NW.",
   },
 
   // ── 자연/외곽 ─────────────────────────
@@ -258,6 +258,26 @@ const PLACES = [
     category: ["nature", "active"],
     meta: "차로 20분",
     desc: "강변 트레일(Cochran Shoals)에서 산책/러닝. 여름엔 튜빙(tubing)으로 강 떠내려가는 게 명물.",
+  },
+
+  // ── Lake Lanier ─────
+  {
+    name: "Lake Lanier",
+    lat: 34.2367, lng: -83.9482,
+    transport: ["car"],
+    category: ["nature", "active"],
+    meta: "차로 1시간",
+    desc: "조지아 최대 호수. 보팅, 수영, 비치(Lake Lanier Islands). 여름에 인기. 겨울엔 Magical Nights of Lights 라이트 페스티벌.",
+  },
+
+  // ── North Georgia Premium Outlets (Dawsonville) ─────
+  {
+    name: "North Georgia Premium Outlets",
+    lat: 34.4187, lng: -84.0844,
+    transport: ["car"],
+    category: ["shop"],
+    meta: "차로 1시간 10분",
+    desc: "Dawsonville에 있는 대형 아울렛. Nike, Coach, Polo, Adidas 등 100개 이상 브랜드. Helen 가는 길에 들르기 좋음.",
   },
 
   // ── Day trip (멀지만 가볼만) ─────────────────────────
