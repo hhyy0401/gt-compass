@@ -168,15 +168,34 @@ const PLACES = [
     beltline: "north",
   },
 
-  // ── South Beltline (개발 중) ─────────────────────────
+  // ── South / Southeast Beltline ─────────────────────────
   {
-    name: "Southside Trail (개발 중)",
+    name: "Southeast Trail",
+    lat: 33.7350, lng: -84.3640,
+    transport: ["car", "walk"],
+    category: ["active", "photo"],
+    meta: "Southeast Beltline · 신규 개통 (2026.04)",
+    desc: "Boulevard에서 Glenwood까지 1.2마일. 2026년 4월 17일 개통. Beltline 본선이 이제 14.8마일.",
+    beltline: "south",
+  },
+  {
+    name: "Southside Trail (공사 중)",
     lat: 33.7300, lng: -84.3850,
     transport: ["car"],
     category: ["active"],
-    meta: "South Beltline · 부분 개통",
-    desc: "22마일 풀 루프 완공 시 East ↔ West를 연결합니다.",
+    meta: "South Beltline · 2026 6월 완공 목표",
+    desc: "Segments 2-3은 공사 중. 6월 완공 시 East ↔ West 연결 완료, 총 16.7마일 연속 트레일이 됩니다.",
     beltline: "south",
+  },
+
+  // ── Inman Park ─────────────────────────
+  {
+    name: "Inman Park",
+    lat: 33.7619, lng: -84.3537,
+    transport: ["car", "marta"],
+    category: ["food", "shop", "photo"],
+    meta: "차로 12분 · 🚇 Inman Park 역",
+    desc: "예쁜 빅토리안 주택과 트렌디 식당이 모인 동네. Beltline 옆이고 Krog Street Market 인접. Little Five Points와도 가까워요.",
   },
 
   // ── 차로 가까운 ─────────────────────────
