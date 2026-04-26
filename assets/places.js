@@ -131,7 +131,7 @@ const PLACES = [
   // ── West Beltline ─────────────────────────
   {
     name: "Lee + White",
-    lat: 33.7404, lng: -84.4143,
+    lat: 33.7256, lng: -84.4221,
     transport: ["car"],
     category: ["food"],
     meta: "차로 10분 · West Beltline",
@@ -273,7 +273,7 @@ const PLACES = [
   // ── North Georgia Premium Outlets (Dawsonville) ─────
   {
     name: "North Georgia Premium Outlets",
-    lat: 34.4187, lng: -84.0844,
+    lat: 34.3570, lng: -84.0480,
     transport: ["car"],
     category: ["shop"],
     meta: "차로 1시간 10분",
@@ -283,7 +283,7 @@ const PLACES = [
   // ── Day trip (멀지만 가볼만) ─────────────────────────
   {
     name: "Athens (UGA)",
-    lat: 33.9519, lng: -83.3576,
+    lat: 33.9480, lng: -83.3773,
     transport: ["car"],
     category: ["food", "photo"],
     meta: "차로 1시간 15분",

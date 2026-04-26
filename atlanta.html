@@ -84,6 +84,7 @@ const state = {
 // ── 필터 버튼 렌더 ──
 function renderFilterButtons(groupKey, containerId) {
   const container = document.getElementById(containerId);
+  const clearBtn = container.querySelector('.filter-clear');
   const labels = TAG_LABELS[groupKey];
   Object.entries(labels).forEach(([key, info]) => {
     const btn = document.createElement('button');
@@ -97,7 +98,8 @@ function renderFilterButtons(groupKey, containerId) {
       else { set.add(key); btn.classList.add('active'); }
       applyFilter();
     };
-    container.appendChild(btn);
+    if (clearBtn) container.insertBefore(btn, clearBtn);
+    else container.appendChild(btn);
   });
 }
 renderFilterButtons('transport', 'filter-transport');
