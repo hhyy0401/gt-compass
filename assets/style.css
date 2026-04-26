@@ -575,6 +575,7 @@ footer {
   border-radius: 12px;
   text-align: center;
   transition: border-color .15s ease, transform .15s ease;
+  position: relative;
 }
 .rank-card:hover { border-color: var(--gt-gold); transform: translateY(-2px); }
 .rank-card .num {
@@ -586,6 +587,24 @@ footer {
   font-size: 12.5px; color: var(--ink-soft);
   margin-top: 4px; line-height: 1.3;
 }
+.rank-card .medal {
+  position: absolute; top: 6px; right: 8px;
+  font-size: 14px; line-height: 1;
+}
+.rank-card.silver {
+  background: linear-gradient(160deg, #ffffff 0%, #f1f5f9 100%);
+  border-color: #cbd5e1;
+}
+.rank-card.bronze {
+  background: linear-gradient(160deg, #ffffff 0%, #fef3e7 100%);
+  border-color: #e3c5a8;
+}
+
+/* Visitor counter in footer */
+.visit-count {
+  margin-top: 6px; font-size: 12px; color: var(--muted);
+}
+.visit-count b { color: var(--gt-navy); }
 @media (max-width: 700px) {
   .rank-hero { grid-template-columns: 1fr; }
   .rank-grid { grid-template-columns: repeat(2, 1fr); }
