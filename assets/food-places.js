@@ -88,6 +88,7 @@ const FOOD_PLACES = [
   { type:"food", name:"Daebal House 2 (대발이네 2)", lat:33.9691, lng:-84.1428, tags:["korean"],     note:"Duluth" },
   { type:"food", name:"한신포차",                lat:33.9606, lng:-84.1313, tags:["korean"],          note:"Duluth" },
   { type:"food", name:"THE 901",                lat:33.9575, lng:-84.1288, tags:["korean"],          note:"Duluth" },
+  { type:"food", name:"장충동 왕족발",          lat:34.0063, lng:-84.1704, tags:["korean"],          note:"Duluth, 족발" },
   { type:"food", name:"Bread and Butterfly",    lat:33.7624, lng:-84.3582, tags:["brunch"],          note:"Inman Park" },
 
   // ── 🍰 디저트 ─────
