@@ -166,10 +166,15 @@ function applyEvents(events, isDemo, meta) {
   if (isDemo) {
     status.innerHTML = `<span class="demo-pill">예시</span>로컬 미리보기, 실제 데이터는 Vercel 배포 후 자동으로 채워집니다.`;
   } else {
-    const fetched = meta?.fetchedAt ? new Date(meta.fetchedAt).toLocaleString('ko-KR') : '';
-    const ss = meta?.sourceStatus || {};
-    const summary = Object.entries(ss).map(([k,v]) => `${k} ${v}`).join(', ');
-    status.textContent = `${meta.count}개 이벤트 · ${fetched} · ${summary}`;
+    const fetched = meta?.fetchedAt ? new Date(meta.fetchedAt).toLocaleDateString('ko-KR') : '';
+    const labels = { braves:'⚾ Braves', worldcup:'⚽ World Cup', aso:'🎻 Symphony', musical:'🎭 Musical', high:'🎨 High Museum', kpop:'🎤 K-pop' };
+    const counts = {};
+    for (const e of events) counts[e.extendedProps.category] = (counts[e.extendedProps.category] || 0) + 1;
+    const summary = Object.entries(labels)
+      .filter(([k]) => counts[k])
+      .map(([k, lbl]) => `${lbl} ${counts[k]}`)
+      .join(' · ');
+    status.innerHTML = `<b>총 ${events.length}개</b> · 마지막 갱신 ${fetched} · ${summary}`;
   }
 }
 
