@@ -11,36 +11,10 @@ import { writeFile } from 'node:fs/promises';
 
 const KEY = process.env.TICKETMASTER_API_KEY || '';
 
-// ── 1. Atlanta Braves (MLB Stats API) — 토요일 홈경기만 ─────
+// ── 1. Braves: 자동으로는 못 받아옴.
+//    giveaway 데이터는 events-manual.json 에 수동으로 입력 (학생회 시즌 시작 시 mlb.com에서 복사).
 async function fetchBraves() {
-  const today = new Date();
-  const start = today.toISOString().slice(0, 10);
-  const end = new Date(today.getTime() + 120 * 86400000).toISOString().slice(0, 10);
-  const url = `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=144&startDate=${start}&endDate=${end}`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Braves HTTP ${res.status}`);
-  const data = await res.json();
-  const events = [];
-  for (const d of data.dates || []) {
-    for (const g of d.games || []) {
-      if (g.teams?.home?.team?.name !== 'Atlanta Braves') continue;
-      const gd = g.gameDate ? new Date(g.gameDate) : null;
-      if (!gd) continue;
-      const dayET = gd.toLocaleDateString('en-US', { weekday: 'short', timeZone: 'America/New_York' });
-      if (dayET !== 'Sat') continue;
-      const dateStr = gd.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
-      events.push({
-        id: `braves-${g.gamePk}`,
-        title: `⚾ Braves vs ${g.teams.away.team.name}`,
-        start: dateStr,
-        category: 'braves',
-        source: 'MLB',
-        url: 'https://www.mlb.com/braves/tickets/promotions',
-        desc: 'Truist Park · 토요일 giveaway 가능성 높음',
-      });
-    }
-  }
-  return events;
+  return [];
 }
 
 // ── 2. Atlanta Symphony Hall (Ticketmaster venueId) ─────
@@ -136,7 +110,15 @@ async function fetchKpop() {
       });
     }
   }
-  return out;
+  // 같은 제목 dedupe (가장 빠른 날짜만 남김)
+  const byTitle = new Map();
+  for (const e of out) {
+    const key = e.title.replace(/^🎤\s/, '').trim();
+    if (!byTitle.has(key) || e.start < byTitle.get(key).start) {
+      byTitle.set(key, e);
+    }
+  }
+  return [...byTitle.values()];
 }
 
 // ── 메인 ─────

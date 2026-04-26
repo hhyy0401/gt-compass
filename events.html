@@ -97,11 +97,12 @@
 <main class="page" style="max-width:1280px;">
   <h2 class="section" style="margin-top:0;">📅 What's on Atlanta?</h2>
   <p style="color:var(--muted); font-size:14.5px;">
-    Atlanta Braves 경기·giveaway, ASO 공연, High Museum 무료일, K-pop 콘서트가 자동으로 모입니다. 매일 새벽 자동 업데이트.
+    Atlanta Braves giveaway, FIFA 월드컵 2026 (애틀랜타 8경기), ASO 공연, High Museum 무료일, K-pop 콘서트. 매일 새벽 자동 업데이트.
   </p>
 
   <div class="cal-legend" id="legend">
     <span class="leg" data-cat="braves"><span class="dot" style="background:#dc2626"></span>⚾ Braves</span>
+    <span class="leg" data-cat="worldcup"><span class="dot" style="background:#059669"></span>⚽ World Cup</span>
     <span class="leg" data-cat="aso"><span class="dot" style="background:#7c3aed"></span>🎻 Symphony</span>
     <span class="leg" data-cat="high"><span class="dot" style="background:#2563eb"></span>🎨 High Museum</span>
     <span class="leg" data-cat="kpop"><span class="dot" style="background:#db2777"></span>🎤 K-pop</span>
@@ -118,10 +119,11 @@
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 <script>
 const COLORS = {
-  braves: '#dc2626',
-  aso:    '#7c3aed',
-  high:   '#2563eb',
-  kpop:   '#db2777',
+  braves:   '#dc2626',
+  worldcup: '#059669',
+  aso:      '#7c3aed',
+  high:     '#2563eb',
+  kpop:     '#db2777',
 };
 const enabled = new Set(Object.keys(COLORS));
 
