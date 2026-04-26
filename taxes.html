@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>세금 신고 · GT Compass</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .steps { display:flex; flex-direction:column; gap:14px; margin:18px 0; }
+  .step {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--gt-gold);
+    border-radius: 12px;
+    padding: 18px 22px;
+    transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+  }
+  .step:hover {
+    transform: translateX(2px);
+    border-left-color: var(--gt-navy);
+    box-shadow: 0 4px 14px rgba(0,48,87,0.06);
+  }
+  .step .step-num {
+    display:inline-flex; align-items:center; justify-content:center;
+    width:26px; height:26px; border-radius:50%;
+    background: var(--gt-navy); color: white;
+    font-size: 13px; font-weight: 700;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .step h4 {
+    margin: 0 0 6px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--gt-navy);
+    letter-spacing: -0.012em;
+  }
+  .step .when { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+  .step ul { margin: 8px 0 0; padding-left: 20px; }
+  .step ul li { font-size: 15px; line-height: 1.65; margin-bottom: 4px; }
+  .io { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+  .io-box { background: #f8f7f2; padding: 10px 12px; border-radius: 8px; font-size: 13.5px; line-height: 1.55; }
+  .io-box b {
+    color: var(--gt-navy);
+    display: block; margin-bottom: 3px;
+    font-size: 11px; letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  @media (max-width: 600px) { .io { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<main class="page page-narrow">
+  <p style="margin-top:0;"><a href="life.html" style="font-size:13px; color:var(--muted);">← 생활</a></p>
+
+  <h2 class="section" style="margin-top:0;">💰 세금 신고 (Non-Resident Alien)</h2>
+  <p>F-1 학생도 미국에서 소득이 있으면(또는 없어도) 매년 세금 신고가 필요합니다. 흐름을 5단계로 정리.</p>
+
+  <div class="info warn">
+    ⚠️ 본 페이지는 안내용. 본인 상황에 따라 다르므로 OIE / Sprintax 안내문을 반드시 함께 확인하세요. 거주자 신분(Resident vs Non-Resident)은 보통 5년차부터 바뀝니다.
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <h4><span class="step-num">1</span>GLACIER 등록</h4>
+      <div class="when">📅 연말 ~ 연초 (TA/RA 시작 시)</div>
+      <p>학교에서 GLACIER 가입 메일이 옵니다. 정보 입력 후 W-4 / Form 8233 등을 출력해서 iStart에 업로드.</p>
+      <div class="io">
+        <div class="io-box"><b>Input</b>Passport · I-20 · I-94 · SSN</div>
+        <div class="io-box"><b>Output</b>W-4 · Form 8233 · Tax Summary Report</div>
+      </div>
+      <ul>
+        <li>이후 <b>iStart → Tax Document Upload</b> 제출</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h4><span class="step-num">2</span>소득 문서 자동 생성</h4>
+      <div class="when">📅 다음해 1월 말 ~ 2월</div>
+      <ul>
+        <li><b>W-2</b> — OneUSG Payroll에서 발급 (급여 소득)</li>
+        <li><b>1042-S</b> — GLACIER에서 발급 (장학금/조세조약 소득)</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h4><span class="step-num">3</span>Sprintax 코드 받기</h4>
+      <div class="when">📅 2월 ~ 3월</div>
+      <ul>
+        <li><b>iStart → Sprintax Access Request</b> 제출</li>
+        <li>학교에서 <b>Sprintax access code</b> 메일로 발송 (Federal 무료 / State는 본인 부담)</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h4><span class="step-num">4</span>Sprintax로 세금 신고서 작성</h4>
+      <div class="when">📅 2월 ~ 4월 (마감 4월 15일)</div>
+      <div class="io">
+        <div class="io-box"><b>Input</b>W-2 · 1042-S · Visa 정보</div>
+        <div class="io-box"><b>Output</b>Form 1040-NR · Form 8843 · GA State Return</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <h4><span class="step-num">5</span>제출</h4>
+      <div class="when">📅 4월 15일까지</div>
+      <ul>
+        <li><b>Federal (IRS)</b> — Form 1040-NR + Form 8843 → <b>우편 제출</b> (Sprintax가 봉투 라벨까지 출력)</li>
+        <li><b>Georgia State</b> — GA state return → <b>e-file</b> (Sprintax에서 바로)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>주의사항</h3>
+  <ul class="list-clean">
+    <li><b>소득이 없어도</b> Form 8843은 매년 제출해야 합니다 (F-1 학생 의무)</li>
+    <li>Sprintax 외 TurboTax 같은 일반 프로그램은 NR 학생에 부적합 (잘못 신고 가능)</li>
+    <li>5년 이상 미국 거주 → Resident Alien으로 전환 → 그때부터 일반 1040 사용</li>
+    <li>1042-S는 매년 늦게 발급되는 경우가 있어요 (2월 중순). 받기 전엔 Sprintax 진행 보류</li>
+  </ul>
+
+  <div class="info">
+    📧 OIE 세금 안내 메일 + <a href="http://istart.gatech.edu" target="_blank">istart.gatech.edu</a> 공지를 매년 1–2월에 꼭 확인하세요.
+  </div>
+
+</main>
+
+<script src="assets/nav.js"></script>
+</body>
+</html>

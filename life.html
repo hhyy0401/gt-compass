@@ -2,212 +2,41 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8" />
-<title>생활 (은행·수강신청·세금) · GT Compass</title>
+<title>생활 · GT Compass</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="assets/style.css" />
-<style>
-  .anchor { display:block; position:relative; top:-72px; visibility:hidden; }
-  .steps { display:flex; flex-direction:column; gap:14px; margin:18px 0; }
-  .step {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-left: 4px solid var(--gt-gold);
-    border-radius: 12px;
-    padding: 18px 22px;
-    transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
-    position: relative;
-  }
-  .step:hover {
-    transform: translateX(2px);
-    border-left-color: var(--gt-navy);
-    box-shadow: 0 4px 14px rgba(0,48,87,0.06);
-  }
-  .step .step-num {
-    display:inline-flex; align-items:center; justify-content:center;
-    width:26px; height:26px; border-radius:50%;
-    background: var(--gt-navy); color: white;
-    font-size: 13px; font-weight: 700;
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-  .step h4 {
-    margin: 0 0 6px;
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--gt-navy);
-    letter-spacing: -0.012em;
-  }
-  .step .when {
-    font-size: 13px;
-    color: var(--muted);
-    margin-bottom: 10px;
-  }
-  .step ul { margin: 8px 0 0; padding-left: 20px; }
-  .step ul li { font-size: 15px; line-height: 1.65; margin-bottom: 4px; }
-  .io {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 10px; margin-top: 10px;
-  }
-  .io-box {
-    background: #f8f7f2;
-    padding: 10px 12px;
-    border-radius: 8px;
-    font-size: 13.5px;
-    line-height: 1.55;
-  }
-  .io-box b {
-    color: var(--gt-navy);
-    display: block; margin-bottom: 3px;
-    font-size: 11px; letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-  @media (max-width: 600px) { .io { grid-template-columns: 1fr; } }
-</style>
 </head>
 <body>
 
-<main class="page page-narrow">
+<main class="page">
   <h2 class="section" style="margin-top:0;">📚 생활 가이드</h2>
-  <p>학기 시작 전·중에 자주 들여다볼 것들. 은행 계좌, 수강신청, 그리고 매년 돌아오는 세금 신고.</p>
+  <p>학기 시작 전·중에 자주 들여다볼 것들. 각 카테고리를 클릭해서 자세히 보세요.</p>
 
-  <!-- ── 은행 ── -->
-  <span id="banking" class="anchor"></span>
-  <h2 class="section">🏦 은행 계좌 개설</h2>
-  <p>도착 후 가장 먼저 해야 할 일 중 하나.</p>
-
-  <h3>필요 서류</h3>
-  <ul class="list-clean">
-    <li><b>I-20</b></li>
-    <li><b>I-94</b> (입국 기록, <a href="https://i94.cbp.dhs.gov" target="_blank">i94.cbp.dhs.gov</a>에서 PDF 다운로드)</li>
-    <li><b>주소 증명 (Proof of Residency)</b> — 임대 계약서, 우편물, 학교 발급 서류 등</li>
-    <li><b>여권 (신분증)</b></li>
-  </ul>
-  <div class="info">
-    💡 <b>Tenth and Home</b> 거주자: 요청 시 office에서 proof of residency 발급해줍니다.
-  </div>
-
-  <h3>주요 은행</h3>
-  <table class="simple">
-    <tr><th>은행</th><th>특징</th></tr>
-    <tr><td><b>Bank of America</b></td><td>지점/ATM 많음, 한국어 가능 직원 종종</td></tr>
-    <tr><td><b>Chase</b></td><td>앱 깔끔, sign-up bonus 자주 ($300+)</td></tr>
-    <tr><td><b>Wells Fargo</b></td><td>지점 많고 캠퍼스 근처 위치</td></tr>
-    <tr><td><b>Truist</b></td><td>남부 지역 강세</td></tr>
-  </table>
-  <div class="info warn">
-    🎁 <b>Sign-up bonus</b>: 신규 계좌 오픈 시 promotion code를 쓰면 $200~$400 상당의 보너스. 한인 커뮤니티(<a href="https://gtksa.net" target="_blank">gtksa.net</a> 게시판)나 Doctor of Credit에서 코드 검색 후 방문 추천.
-  </div>
-  <ul class="list-clean">
-    <li>처음엔 <b>Checking + Savings</b> 둘 다 열어두는 게 편함</li>
-    <li>Debit 카드는 그 자리에서 발급, 영구 카드는 1–2주 내 우편 도착</li>
-    <li>온라인뱅킹 + Zelle 등록 (한국인끼리 송금 시 유용)</li>
-    <li>SSN은 나중에 받아서 추가 등록 가능 (계좌 개설 자체는 SSN 없이 OK)</li>
-  </ul>
-
-  <!-- ── 수강신청 ── -->
-  <span id="courses" class="anchor"></span>
-  <h2 class="section">📖 수강신청 · 수업</h2>
-  <p>학기마다 자주 들여다볼 사이트. 북마크 추천.</p>
-
-  <h3>핵심 링크</h3>
-  <table class="simple">
-    <tr><th>용도</th><th>사이트</th></tr>
-    <tr><td>등록·수업·납부 허브</td><td><a href="https://buzzport.gatech.edu" target="_blank">buzzport.gatech.edu</a></td></tr>
-    <tr><td>수강신청</td><td><a href="https://oscar.gatech.edu" target="_blank">oscar.gatech.edu</a></td></tr>
-    <tr><td>학비 납부</td><td><a href="https://bursar.gatech.edu" target="_blank">bursar.gatech.edu</a> → student pay portal</td></tr>
-    <tr><td>수업별 GPA 통계</td><td><a href="https://critique.gatech.edu" target="_blank">critique.gatech.edu</a></td></tr>
-    <tr><td>수업 시간표 + 성적 분포</td><td><a href="https://gt-scheduler.org" target="_blank">gt-scheduler.org</a></td></tr>
-    <tr><td>수업 검색 (대안)</td><td><a href="https://www.coursicle.com/gatech/" target="_blank">coursicle.com/gatech</a></td></tr>
-    <tr><td>교재 PDF 검색</td><td>libgen</td></tr>
-  </table>
-
-  <h3>수강신청 흐름</h3>
-  <ol class="list-clean">
-    <li><b>Buzzport 로그인</b></li>
-    <li><b>Registration (OSCAR)</b> 클릭</li>
-    <li>"Registration" 탭 → "Register for Classes"</li>
-    <li>CRN 입력 또는 검색해서 추가</li>
-  </ol>
-  <div class="info">
-    💡 <b>수강신청 전</b>: gt-scheduler.org에서 시간표 미리 짜보기 + critique에서 GPA 분포 확인 + 지도교수 승인.
-  </div>
-  <ul class="list-clean">
-    <li>학비 납부 마감: 학기마다 다름. Bursar 페이지에서 확인</li>
-    <li>TA/RA로 funded면 자동 waive되는 부분 + 본인 부담 fee 구분 필요</li>
-    <li>국제학생 의료보험비도 학비에 포함되어 청구 (waive 시 별도 처리)</li>
-  </ul>
-
-  <!-- ── 세금 ── -->
-  <span id="taxes" class="anchor"></span>
-  <h2 class="section">💰 세금 신고 (Non-Resident Alien 기준)</h2>
-  <p>F-1 학생도 미국에서 소득이 있으면(또는 없어도) 매년 세금 신고가 필요합니다. 흐름을 5단계로 정리.</p>
-
-  <div class="info warn">
-    ⚠️ 본 페이지는 안내용. 본인 상황에 따라 다르므로 OIE / Sprintax 안내문을 반드시 함께 확인하세요. 거주자 신분(Resident vs Non-Resident)은 보통 5년차부터 바뀝니다.
-  </div>
-
-  <div class="steps">
-    <div class="step">
-      <h4><span class="step-num">1</span>GLACIER 등록</h4>
-      <div class="when">📅 연말 ~ 연초 (TA/RA 시작 시)</div>
-      <p>학교에서 GLACIER 가입 메일이 옵니다. 정보 입력 후 W-4 / Form 8233 등을 출력해서 iStart에 업로드.</p>
-      <div class="io">
-        <div class="io-box"><b>Input</b>Passport · I-20 · I-94 · SSN</div>
-        <div class="io-box"><b>Output</b>W-4 · Form 8233 · Tax Summary Report</div>
-      </div>
-      <ul>
-        <li>이후 <b>iStart → Tax Document Upload</b> 제출</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <h4><span class="step-num">2</span>소득 문서 자동 생성</h4>
-      <div class="when">📅 다음해 1월 말 ~ 2월</div>
-      <ul>
-        <li><b>W-2</b> — OneUSG Payroll에서 발급 (급여 소득)</li>
-        <li><b>1042-S</b> — GLACIER에서 발급 (장학금/조세조약 소득)</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <h4><span class="step-num">3</span>Sprintax 코드 받기</h4>
-      <div class="when">📅 2월 ~ 3월</div>
-      <ul>
-        <li><b>iStart → Sprintax Access Request</b> 제출</li>
-        <li>학교에서 <b>Sprintax access code</b> 메일로 발송 (Federal 무료 / State는 본인 부담)</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <h4><span class="step-num">4</span>Sprintax로 세금 신고서 작성</h4>
-      <div class="when">📅 2월 ~ 4월 (마감 4월 15일)</div>
-      <div class="io">
-        <div class="io-box"><b>Input</b>W-2 · 1042-S · Visa 정보</div>
-        <div class="io-box"><b>Output</b>Form 1040-NR · Form 8843 · GA State Return</div>
-      </div>
-    </div>
-
-    <div class="step">
-      <h4><span class="step-num">5</span>제출</h4>
-      <div class="when">📅 4월 15일까지</div>
-      <ul>
-        <li><b>Federal (IRS)</b> — Form 1040-NR + Form 8843 → <b>우편 제출</b> (Sprintax가 봉투 라벨까지 출력)</li>
-        <li><b>Georgia State</b> — GA state return → <b>e-file</b> (Sprintax에서 바로)</li>
-      </ul>
-    </div>
-  </div>
-
-  <h3>주의사항</h3>
-  <ul class="list-clean">
-    <li><b>소득이 없어도</b> Form 8843은 매년 제출해야 합니다 (F-1 학생 의무)</li>
-    <li>Sprintax 외 TurboTax 같은 일반 프로그램은 NR 학생에 부적합 (잘못 신고 가능)</li>
-    <li>5년 이상 미국 거주 → Resident Alien으로 전환 → 그때부터 일반 1040 사용</li>
-    <li>1042-S는 매년 늦게 발급되는 경우가 있어요 (2월 중순). 받기 전엔 Sprintax 진행 보류</li>
-  </ul>
-
-  <div class="info">
-    📧 OIE 세금 안내 메일 + <a href="http://istart.gatech.edu" target="_blank">istart.gatech.edu</a> 공지를 매년 1–2월에 꼭 확인하세요.
+  <div class="cards">
+    <a href="housing.html" class="card">
+      <span class="icon">🏠</span>
+      <h3>거주 · 마트</h3>
+      <p class="meta">동네별 비교(Tenth, Midtown, West Midtown, Atlantic Station, Home Park) + 캠퍼스 근처 마트 미니 지도. 한인타운, 셔틀/MARTA 정보.</p>
+      <span class="cta">동네 알아보기</span>
+    </a>
+    <a href="banking.html" class="card">
+      <span class="icon">🏦</span>
+      <h3>은행 계좌</h3>
+      <p class="meta">필요 서류, 주요 은행 비교, sign-up bonus 팁.</p>
+      <span class="cta">은행 가이드</span>
+    </a>
+    <a href="courses.html" class="card">
+      <span class="icon">📖</span>
+      <h3>수강신청 · 수업</h3>
+      <p class="meta">Buzzport, OSCAR, Critique, GT-Scheduler 필수 링크 + 수강신청 흐름.</p>
+      <span class="cta">바로가기</span>
+    </a>
+    <a href="taxes.html" class="card">
+      <span class="icon">💰</span>
+      <h3>세금 신고</h3>
+      <p class="meta">F-1 학생 매년 필수. GLACIER → Sprintax → 1040-NR 5단계 흐름.</p>
+      <span class="cta">단계별 보기</span>
+    </a>
   </div>
 
 </main>

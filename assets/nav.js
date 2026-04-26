@@ -5,7 +5,6 @@
     { href: 'index.html',    label: '홈' },
     { href: 'checklist.html',label: '시작하기' },
     { href: 'atlanta.html',  label: 'Atlanta' },
-    { href: 'housing.html',  label: '거주·마트' },
     { href: 'life.html',     label: '생활' },
     { href: 'events.html',   label: '이벤트' },
   ];
@@ -21,24 +20,6 @@
   nav.className = 'nav';
   nav.innerHTML = html;
   document.body.insertBefore(nav, document.body.firstChild);
-
-  // 홈이 아닌 페이지엔 main 위에 breadcrumb 주입
-  if (path !== 'index.html' && path !== '') {
-    const main = document.querySelector('main');
-    if (main) {
-      const crumb = document.createElement('div');
-      crumb.className = 'breadcrumb-bar';
-      const otherLinks = links.filter(l => l.href !== 'index.html' && l.href !== path).slice(0, 4);
-      crumb.innerHTML = `
-        <a href="index.html" class="crumb-home">← 홈</a>
-        <span class="crumb-sep">·</span>
-        <span class="crumb-other">
-          ${otherLinks.map(l => `<a href="${l.href}">${l.label}</a>`).join('<span class="crumb-mid">·</span>')}
-        </span>
-      `;
-      main.insertBefore(crumb, main.firstChild);
-    }
-  }
 
   // Footer 주입
   const footer = document.createElement('footer');

@@ -111,6 +111,58 @@ a:hover { text-decoration: underline; }
   backdrop-filter: blur(4px);
 }
 
+/* ── Accordion (펼치기) ── */
+.accordion {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  margin: 16px 0;
+  overflow: hidden;
+  transition: box-shadow .18s ease, border-color .18s ease;
+}
+.accordion[open] {
+  border-color: var(--gt-gold);
+  box-shadow: 0 4px 18px rgba(0,48,87,0.06);
+}
+.accordion summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 22px;
+  display: flex; align-items: center; gap: 14px;
+  user-select: none;
+  position: relative;
+  transition: background .15s ease;
+}
+.accordion summary::-webkit-details-marker { display: none; }
+.accordion summary:hover { background: #f8f7f2; }
+.accordion summary::after {
+  content: "▾";
+  margin-left: auto;
+  color: var(--gt-navy);
+  font-size: 18px;
+  transition: transform .25s ease;
+}
+.accordion[open] summary::after { transform: rotate(180deg); }
+.accordion .acc-title {
+  font-size: 18px; font-weight: 700;
+  color: var(--gt-navy);
+  letter-spacing: -0.015em;
+}
+.accordion .acc-sub {
+  font-size: 13px; color: var(--muted);
+  font-weight: 400;
+}
+.accordion .acc-body {
+  padding: 4px 22px 22px;
+  border-top: 1px solid var(--line-soft);
+  margin-top: 4px;
+}
+.accordion .acc-body h3:first-child { margin-top: 18px; }
+@media (max-width: 600px) {
+  .accordion summary { flex-direction: column; align-items: flex-start; gap: 4px; padding-right: 40px; }
+  .accordion summary::after { position: absolute; right: 22px; top: 22px; }
+}
+
 /* ── Breadcrumb (홈/카테고리 빠른 이동) ── */
 .breadcrumb-bar {
   display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
