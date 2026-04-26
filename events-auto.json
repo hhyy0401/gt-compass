@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-04-26T16:31:58.995Z",
+  "fetchedAt": "2026-04-26T16:39:15.799Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (11)",
@@ -24,7 +24,7 @@
       "start": "2026-04-28T23:30:00Z",
       "category": "musical",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7fv7K",
+      "url": "https://www.ticketmaster.com/six-touring-tickets/artist/2725025",
       "desc": "Fox Theatre Atlanta"
     },
     {
@@ -87,7 +87,7 @@
       "start": "2026-05-26T23:30:00Z",
       "category": "musical",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74aCk",
+      "url": "https://www.ticketmaster.com/disneys-beauty-and-the-beast-touring-tickets/artist/803726",
       "desc": "Fox Theatre Atlanta"
     },
     {
@@ -159,7 +159,7 @@
       "start": "2026-07-21T23:30:00Z",
       "category": "musical",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74Ka3",
+      "url": "https://www.ticketmaster.com/monty-pythons-spamalot-touring-tickets/artist/1424801",
       "desc": "Fox Theatre Atlanta"
     },
     {
@@ -186,7 +186,7 @@
       "start": "2026-09-02T23:30:00Z",
       "category": "musical",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-v7p",
+      "url": "https://www.ticketmaster.com/hamilton-touring-tickets/artist/2336213",
       "desc": "Fox Theatre Atlanta"
     },
     {
@@ -258,7 +258,7 @@
       "start": "2026-12-16T00:30:00Z",
       "category": "musical",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OPaF",
+      "url": "https://www.ticketmaster.com/mrs-doubtfire-touring-tickets/artist/3007777",
       "desc": "Fox Theatre Atlanta"
     },
     {
@@ -276,7 +276,7 @@
       "start": "2027-02-03T00:30:00Z",
       "category": "musical",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-vFF",
+      "url": "https://www.ticketmaster.com/water-for-elephants-touring-tickets/artist/3627249",
       "desc": "Fox Theatre Atlanta"
     },
     {
@@ -294,7 +294,7 @@
       "start": "2027-03-04T00:30:00Z",
       "category": "musical",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-vF_",
+      "url": "https://www.ticketmaster.com/wicked-touring-tickets/artist/864373",
       "desc": "Fox Theatre Atlanta"
     },
     {
@@ -312,7 +312,7 @@
       "start": "2027-04-13T23:30:00Z",
       "category": "musical",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-ee4",
+      "url": "https://www.ticketmaster.com/the-notebook-touring-tickets/artist/3656159",
       "desc": "Fox Theatre Atlanta"
     },
     {
@@ -321,7 +321,7 @@
       "start": "2027-06-11T23:30:00Z",
       "category": "musical",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OSZO",
+      "url": "https://www.ticketmaster.com/beetlejuice-touring-tickets/artist/2867362",
       "desc": "Fox Theatre Atlanta"
     }
   ]
