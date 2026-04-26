@@ -42,7 +42,7 @@ const FOOD_PLACES = [
   { type:"food", name:"Kanpai BBQ",             lat:34.0029, lng:-84.1446, tags:["korean","bbq"],    note:"Duluth, 핫팟" },
   { type:"food", name:"K-pot",                  lat:34.0029, lng:-84.1446, tags:["korean"],          note:"핫팟" },
   { type:"food", name:"J's Mini Hotpot",        lat:33.8730, lng:-84.2960, tags:["chinese"],         note:"Buford Hwy, 핫팟" },
-  { type:"food", name:"Blue India",             lat:33.8050, lng:-84.3550, tags:["indian"],          note:"카레" },
+  { type:"food", name:"Blue India",             lat:33.7796, lng:-84.3838, tags:["indian"],          note:"Midtown, 카레" },
   { type:"food", name:"Lady Bird",              lat:33.7726, lng:-84.3700, tags:["bbq","american"],  note:"BeltLine" },
   { type:"food", name:"Superica",               lat:33.7570, lng:-84.3642, tags:["mexican"],         note:"Krog Street",
     chainLocations:[ {lat:33.7900, lng:-84.4140, area:"Westside"}, {lat:33.8485, lng:-84.3712, area:"Buckhead"} ]},
