@@ -30,7 +30,8 @@
 <body>
 
 <main class="page">
-  <h2 class="section" style="margin-top:0;">🏠 거주 · 마트</h2>
+  <p style="margin-top:0;"><a href="life.html" style="font-size:13.5px; color:var(--muted); text-decoration:none;">← 생활</a></p>
+  <h2 class="section" style="margin-top:0;">🏠 거주, 마트</h2>
   <p>GT 캠퍼스를 중심으로 한국 학생들이 많이 사는 동네와 캠퍼스 근처 마트를 한눈에.</p>
 
   <div class="map-legend">
@@ -72,10 +73,9 @@
   <h3>근처 마트 (구역별)</h3>
   <table class="simple">
     <tr><th>구역</th><th>마트</th></tr>
-    <tr><td>Tenth / Midtown</td><td>Publix · Whole Foods · Trader Joe's · Piedmont Farmer's Market (주말)</td></tr>
-    <tr><td>West Midtown</td><td>Publix · Whole Foods · Trader Joe's · <b>Lidl (신규)</b> · Walmart</td></tr>
-    <tr><td>Downtown</td><td>Publix · Kroger</td></tr>
-    <tr><td>Atlantic Station</td><td>Target (식료품 코너), 주변에 IKEA</td></tr>
+    <tr><td>Tenth, Midtown</td><td>Publix, Whole Foods, Trader Joe's, Piedmont Farmer's Market (주말)</td></tr>
+    <tr><td>West Midtown</td><td><b>Lidl (신규)</b>, Kroger</td></tr>
+    <tr><td>Atlantic Station</td><td>Target, IKEA</td></tr>
   </table>
 
   <div class="info">
@@ -113,11 +113,10 @@ const MARKETS = [
   { name:"Publix (Midtown)",         lat:33.7837, lng:-84.3833, note:"Midtown 메인 식료품" },
   { name:"Whole Foods (Midtown)",    lat:33.7728, lng:-84.3726, note:"Ponce de Leon 근처" },
   { name:"Trader Joe's (Midtown)",   lat:33.7869, lng:-84.3811, note:"" },
-  { name:"Lidl (West Midtown · 신규)",lat:33.7838, lng:-84.4153, note:"가성비 좋음" },
-  { name:"Walmart (Howell Mill)",    lat:33.7876, lng:-84.4141, note:"" },
-  { name:"Target (Atlantic Station)",lat:33.7916, lng:-84.3998, note:"식료품 코너 + 생활용품" },
-  { name:"IKEA (West Midtown)",      lat:33.7869, lng:-84.3899, note:"가구" },
-  { name:"Kroger (Downtown)",        lat:33.7547, lng:-84.3925, note:"" },
+  { name:"Lidl (West Midtown, 신규)",lat:33.7838, lng:-84.4153, note:"가성비 좋음" },
+  { name:"Kroger (West Midtown)",    lat:33.7900, lng:-84.4135, note:"Howell Mill 근처" },
+  { name:"Target (Atlantic Station)",lat:33.7916, lng:-84.3998, note:"식료품 코너와 생활용품" },
+  { name:"IKEA (Atlantic Station 근처)", lat:33.7910, lng:-84.4055, note:"가구" },
 ];
 
 const COLORS = { gt:"#003057", home:"#B3A369", market:"#15803d" };

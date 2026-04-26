@@ -111,6 +111,51 @@ a:hover { text-decoration: underline; }
   backdrop-filter: blur(4px);
 }
 
+/* ── Sidebar TOC (생활 페이지) ── */
+.life-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+.life-toc {
+  position: sticky; top: 80px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+}
+.life-toc .toc-label {
+  font-size: 11px; font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 4px 10px 10px;
+}
+.life-toc ul { list-style: none; padding: 0; margin: 0; }
+.life-toc li { margin: 0; }
+.life-toc a {
+  display: block;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: all .12s ease;
+  scroll-margin-top: 80px;
+}
+.life-toc a:hover {
+  background: #f8f7f2;
+  color: var(--gt-navy);
+  text-decoration: none;
+}
+@media (max-width: 800px) {
+  .life-layout { grid-template-columns: 1fr; }
+  .life-toc { position: static; }
+}
+
+details.accordion { scroll-margin-top: 80px; }
+
 /* ── Accordion (펼치기) ── */
 .accordion {
   background: var(--card);
@@ -248,9 +293,19 @@ p { color: var(--ink-soft); font-size: 16px; line-height: 1.7; }
 /* ── Card grid ── */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
+@media (max-width: 900px) { .cards { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+
+/* 보조 톤 — 구분자 없이 색깔만 다르게 */
+.muted-tone {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+html { scroll-behavior: smooth; }
 .card {
   background: var(--card);
   border: 1px solid var(--line);

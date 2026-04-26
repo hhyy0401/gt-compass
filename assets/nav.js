@@ -3,10 +3,10 @@
   const path = location.pathname.split('/').pop() || 'index.html';
   const links = [
     { href: 'index.html',    label: '홈' },
-    { href: 'checklist.html',label: '시작하기' },
-    { href: 'atlanta.html',  label: 'Atlanta' },
+    { href: 'checklist.html',label: '신입생 길잡이' },
+    { href: 'atlanta.html',  label: 'Atlanta Map' },
     { href: 'life.html',     label: '생활' },
-    { href: 'events.html',   label: '이벤트' },
+    { href: 'events.html',   label: "What's on Atlanta" },
   ];
   const html = `
     <div class="nav-inner">
