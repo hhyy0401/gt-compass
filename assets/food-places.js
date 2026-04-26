@@ -79,7 +79,7 @@ const FOOD_PLACES = [
   { type:"food", name:"a mano",                 lat:33.7619, lng:-84.3537, tags:["italian"],         note:"Inman Park" },
   { type:"food", name:"Barcelona Wine Bar",     lat:33.7615, lng:-84.3530, tags:["spanish","bar"],   note:"Inman Park, 스페인 와인바" },
   { type:"food", name:"Park 27",                lat:34.0515, lng:-84.0713, tags:["korean"],          note:"Suwanee" },
-  { type:"food", name:"Pho King",               lat:33.7900, lng:-84.3870, tags:["vietnamese"],      note:"Midtown" },
+  { type:"food", name:"Pho King",               lat:33.7802, lng:-84.3875, tags:["vietnamese"],      note:"Midtown" },
   { type:"food", name:"New Realm Brewing",      lat:33.7700, lng:-84.3650, tags:["bar"],             note:"Old Fourth Ward, 브루어리" },
 
   // ── 🍰 디저트 ─────
