@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-04-26T16:39:15.799Z",
+  "fetchedAt": "2026-04-27T10:21:35.919Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (11)",
+    "aso": "ok (10)",
     "musical": "ok (9)",
     "high": "ok (11)",
     "kpop": "ok (4)"
   },
-  "count": 35,
+  "count": 34,
   "events": [
-    {
-      "id": "aso-vvG1zZ_dR4GQkJ",
-      "title": "🎻 The Georgia Boy Choir International Festival",
-      "start": "2026-04-26T20:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/the-georgia-boy-choir-international-festival-atlanta-georgia-04-26-2026/event/0E00643BD531A1A6",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
     {
       "id": "fox-Z7r9jZ1A7fv7K",
       "title": "🎭 Six (Touring)",
