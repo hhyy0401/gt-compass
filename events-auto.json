@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-04-27T10:21:35.919Z",
+  "fetchedAt": "2026-04-28T10:19:34.323Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (10)",
     "musical": "ok (9)",
     "high": "ok (11)",
-    "kpop": "ok (4)"
+    "kpop": "ok (5)"
   },
-  "count": 34,
+  "count": 35,
   "events": [
     {
       "id": "fox-Z7r9jZ1A7fv7K",
@@ -188,6 +188,15 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "kpop-vvG1zZ_a9AH7kj",
+      "title": "🎤 aespa LIVE TOUR - SYNK : COMPLæXITY - in ATLANTA",
+      "start": "2026-09-25T00:00:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/aespa-live-tour-synk-complxity-in-atlanta-georgia-09-24-2026/event/0E006495C5F0419C",
+      "desc": "State Farm Arena"
     },
     {
       "id": "aso-vvG1zZbUD-dGUS",
