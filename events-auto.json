@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-04-29T10:10:09.946Z",
+  "fetchedAt": "2026-04-30T10:10:22.575Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (10)",
@@ -10,9 +10,9 @@
   "count": 35,
   "events": [
     {
-      "id": "fox-Z7r9jZ1A7fv7f",
+      "id": "fox-Z7r9jZ1A7fv74",
       "title": "🎭 Six (Touring)",
-      "start": "2026-04-29T23:30:00Z",
+      "start": "2026-04-30T23:30:00Z",
       "category": "musical",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/six-touring-tickets/artist/2725025",
