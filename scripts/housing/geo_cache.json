@@ -1,9 +1,9 @@
 {
   "100midtown": {
     "address": "100 10th St NW",
-    "lat": 33.7809738,
-    "lon": -84.3903214,
-    "source": "nominatim"
+    "lat": 33.78145,
+    "lon": -84.38924,
+    "source": "census-verified"
   },
   "903 peachtree": {
     "address": "903 peachtree st nw,atlanta,GA,30309",
@@ -19,15 +19,15 @@
   },
   "avana westside": {
     "address": "1040 Huff Rd NW, Atlanta GA 30318",
-    "lat": 33.7886773,
-    "lon": -84.4213601,
-    "source": "nominatim"
+    "lat": 33.78939,
+    "lon": -84.42282,
+    "source": "census-verified"
   },
   "bexley summerhill": {
     "address": "720 Hank Aaron Dr SE",
-    "lat": 33.722576,
-    "lon": -84.3879682,
-    "source": "nominatim"
+    "lat": 33.73434,
+    "lon": -84.38784,
+    "source": "census-verified"
   },
   "bower westside": {
     "address": "1000 Northside DR NW Atlanta",
@@ -43,9 +43,9 @@
   },
   "buckhead 960": {
     "address": "960 E Paces Ferry Rd NE",
-    "lat": 33.8467761,
-    "lon": -84.3571761,
-    "source": "nominatim"
+    "lat": 33.84879,
+    "lon": -84.35333,
+    "source": "census-verified"
   },
   "camden buckhead square": {
     "address": "3097 Maple Dr NE, Atlanta, GA 30305",
@@ -91,9 +91,9 @@
   },
   "local on 14th": {
     "address": "455 14th St NW",
-    "lat": 33.7869492,
-    "lon": -84.401946,
-    "source": "nominatim"
+    "lat": 33.78626,
+    "lon": -84.40115,
+    "source": "census-verified"
   },
   "metropolis": {
     "address": "943 Peachtree St NE",
@@ -145,9 +145,9 @@
   },
   "westside union": {
     "address": "400 Bishop St NW",
-    "lat": 33.793053,
-    "lon": -84.402303,
-    "source": "nominatim"
+    "lat": 33.79407,
+    "lon": -84.39986,
+    "source": "census-verified"
   },
   "windsor at midtown": {
     "address": "222 14th St NE, ATLANTA, GA",

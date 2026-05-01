@@ -538,8 +538,14 @@ function renderList(visibleByLoc) {
       chip.innerHTML = `${escapeHtml(loc.name)}<span class="hm-loc-count">${n}</span>`;
       chip.title = `${loc.neighborhood} · ${loc.address}`;
       chip.onclick = () => {
-        map.flyTo([loc.lat, loc.lon], 16, { duration: 0.6 });
-        setTimeout(() => markersByKey[loc.key].openPopup(), 650);
+        const m = markersByKey[loc.key];
+        // zoomToShowLayer breaks the cluster (zoom in or spiderfy) before the popup opens.
+        // Without this, openPopup is silent when the marker is hidden inside a cluster.
+        if (cluster.hasLayer(m)) {
+          cluster.zoomToShowLayer(m, () => m.openPopup());
+        } else {
+          m.openPopup();
+        }
       };
       list.appendChild(chip);
     });

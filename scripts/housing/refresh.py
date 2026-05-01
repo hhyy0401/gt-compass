@@ -47,39 +47,40 @@ PII_FIELDS = {'문의/Refer 연락'}
 
 HARDCODE_COORDS = {
     # canonical key -> (lat, lon, label)
-    'tenth and home': (33.7818, -84.3954, '251 10th St NW, Atlanta, GA 30332'),
-    'paloma west midtown': (33.7917, -84.4136, 'Paloma West Midtown, 1062 Brady Ave NW, Atlanta, GA 30318'),
-    'rambler atlanta': (33.77452, -84.38516, 'Rambler Atlanta, 736 Peachtree St NE, Atlanta, GA 30308'),
-    'skyhouse buckhead': (33.84952, -84.35768, 'Skyhouse Buckhead, 3390 Stratford Rd NE, Atlanta, GA 30326'),
-    'camden brookwood': (33.8088, -84.3856, 'Camden Brookwood, 2500 Peachtree Rd NW, Atlanta, GA 30305'),
-    'maa lenox': (33.84745, -84.35950, 'MAA Lenox, 600 Phipps Blvd NE, Atlanta, GA 30326'),
-    'maa centennial park': (33.76098, -84.39348, 'MAA Centennial Park, 305 Centennial Olympic Park Dr NW, Atlanta, GA 30313'),
+    # Coords below verified 2026-05 against US Census Geocoder (TIGER/Line);
+    # MAA Centennial Park + Avana on Main use Nominatim (Census didn't match).
+    'tenth and home': (33.78156, -84.39543, '251 10th St NW, Atlanta, GA 30332'),
+    'paloma west midtown': (33.78358, -84.41291, 'Paloma West Midtown, 1062 Brady Ave NW, Atlanta, GA 30318'),
+    'rambler atlanta': (33.77475, -84.38473, 'Rambler Atlanta, 736 Peachtree St NE, Atlanta, GA 30308'),
+    'skyhouse buckhead': (33.84878, -84.36654, 'SkyHouse Buckhead, 3390 Stratford Rd NE, Atlanta, GA 30326'),
+    'camden brookwood': (33.80183, -84.39746, 'Camden Brookwood, 147 26th St NW, Atlanta, GA 30309'),
+    'maa lenox': (33.85273, -84.36537, 'MAA Lenox, 600 Phipps Blvd NE, Atlanta, GA 30326'),
+    'maa centennial park': (33.75596, -84.39732, 'MAA Centennial Park, 305 Centennial Olympic Park Dr NW, Atlanta, GA 30313'),
     'alexander at the district': (33.8845, -84.4690, 'The Alexander at the District, Cumberland, Atlanta, GA'),
     'imt buckhead on 26th': (33.80265, -84.39185, 'IMT Buckhead on 26th, 26th St NW, Brookwood, Atlanta, GA 30309'),
-    '903 peachtree': (33.78214, -84.38292, '903 Peachtree, 903 Peachtree St NE, Atlanta, GA 30308'),
-    'hanover midtown': (33.78745, -84.38962, 'Hanover Midtown, 1230 W Peachtree St NW, Atlanta, GA 30309'),
-    'metropolis': (33.78250, -84.38330, 'Metropolis, 943 Peachtree St NE, Atlanta, GA 30309'),
-    'venue brookwood': (33.81237, -84.38501, 'Venue Brookwood, 100 Colonial Homes Dr NW, Atlanta, GA 30309'),
-    'windsor peachtree corners': (33.97160, -84.22180, 'Windsor Peachtree Corners, 3341 Peachtree Corners Cir, Peachtree Corners, GA 30092'),
-    'reserve at lenox park': (33.86658, -84.34520, 'Reserve at Lenox Park, 1200 Reserve Dr NE, Atlanta, GA 30319'),
-    'steelworks': (33.7867, -84.4070, 'Steelworks, 1220 Mecaslin St NW, Atlanta, GA 30318'),
-    'momentum midtown': (33.7841, -84.3897, 'Momentum Midtown, 1018 W Peachtree St NW, Atlanta, GA 30309'),
-    'tens on west': (33.78073, -84.38972, 'Tens on West, 1010 W Peachtree St NW, Atlanta, GA 30309'),
-    'society atlanta': (33.77835, -84.38336, 'Society Atlanta, 811 Peachtree St NE, Atlanta, GA 30308'),
-    'sora at spring quarter': (33.7825, -84.3892, 'Sora at Spring Quarter, 1000 Spring St NW, Atlanta, GA 30309'),
-    # Nominatim mis-hits — pinned by hand
-    'alexan on 8th': (33.77666, -84.38953, 'Alexan on 8th, 880 W Peachtree St NW, Atlanta, GA 30309'),
-    'the baxter decatur': (33.79335, -84.29380, 'The Baxter Decatur, 1605 Church St, Decatur, GA 30033'),
-    'mix': (33.75955, -84.38181, 'The Mix, 120 Piedmont Ave NE, Atlanta, GA 30303'),
-    'emmi': (33.78663, -84.38975, 'EMMI, 1405 Spring St NW, Atlanta, GA 30309'),
-    'brooke': (33.86620, -84.26565, 'The Brooke, 2500 Shallowford Rd, Atlanta, GA 30345'),
-    'arlo': (33.77380, -84.29611, 'Arlo, 245 E Trinity Pl, Decatur, GA 30030'),
-    'gateway at cedar brook': (33.80162, -84.28232, 'Gateway at Cedar Brook, 3117 Cedar Brook Dr, Decatur, GA 30033'),
-    'maa brookhaven': (33.86285, -84.33595, 'MAA Brookhaven, 2829 Caldwell Rd NE, Atlanta, GA 30319'),
-    'weatherstone condo': (33.82340, -84.35020, 'Weatherstone Condo, 1266 Weatherstone Dr NE, Atlanta, GA 30324'),
-    'abberly skye': (33.80553, -84.28232, 'Abberly Skye, 2550 Blackmon Dr, Decatur, GA 30033'),
-    'avana on main': (33.82010, -84.35050, 'Avana on Main, 508 Main St NE, Atlanta, GA 30324'),
-    'overton rise': (33.87553, -84.45945, 'Overton Rise, 3695 Cumberland Blvd SE, Atlanta, GA 30339'),
+    '903 peachtree': (33.77946, -84.38415, '903 Peachtree, 903 Peachtree St NE, Atlanta, GA 30308'),
+    'hanover midtown': (33.78839, -84.38786, 'Hanover Midtown, 1230 W Peachtree St NW, Atlanta, GA 30309'),
+    'metropolis': (33.78057, -84.38404, 'Metropolis, 943 Peachtree St NE, Atlanta, GA 30309'),
+    'venue brookwood': (33.81367, -84.39241, 'Venue Brookwood, 100 Colonial Homes Dr NW, Atlanta, GA 30309'),
+    'windsor peachtree corners': (33.94517, -84.25078, 'Windsor Peachtree Corners, 3341 Peachtree Corners Cir, Peachtree Corners, GA 30092'),
+    'reserve at lenox park': (33.84691, -84.34066, 'Reserve at Lenox Park, 1200 Reserve Dr NE, Atlanta, GA 30319'),
+    'steelworks': (33.78760, -84.39988, 'Steelworks, 1220 Mecaslin St NW, Atlanta, GA 30318'),
+    'momentum midtown': (33.78250, -84.38791, 'Momentum Midtown, 1018 W Peachtree St NW, Atlanta, GA 30309'),
+    'tens on west': (33.78229, -84.38791, 'Tens on West, 1010 W Peachtree St NW, Atlanta, GA 30309'),
+    'society atlanta': (33.77700, -84.38438, 'Society Atlanta, 811 Peachtree St NE, Atlanta, GA 30308'),
+    'sora at spring quarter': (33.78155, -84.38924, 'Sora at Spring Quarter, 1000 Spring St NW, Atlanta, GA 30309'),
+    'alexan on 8th': (33.77907, -84.38735, 'Alexan on 8th, 880 W Peachtree St NW, Atlanta, GA 30309'),
+    'the baxter decatur': (33.79360, -84.28394, 'The Baxter Decatur, 1605 Church St, Decatur, GA 30033'),
+    'mix': (33.75739, -84.38229, 'The Mix, 120 Piedmont Ave NE, Atlanta, GA 30303'),
+    'emmi': (33.79486, -84.38902, 'EMMI, 1405 Spring St NW, Atlanta, GA 30309'),
+    'brooke': (33.86200, -84.28688, 'The Brooke, 2500 Shallowford Rd NE, Atlanta, GA 30345'),
+    'arlo': (33.77172, -84.29324, 'Arlo, 245 E Trinity Pl, Decatur, GA 30030'),
+    'gateway at cedar brook': (33.79616, -84.26789, 'Gateway at Cedar Brook, 3117 Cedar Brook Dr, Decatur, GA 30033'),
+    'maa brookhaven': (33.87004, -84.33088, 'MAA Brookhaven, 2829 Caldwell Rd NE, Atlanta, GA 30319'),
+    'weatherstone condo': (33.81225, -84.33556, 'Weatherstone Condo, 1266 Weatherstone Dr NE, Atlanta, GA 30324'),
+    'abberly skye': (33.79383, -84.28693, 'Abberly Skye, 2550 Blackmon Dr, Decatur, GA 30033'),
+    'avana on main': (33.82322, -84.37040, 'Avana on Main, Morosgo Dr NE, Atlanta, GA 30324'),
+    'overton rise': (33.88730, -84.45550, 'Overton Rise, 3695 Cumberland Blvd SE, Atlanta, GA 30339'),
     # Vague unnamed houses — approximate pins
     '__house__:marietta clipper lane': (33.9526, -84.5499, 'Clipper Ln, Marietta, GA (approx.)'),
     '__house__:piedmont ave': (33.7800, -84.3760, 'Piedmont Ave, Atlanta, GA (approx.)'),
@@ -264,6 +265,41 @@ def norm_name(name: str) -> str:
     return n.strip()
 
 
+# Canonical display names for keys whose title-case looks wrong (acronyms,
+# brand-specific casing). Anything not listed here goes through title_case().
+# Display-name overrides for keys whose default capitalization is wrong.
+# Only listed when the result of title_case() needs adjustment, e.g.,
+# acronyms (MAA, IMT, EMMI) or compact forms (100Midtown -> 100 Midtown).
+# All other keys flow through title_case() which capitalizes the first
+# letter of every space-separated word.
+NAME_DISPLAY = {
+    'imt buckhead on 26th': 'IMT Buckhead On 26th',
+    'maa lenox': 'MAA Lenox',
+    'maa centennial park': 'MAA Centennial Park',
+    'maa brookhaven': 'MAA Brookhaven',
+    'emmi': 'EMMI',
+    'glc': 'GLC',
+    '100midtown': '100 Midtown',
+    'nine15 midtown': 'Nine15 Midtown',
+    'mix': 'The Mix',
+    'brooke': 'The Brooke',
+}
+
+
+def title_case(s: str) -> str:
+    """Capitalize first letter of each space-separated word; leave other letters as-is.
+    So 'tens on west' -> 'Tens On West', but 'MAA Lenox' stays 'MAA Lenox'."""
+    return ' '.join(w[:1].upper() + w[1:] if w else w for w in s.split(' '))
+
+
+def display_name(key: str, candidates: list[str]) -> str:
+    if key in NAME_DISPLAY:
+        return NAME_DISPLAY[key]
+    if not candidates:
+        return title_case(key)
+    return title_case(max(candidates, key=len))
+
+
 def short_type(t: str) -> str:
     if not t:
         return 'Unknown'
@@ -379,7 +415,7 @@ def build_locations(rows: list[dict], geo: dict) -> list[dict]:
             winner_lower = max(name_counts, key=lambda k: (name_counts[k], len(k)))
             cands = [r['거주지(아파트) 이름'].strip() for r in group_rows
                      if (r.get('거주지(아파트) 이름') or '').strip().lower() == winner_lower]
-            display = max(cands, key=len) if cands else winner_lower.title()
+            display = display_name(key, cands)
         else:
             display = '(이름 없음 / House)'
         locs.append({
