@@ -50,6 +50,7 @@ HARDCODE_COORDS = {
     'tenth and home': (33.7818, -84.3954, '251 10th St NW, Atlanta, GA 30332'),
     'paloma west midtown': (33.7917, -84.4136, 'Paloma West Midtown, 1062 Brady Ave NW, Atlanta, GA 30318'),
     'rambler atlanta': (33.77452, -84.38516, 'Rambler Atlanta, 736 Peachtree St NE, Atlanta, GA 30308'),
+    'skyhouse buckhead': (33.84952, -84.35768, 'Skyhouse Buckhead, 3390 Stratford Rd NE, Atlanta, GA 30326'),
     'camden brookwood': (33.8088, -84.3856, 'Camden Brookwood, 2500 Peachtree Rd NW, Atlanta, GA 30305'),
     'maa lenox': (33.84745, -84.35950, 'MAA Lenox, 600 Phipps Blvd NE, Atlanta, GA 30326'),
     'maa centennial park': (33.76098, -84.39348, 'MAA Centennial Park, 305 Centennial Olympic Park Dr NW, Atlanta, GA 30313'),
