@@ -68,7 +68,7 @@ HARDCODE_COORDS = {
     # Nominatim mis-hits — pinned by hand
     'alexan on 8th': (33.77666, -84.38953, 'Alexan on 8th, 880 W Peachtree St NW, Atlanta, GA 30309'),
     'the baxter decatur': (33.79335, -84.29380, 'The Baxter Decatur, 1605 Church St, Decatur, GA 30033'),
-    'mix': (33.75696, -84.38260, 'The Mix, 120 Piedmont Ave NE, Atlanta, GA 30303'),
+    'mix': (33.75955, -84.38181, 'The Mix, 120 Piedmont Ave NE, Atlanta, GA 30303'),
     'emmi': (33.78663, -84.38975, 'EMMI, 1405 Spring St NW, Atlanta, GA 30309'),
     'brooke': (33.86620, -84.26565, 'The Brooke, 2500 Shallowford Rd, Atlanta, GA 30345'),
     'arlo': (33.77380, -84.29611, 'Arlo, 245 E Trinity Pl, Decatur, GA 30030'),
