@@ -57,7 +57,7 @@ HARDCODE_COORDS = {
     'maa lenox': (33.85273, -84.36537, 'MAA Lenox, 600 Phipps Blvd NE, Atlanta, GA 30326'),
     'maa centennial park': (33.75596, -84.39732, 'MAA Centennial Park, 305 Centennial Olympic Park Dr NW, Atlanta, GA 30313'),
     'alexander at the district': (33.8845, -84.4690, 'The Alexander at the District, Cumberland, Atlanta, GA'),
-    'imt buckhead on 26th': (33.80265, -84.39185, 'IMT Buckhead on 26th, 26th St NW, Brookwood, Atlanta, GA 30309'),
+    'imt buckhead on 26th': (33.80205, -84.39773, 'IMT Buckhead on 26th, 225 26th St NW, Atlanta, GA 30309'),
     '903 peachtree': (33.77946, -84.38415, '903 Peachtree, 903 Peachtree St NE, Atlanta, GA 30308'),
     'hanover midtown': (33.78839, -84.38786, 'Hanover Midtown, 1230 W Peachtree St NW, Atlanta, GA 30309'),
     'metropolis': (33.78057, -84.38404, 'Metropolis, 943 Peachtree St NE, Atlanta, GA 30309'),
