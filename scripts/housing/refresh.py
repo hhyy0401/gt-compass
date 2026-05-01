@@ -58,7 +58,7 @@ HARDCODE_COORDS = {
     '903 peachtree': (33.78214, -84.38292, '903 Peachtree, 903 Peachtree St NE, Atlanta, GA 30308'),
     'hanover midtown': (33.78745, -84.38962, 'Hanover Midtown, 1230 W Peachtree St NW, Atlanta, GA 30309'),
     'metropolis': (33.78250, -84.38330, 'Metropolis, 943 Peachtree St NE, Atlanta, GA 30309'),
-    'reserve at lenox park': (33.8635, -84.3372, 'Reserve at Lenox Park, 3535 Roswell Rd NE, Atlanta, GA 30305'),
+    'reserve at lenox park': (33.86658, -84.34520, 'Reserve at Lenox Park, 1200 Reserve Dr NE, Atlanta, GA 30319'),
     'steelworks': (33.7867, -84.4070, 'Steelworks, 1220 Mecaslin St NW, Atlanta, GA 30318'),
     'momentum midtown': (33.7841, -84.3897, 'Momentum Midtown, 1018 W Peachtree St NW, Atlanta, GA 30309'),
     'tens on west': (33.78073, -84.38972, 'Tens on West, 1010 W Peachtree St NW, Atlanta, GA 30309'),
