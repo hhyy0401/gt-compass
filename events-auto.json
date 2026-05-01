@@ -1,30 +1,30 @@
 {
-  "fetchedAt": "2026-04-30T10:10:22.575Z",
+  "fetchedAt": "2026-05-01T09:49:35.450Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (10)",
+    "aso": "ok (11)",
     "musical": "ok (9)",
-    "high": "ok (11)",
+    "high": "ok (12)",
     "kpop": "ok (5)"
   },
-  "count": 35,
+  "count": 37,
   "events": [
     {
-      "id": "fox-Z7r9jZ1A7fv74",
+      "id": "fox-Z7r9jZ1A7fv7p",
       "title": "🎭 Six (Touring)",
-      "start": "2026-04-30T23:30:00Z",
+      "start": "2026-05-02T00:00:00Z",
       "category": "musical",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/six-touring-tickets/artist/2725025",
       "desc": "Fox Theatre Atlanta"
     },
     {
-      "id": "aso-vvG1zZbcJN8dHB",
+      "id": "aso-vvG1zZbcJN8SW6",
       "title": "🎻 America@250: Spano conducts Rachmaninoff",
-      "start": "2026-05-01T00:00:00Z",
+      "start": "2026-05-03T00:00:00Z",
       "category": "aso",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/america250-spano-conducts-rachmaninoff-atlanta-georgia-04-30-2026/event/0E0062D9A3403F3A",
+      "url": "https://www.ticketmaster.com/america250-spano-conducts-rachmaninoff-atlanta-georgia-05-02-2026/event/0E0062D9A3433F47",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
@@ -190,8 +190,17 @@
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
     },
     {
+      "id": "aso-vvG1zZ_aS1maiD",
+      "title": "🎻 Students at the Symphony with the Atlanta Symphony Orchestra",
+      "start": "2026-09-18T14:15:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/students-at-the-symphony-with-the-atlanta-georgia-09-18-2026/event/0E00649CCAB89B3B",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
       "id": "kpop-vvG1zZ_a9AH7kj",
-      "title": "🎤 aespa LIVE TOUR - SYNK : COMPLæXITY - in ATLANTA",
+      "title": "🎤 aespa LIVE TOUR - SYNK : COMPLÆXITY - in ATLANTA",
       "start": "2026-09-25T00:00:00Z",
       "category": "kpop",
       "source": "Ticketmaster",
@@ -301,6 +310,15 @@
       "id": "high-secondsun-2027-03-14",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
       "start": "2027-03-14",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "high-secondsun-2027-04-11",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2027-04-11",
       "category": "high",
       "source": "high.org",
       "url": "https://high.org/visit",
