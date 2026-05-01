@@ -70,7 +70,7 @@ HARDCODE_COORDS = {
     'the baxter decatur': (33.79335, -84.29380, 'The Baxter Decatur, 1605 Church St, Decatur, GA 30033'),
     'mix': (33.75696, -84.38260, 'The Mix, 120 Piedmont Ave NE, Atlanta, GA 30303'),
     'emmi': (33.78663, -84.38975, 'EMMI, 1405 Spring St NW, Atlanta, GA 30309'),
-    'brooke': (33.90934, -84.27595, 'The Brooke, 2500 Shallowford Rd, Chamblee, GA'),
+    'brooke': (33.86620, -84.26565, 'The Brooke, 2500 Shallowford Rd, Atlanta, GA 30345'),
     'arlo': (33.77380, -84.29611, 'Arlo, 245 E Trinity Pl, Decatur, GA 30030'),
     'gateway at cedar brook': (33.80162, -84.28232, 'Gateway at Cedar Brook, 3117 Cedar Brook Dr, Decatur, GA 30033'),
     'maa brookhaven': (33.86285, -84.33595, 'MAA Brookhaven, 2829 Caldwell Rd NE, Atlanta, GA 30319'),
