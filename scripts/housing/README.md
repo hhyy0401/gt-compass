@@ -29,7 +29,10 @@ Runs daily via `.github/workflows/refresh-housing.yml`. Requires one repo secret
 1. Open the Google Sheet that the form writes to.
 2. **File → Share → Publish to web**.
 3. Pick the response tab as the source. Format: **Comma-separated values (.csv)**.
-4. Click **Publish**, copy the URL.
+4. Click **Publish**, copy the URL. Make sure it ends in `?output=csv` (NOT `/pubhtml`).
+   - Wrong: `…/pubhtml`
+   - Right: `…/pub?output=csv`
+   - If your URL ends in `/pubhtml`, just replace `/pubhtml` with `/pub?output=csv`.
 5. GitHub repo → Settings → Secrets and variables → Actions → New repository secret. Name: `HOUSING_SHEET_CSV_URL`. Paste the URL.
 
 The action also runs on push to `main` whenever this folder changes, and can be triggered manually via "Run workflow".

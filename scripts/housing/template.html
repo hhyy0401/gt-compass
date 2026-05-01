@@ -23,9 +23,9 @@
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 14px;
-    height: calc(100vh - 280px);
-    min-height: 520px;
-    max-height: 760px;
+    height: calc(100vh - 240px);
+    min-height: 620px;
+    max-height: 820px;
   }
   .hm-side {
     overflow-y: auto;
@@ -160,7 +160,8 @@
     margin: 0;
     width: 520px !important;
     max-width: 92vw !important;
-    max-height: 75vh;
+    /* keep popup small enough to fit inside the map (avoids clipping at top/bottom) */
+    max-height: min(540px, calc(100vh - 320px));
     overflow-y: auto;
     font-family: var(--sans);
   }
