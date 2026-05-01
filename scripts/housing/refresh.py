@@ -60,6 +60,7 @@ HARDCODE_COORDS = {
     'hanover midtown': (33.78745, -84.38962, 'Hanover Midtown, 1230 W Peachtree St NW, Atlanta, GA 30309'),
     'metropolis': (33.78250, -84.38330, 'Metropolis, 943 Peachtree St NE, Atlanta, GA 30309'),
     'venue brookwood': (33.81237, -84.38501, 'Venue Brookwood, 100 Colonial Homes Dr NW, Atlanta, GA 30309'),
+    'windsor peachtree corners': (33.97160, -84.22180, 'Windsor Peachtree Corners, 3341 Peachtree Corners Cir, Peachtree Corners, GA 30092'),
     'reserve at lenox park': (33.86658, -84.34520, 'Reserve at Lenox Park, 1200 Reserve Dr NE, Atlanta, GA 30319'),
     'steelworks': (33.7867, -84.4070, 'Steelworks, 1220 Mecaslin St NW, Atlanta, GA 30318'),
     'momentum midtown': (33.7841, -84.3897, 'Momentum Midtown, 1018 W Peachtree St NW, Atlanta, GA 30309'),
