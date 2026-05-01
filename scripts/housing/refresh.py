@@ -126,9 +126,24 @@ NEIGHBORHOOD = {
 # ---------------------------------------------------------------------------
 
 def fetch_csv(url: str) -> list[dict]:
-    req = urllib.request.Request(url, headers={'User-Agent': 'gtksa-housing-refresh/1.0'})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        text = resp.read().decode('utf-8')
+    # GitHub Actions → googleusercontent CDN can be slow; retry with bigger timeouts.
+    last_err = None
+    for attempt, t in enumerate([60, 90, 120], 1):
+        try:
+            req = urllib.request.Request(url, headers={
+                'User-Agent': 'Mozilla/5.0 (compatible; gtksa-housing-refresh/1.0)',
+                'Accept': 'text/csv,*/*;q=0.5',
+            })
+            with urllib.request.urlopen(req, timeout=t) as resp:
+                text = resp.read().decode('utf-8')
+            break
+        except Exception as e:
+            last_err = e
+            print(f'[refresh] CSV fetch attempt {attempt} failed (timeout={t}s): {e}')
+            time.sleep(2 * attempt)
+    else:
+        raise SystemExit(f'Could not fetch CSV after retries: {last_err}')
+
     reader = csv.reader(io.StringIO(text))
     rows = list(reader)
     if not rows:
