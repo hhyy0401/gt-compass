@@ -1,0 +1,42 @@
+name: Refresh Housing Map Daily
+
+on:
+  schedule:
+    # daily at UTC 09:00 (US Eastern 4-5am)
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/housing/**"
+      - ".github/workflows/refresh-housing.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run refresh
+        env:
+          HOUSING_SHEET_CSV_URL: ${{ secrets.HOUSING_SHEET_CSV_URL }}
+        run: python scripts/housing/refresh.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add housing-map.html scripts/housing/geo_cache.json
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "auto: refresh housing-map.html"
+            git push
+          fi

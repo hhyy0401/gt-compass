@@ -1,0 +1,164 @@
+{
+  "100midtown": {
+    "address": "100 10th St NW",
+    "lat": 33.7809738,
+    "lon": -84.3903214,
+    "source": "nominatim"
+  },
+  "903 peachtree": {
+    "address": "903 peachtree st nw,atlanta,GA,30309",
+    "lat": 33.754012,
+    "lon": -84.390034,
+    "source": "nominatim"
+  },
+  "ascent midtown": {
+    "address": "1400 W Peachtree St NW",
+    "lat": 33.7927853,
+    "lon": -84.3884845,
+    "source": "nominatim"
+  },
+  "avana westside": {
+    "address": "1040 Huff Rd NW, Atlanta GA 30318",
+    "lat": 33.7886773,
+    "lon": -84.4213601,
+    "source": "nominatim"
+  },
+  "bexley summerhill": {
+    "address": "720 Hank Aaron Dr SE",
+    "lat": 33.722576,
+    "lon": -84.3879682,
+    "source": "nominatim"
+  },
+  "bower westside": {
+    "address": "1000 Northside DR NW Atlanta",
+    "lat": 33.781678,
+    "lon": -84.407574,
+    "source": "nominatim"
+  },
+  "brady": {
+    "address": "930 Howell Mill Rd",
+    "lat": 33.7802207,
+    "lon": -84.410606,
+    "source": "nominatim"
+  },
+  "buckhead 960": {
+    "address": "960 E Paces Ferry Rd NE",
+    "lat": 33.8467761,
+    "lon": -84.3571761,
+    "source": "nominatim"
+  },
+  "camden buckhead square": {
+    "address": "3097 Maple Dr NE, Atlanta, GA 30305",
+    "lat": 33.8395535,
+    "lon": -84.3719138,
+    "source": "nominatim"
+  },
+  "exchange": {
+    "address": "470 16th St NW, Atlanta, GA 30363",
+    "lat": 33.7875925,
+    "lon": -84.4041834,
+    "source": "nominatim"
+  },
+  "gables buckhead": {
+    "address": "530 East Paces Ferry Rd NE",
+    "lat": 33.8386751,
+    "lon": -84.3707604,
+    "source": "nominatim"
+  },
+  "hadley": {
+    "address": "770 Juniper St NE, Atlanta, GA 30308",
+    "lat": 33.775696,
+    "lon": -84.3830925,
+    "source": "nominatim"
+  },
+  "hanover midtown": {
+    "address": "1230 peachtree st",
+    "lat": 33.7878682,
+    "lon": -84.3851176,
+    "source": "nominatim"
+  },
+  "hub atlanta": {
+    "address": "960 Spring St NW, Atlanta, GA 30309",
+    "lat": 33.7807409,
+    "lon": -84.3897102,
+    "source": "nominatim"
+  },
+  "linea midtown": {
+    "address": "95 8th St NW, Atlanta, GA 30309",
+    "lat": 33.7797521,
+    "lon": -84.3899941,
+    "source": "nominatim"
+  },
+  "local on 14th": {
+    "address": "455 14th St NW",
+    "lat": 33.7869492,
+    "lon": -84.401946,
+    "source": "nominatim"
+  },
+  "metropolis": {
+    "address": "943 Peachtree St NE",
+    "lat": 33.7801047,
+    "lon": -84.3836933,
+    "source": "nominatim"
+  },
+  "nine15 midtown": {
+    "address": "915 W Peachtree St NW",
+    "lat": 33.7797565,
+    "lon": -84.3867174,
+    "source": "nominatim"
+  },
+  "osprey": {
+    "address": "980 Howell Mill Rd NW",
+    "lat": 33.7811243,
+    "lon": -84.411056,
+    "source": "nominatim"
+  },
+  "skyhouse buckhead": {
+    "address": "3390 Stratford Rd NE, Atlanta, GA 30326",
+    "lat": 33.8498324,
+    "lon": -84.3674697,
+    "source": "nominatim"
+  },
+  "skyline west": {
+    "address": "1390 Northside DR NW",
+    "lat": 33.7925196,
+    "lon": -84.4084346,
+    "source": "nominatim"
+  },
+  "the ridge": {
+    "address": "1945 Ridgewood Dr NE, Atlanta, GA",
+    "lat": 33.7915236,
+    "lon": -84.3165137,
+    "source": "nominatim"
+  },
+  "trace midtown": {
+    "address": "782 Peachtree St NE, Atlanta, GA 30308",
+    "lat": 33.775823,
+    "lon": -84.3853278,
+    "source": "nominatim"
+  },
+  "venue brookwood": {
+    "address": "2144 Peachtree Rd NW",
+    "lat": 33.8302174,
+    "lon": -84.3867636,
+    "source": "nominatim"
+  },
+  "westside union": {
+    "address": "400 Bishop St NW",
+    "lat": 33.793053,
+    "lon": -84.402303,
+    "source": "nominatim"
+  },
+  "windsor at midtown": {
+    "address": "222 14th St NE, ATLANTA, GA",
+    "lat": 33.7870226,
+    "lon": -84.3808013,
+    "source": "nominatim"
+  },
+  "windsor peachtree corners": {
+    "address": "3341 Peachtree Corners Cir, Peachtree Corners, GA 30092",
+    "lat": 33.9451312,
+    "lon": -84.2507338,
+    "source": "nominatim"
+  }
+}

@@ -1,0 +1,665 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>거주지 정보 지도 · GTKSA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  /* housing-map specific */
+  .hm-meta { color: var(--muted); font-size: 13.5px; margin: 0 0 12px; }
+  .hm-meta a { font-weight: 600; }
+  .preview-cta {
+    display: inline-block; padding: 8px 14px;
+    background: var(--gt-navy); color: white;
+    border-radius: 8px; font-size: 13.5px; font-weight: 600;
+    text-decoration: none;
+  }
+  .preview-cta:hover { background: var(--gt-navy-light); text-decoration: none; }
+  /* left filter, right map. height fits ~one viewport (cut at filter end). */
+  .hm-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 14px;
+    height: calc(100vh - 280px);
+    min-height: 520px;
+    max-height: 760px;
+  }
+  .hm-side {
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+  .hm-side .filter-bar {
+    margin: 0;
+    padding: 12px 14px;
+  }
+  .hm-side .filter-bar .filter-group { margin-bottom: 6px; }
+  .hm-side .filter-bar .label { font-size: 11px; margin-bottom: 4px; }
+  .hm-side .filter-bar .filter-tag { padding: 4px 10px; font-size: 12px; }
+  .hm-side .filter-summary { margin-top: 6px; font-size: 11.5px; }
+  #map {
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    overflow: hidden;
+    height: 100%;
+  }
+  /* below-map: compact chip-strip of all locations */
+  .hm-list-section {
+    margin-top: 18px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 12px 14px 14px;
+  }
+  .hm-list-label {
+    font-size: 11px; font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.6px;
+    margin-bottom: 10px;
+    padding: 0 2px;
+  }
+  .hm-list-strip { display: flex; flex-wrap: wrap; gap: 6px; }
+  .hm-loc-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 10px;
+    font-size: 12px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--gt-navy);
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.12s ease;
+  }
+  .hm-loc-chip:hover { background: var(--gt-navy); color: white; border-color: var(--gt-navy); }
+  .hm-loc-chip:hover .hm-loc-count { background: rgba(255,255,255,0.25); color: white; }
+  .hm-loc-chip .hm-loc-count {
+    background: var(--gt-gold); color: var(--gt-navy);
+    font-weight: 700; font-size: 10.5px;
+    padding: 1px 6px; border-radius: 999px;
+  }
+  @media (max-width: 900px) {
+    .hm-layout { grid-template-columns: 1fr; height: auto; max-height: none; }
+    .hm-side { max-height: 50vh; }
+    #map { height: 60vh; min-height: 400px; }
+  }
+  .filter-row .rent-range {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: white; border: 1.5px solid var(--line); border-radius: 999px;
+    padding: 4px 10px; font-size: 13px;
+  }
+  .rent-range input {
+    width: 64px; border: 0; padding: 2px 4px; font-family: inherit; font-size: 13px; color: var(--ink);
+    background: transparent; outline: none;
+  }
+  .rent-range input::placeholder { color: var(--muted); }
+  .rent-range .sep { color: var(--muted); }
+  .filter-search input {
+    width: 100%; max-width: 360px;
+    padding: 7px 12px; font-size: 13.5px; font-family: inherit;
+    border: 1.5px solid var(--line); border-radius: 999px; background: white;
+    outline: none;
+  }
+  .filter-search input:focus { border-color: var(--gt-gold); }
+  .place-card .badge {
+    float: right;
+    background: var(--gt-gold); color: var(--gt-navy);
+    font-size: 11px; font-weight: 700;
+    padding: 1px 8px; border-radius: 999px;
+  }
+  .place-card .approx-tag {
+    display: inline-block; font-size: 10.5px; color: #b86b00; background: #fff3e0;
+    padding: 1px 6px; border-radius: 4px; margin-left: 6px; font-weight: 500;
+  }
+  .row-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+  }
+  .row-card:last-child { margin-bottom: 0; }
+  .row-card .row-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .row-card .pill {
+    display: inline-flex; align-items: center;
+    font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px;
+    background: #eef3fa; color: var(--gt-navy); margin-right: 4px;
+  }
+  .row-card .pill.t-house { background: #fef6e7; color: #92400e; }
+  .row-card .pill.t-dorm { background: #f3e8ff; color: #6b21a8; }
+  .row-card .pill.t-sh { background: #fee2e2; color: #991b1b; }
+  .row-card .pill.t-apt { background: #dbeafe; color: #1e40af; }
+  .row-card .price { font-size: 16px; font-weight: 700; color: var(--gt-navy); }
+  .row-card .price small { font-size: 11.5px; font-weight: 400; color: var(--muted); margin-left: 2px; }
+  .row-card .row-sub { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+  .kv-grid { display: grid; grid-template-columns: 110px 1fr; gap: 4px 10px; font-size: 13px; margin-top: 6px; }
+  .kv-grid .k { color: var(--muted); }
+  .kv-grid .v { word-break: break-word; color: var(--ink-soft); }
+  .free-text {
+    font-size: 13px; line-height: 1.6;
+    background: #f8f7f2;
+    border-left: 3px solid var(--gt-gold);
+    padding: 8px 12px; margin-top: 8px; border-radius: 4px;
+    white-space: pre-wrap; color: var(--ink-soft);
+  }
+  details.row-section summary {
+    cursor: pointer; font-size: 12.5px; color: var(--gt-navy); font-weight: 500;
+    padding: 6px 0 4px; list-style: none;
+  }
+  details.row-section summary::before { content: "▸ "; color: var(--muted); }
+  details.row-section[open] summary::before { content: "▾ "; }
+  /* Custom housing popup — wider than default leaflet, scrollable, all info inside */
+  .leaflet-popup.housing-popup .leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,48,87,0.18);
+    padding: 0;
+  }
+  .leaflet-popup.housing-popup .leaflet-popup-content {
+    margin: 0;
+    width: 520px !important;
+    max-width: 92vw !important;
+    max-height: 75vh;
+    overflow-y: auto;
+    font-family: var(--sans);
+  }
+  .pop-housing-body { font-size: 13.5px; line-height: 1.6; }
+  .pop-housing-head {
+    position: sticky; top: 0; background: white;
+    padding: 12px 16px 10px;
+    border-bottom: 1px solid var(--line);
+    z-index: 1;
+  }
+  .pop-housing-head .title { color: var(--gt-navy); font-weight: 700; font-size: 16px; line-height: 1.3; }
+  .pop-housing-head .addr { color: var(--muted); font-size: 12px; margin-top: 3px; }
+  .pop-housing-head .nb-tag {
+    display: inline-block; font-size: 10.5px; font-weight: 600;
+    color: var(--gt-navy); background: #f1ecdc;
+    padding: 1px 7px; border-radius: 999px;
+    margin-right: 6px;
+  }
+  .pop-housing-body { padding: 10px 14px 14px; }
+  /* override marker-pin coloring per type */
+  .marker-pin.type-sh { background: #b04a3a; }
+  .marker-pin.type-apt { background: var(--gt-navy); }
+  .marker-pin.type-dorm { background: #6b4f8a; }
+  .marker-pin.type-house { background: #8e6d3a; }
+  .marker-pin.type-mixed { background: #555; }
+  .marker-pin .count {
+    transform: rotate(45deg); color: white; font-weight: 700; font-size: 12.5px;
+  }
+  /* Georgia Tech flag marker */
+  .gt-flag {
+    width: 32px; height: 38px;
+    display: flex; align-items: flex-end; justify-content: center;
+    pointer-events: none;
+  }
+  .gt-flag .pole {
+    width: 2px; height: 38px; background: var(--gt-navy);
+    position: absolute; left: 50%; top: 0;
+  }
+  .gt-flag .banner {
+    position: absolute; left: calc(50% + 1px); top: 2px;
+    background: var(--gt-gold);
+    color: var(--gt-navy);
+    font-size: 13px; font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    line-height: 1.1;
+  }
+  .map-legend {
+    display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 14px;
+    font-size: 12.5px; color: var(--muted);
+  }
+  .map-legend .key {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px; border-radius: 999px;
+    background: white; border: 1px solid var(--line);
+  }
+  .map-legend .dot { width: 10px; height: 10px; border-radius: 50%; }
+  @media (max-width: 720px) {
+    .leaflet-popup.housing-popup .leaflet-popup-content { width: 86vw !important; max-height: 60vh; }
+  }
+</style>
+</head>
+<body>
+
+<main class="page" style="max-width:1280px;">
+
+  <p style="margin-top:0;"><a href="life.html#sec-housing" style="font-size:13.5px; color:var(--muted); text-decoration:none;">← 거주, 마트, 교통</a></p>
+  <h2 class="section" style="margin-top:0;">📍 2026 GTKSA 거주지 정보 지도</h2>
+  <p class="hm-meta">
+    재학생 __NRESP__개 응답을 __NLOC__개 위치로 묶어 지도에 표시. 마커 클릭 → 해당 위치 응답 보기.
+  </p>
+
+  <div class="info" style="margin: 4px 0 16px;">
+    🙋 <b>거주 중이신가요? 응답 부탁드려요.</b>
+    최근 기숙사 정책 변화와 렌트비 상승으로 거주지 결정이 어려워지고 있고, 특히 신입생들이 치안·렌트비·통학 시간 같은 기본 정보조차 구하기 힘들어합니다. Fall 2026 신입생과 이사 가실 재학생들이 참고할 수 있도록, 현재 거주 중이신 아파트 정보를 공유해주세요. 수집된 응답은 매일 자동으로 이 지도에 반영됩니다 (개인정보 제외).
+    <div style="margin-top:10px;">
+      <a class="preview-cta" href="https://forms.gle/aYhfF3LHfCjbjSAN6" target="_blank" rel="noopener">📝 설문 응답하기</a>
+    </div>
+  </div>
+
+  <div class="map-legend">
+    <span class="key"><span class="dot" style="background:var(--gt-gold)"></span>🚩 Georgia Tech</span>
+    <span class="key"><span class="dot" style="background:var(--gt-navy)"></span>아파트 (일반)</span>
+    <span class="key"><span class="dot" style="background:#b04a3a"></span>Student Housing</span>
+    <span class="key"><span class="dot" style="background:#6b4f8a"></span>기숙사</span>
+    <span class="key"><span class="dot" style="background:#8e6d3a"></span>주택</span>
+    <span class="key"><span class="dot" style="background:#555"></span>혼합</span>
+  </div>
+
+  <div class="hm-layout">
+    <aside class="hm-side">
+      <div class="filter-bar">
+        <div class="filter-group">
+          <div class="label">동네</div>
+          <div class="filter-row" id="f-area"></div>
+        </div>
+        <div class="filter-group">
+          <div class="label">거주 형태</div>
+          <div class="filter-row" id="f-type"></div>
+        </div>
+        <div class="filter-group">
+          <div class="label">침실 수</div>
+          <div class="filter-row" id="f-bed"></div>
+        </div>
+        <div class="filter-group">
+          <div class="label">욕실 수</div>
+          <div class="filter-row" id="f-bath"></div>
+        </div>
+        <div class="filter-group">
+          <div class="label">월 베이스 렌트 (인당, USD)</div>
+          <div class="filter-row">
+            <span class="rent-range">
+              <input type="number" id="f-rent-min" placeholder="min" min="0" step="50">
+              <span class="sep">–</span>
+              <input type="number" id="f-rent-max" placeholder="max" min="0" step="50">
+            </span>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="label">통학 수단</div>
+          <div class="filter-row" id="f-commute"></div>
+        </div>
+        <div class="filter-group">
+          <div class="label">통학 시간 (편도)</div>
+          <div class="filter-row" id="f-time"></div>
+        </div>
+        <div class="filter-group">
+          <div class="label">가구 (모두 포함)</div>
+          <div class="filter-row" id="f-furn"></div>
+        </div>
+        <div class="filter-group">
+          <div class="label">검색</div>
+          <div class="filter-row filter-search">
+            <input type="text" id="f-search" placeholder="아파트 이름 / 주소 / 자유 서술">
+            <button class="filter-clear" id="f-reset">전체 초기화</button>
+          </div>
+        </div>
+        <div class="filter-summary" id="filter-summary"></div>
+      </div>
+    </aside>
+    <div id="map"></div>
+  </div>
+
+  <div class="hm-list-section">
+    <div class="hm-list-label">전체 위치 (응답 수) · 클릭하면 지도에서 보기</div>
+    <div class="hm-list-strip" id="results-list"></div>
+  </div>
+
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script id="payload" type="application/json">__PAYLOAD__</script>
+<script>
+const PAYLOAD = JSON.parse(document.getElementById('payload').textContent);
+const { locations } = PAYLOAD;
+
+// link rows back to their location and assemble a flat list for filtering
+const ALL_ROWS = [];
+locations.forEach(loc => {
+  loc.rows.forEach(r => {
+    r._loc = loc;
+    ALL_ROWS.push(r);
+  });
+});
+
+const T = v => (v === null || v === undefined || v === '' ? '' : String(v));
+
+function shortType(t) {
+  if (!t) return 'Unknown';
+  // The "아파트 (일반)" label literally says "Student Housing이 아닌 아파트...",
+  // so we have to match the parenthesized tag, not just the words.
+  if (t.includes('(Student Housing)')) return 'Student Housing';
+  if (t.includes('아파트 (일반)')) return 'Apartment';
+  if (t.includes('기숙사')) return 'Dorm';
+  if (t.includes('주택')) return 'House';
+  return 'Unknown';
+}
+function typeClass(t) {
+  return ({ 'Student Housing':'sh', 'Apartment':'apt', 'Dorm':'dorm', 'House':'house' })[t] || 'apt';
+}
+function bedKey(b) {
+  const n = parseFloat(b);
+  if (isNaN(n)) return null;
+  if (n === 0) return 'Studio';
+  if (n >= 4) return '4+';
+  return String(Math.floor(n));
+}
+function bathKey(b) {
+  const n = parseFloat(b);
+  if (isNaN(n)) return null;
+  if (n === 0) return null;
+  if (n >= 3) return '3+';
+  return String(n).replace('.0','');
+}
+
+const AREAS = ['Midtown', 'West Midtown', 'Atlantic Station / Home Park', 'Downtown', '그 외'];
+const TYPES = ['Student Housing', 'Apartment', 'Dorm', 'House'];
+const BEDS = ['Studio', '1', '2', '3', '4+'];
+const BATHS = ['1', '1.5', '2', '2.5', '3+'];
+const COMMUTES_RAW = new Set();
+const TIMES_RAW = new Set();
+const FURN_OPTS = ['세탁기/건조기 (in unit)', '식기세척기', '냉장고', '식탁', '옷장 (Walk-in closet)', '전자레인지'];
+
+// split commute strings on commas OUTSIDE parens, then strip "(...)" so chips
+// don't get fragments like "(Stinger" or "MARTA)" from "대중교통 (Stinger, MARTA)"
+function parseCommutes(s) {
+  if (!s) return [];
+  const placeheld = s.replace(/\(([^)]*)\)/g, (_, inner) => '(' + inner.replace(/,/g, '') + ')');
+  return placeheld.split(',').map(t => t.trim().replace(/\s*\([^)]*\)\s*/g, '').trim()).filter(Boolean);
+}
+ALL_ROWS.forEach(r => {
+  parseCommutes(T(r['통학 수단'])).forEach(s => COMMUTES_RAW.add(s));
+  const t = T(r['통학 소요 시간 (편도)']).trim();
+  if (t) TIMES_RAW.add(t);
+});
+
+const state = {
+  area: new Set(),
+  type: new Set(), bed: new Set(), bath: new Set(),
+  commute: new Set(), time: new Set(), furn: new Set(),
+  rentMin: null, rentMax: null, search: '',
+};
+
+function makeChips(elId, items, key) {
+  const el = document.getElementById(elId);
+  el.innerHTML = '';
+  items.forEach(item => {
+    const c = document.createElement('button');
+    c.className = 'filter-tag';
+    c.textContent = item;
+    c.onclick = () => {
+      if (state[key].has(item)) state[key].delete(item);
+      else state[key].add(item);
+      c.classList.toggle('active');
+      applyAndFit();
+    };
+    el.appendChild(c);
+  });
+}
+makeChips('f-area', AREAS, 'area');
+makeChips('f-type', TYPES, 'type');
+makeChips('f-bed', BEDS, 'bed');
+makeChips('f-bath', BATHS, 'bath');
+makeChips('f-commute', [...COMMUTES_RAW].sort(), 'commute');
+makeChips('f-time', [...TIMES_RAW].sort(), 'time');
+makeChips('f-furn', FURN_OPTS, 'furn');
+
+document.getElementById('f-rent-min').oninput = e => { state.rentMin = e.target.value === '' ? null : parseFloat(e.target.value); apply(); };
+document.getElementById('f-rent-max').oninput = e => { state.rentMax = e.target.value === '' ? null : parseFloat(e.target.value); apply(); };
+document.getElementById('f-search').oninput = e => { state.search = e.target.value.toLowerCase().trim(); apply(); };
+document.getElementById('f-reset').onclick = () => {
+  ['area','type','bed','bath','commute','time','furn'].forEach(k => state[k].clear());
+  state.rentMin = state.rentMax = null;
+  state.search = '';
+  document.querySelectorAll('.filter-tag.active').forEach(c => c.classList.remove('active'));
+  document.getElementById('f-rent-min').value = '';
+  document.getElementById('f-rent-max').value = '';
+  document.getElementById('f-search').value = '';
+  applyAndFit();
+};
+
+function rowMatches(r) {
+  if (state.area.size && !state.area.has(r._loc.neighborhood)) return false;
+  const ht = shortType(r['현재 거주 형태']);
+  if (state.type.size && !state.type.has(ht)) return false;
+  if (state.bed.size) {
+    const k = bedKey(r['Bedroom']);
+    if (!k || !state.bed.has(k)) return false;
+  }
+  if (state.bath.size) {
+    const k = bathKey(r['Bathroom']);
+    if (!k || !state.bath.has(k)) return false;
+  }
+  if (state.commute.size) {
+    const tokens = parseCommutes(T(r['통학 수단']));
+    if (![...state.commute].some(opt => tokens.includes(opt))) return false;
+  }
+  if (state.time.size) {
+    const t = T(r['통학 소요 시간 (편도)']);
+    if (!state.time.has(t)) return false;
+  }
+  if (state.furn.size) {
+    const f = T(r['가구 유무']);
+    if (![...state.furn].every(opt => f.includes(opt))) return false;
+  }
+  const rent = parseFloat(r['인당 월 베이스 렌트 비용']);
+  if (state.rentMin !== null && (isNaN(rent) || rent < state.rentMin)) return false;
+  if (state.rentMax !== null && (isNaN(rent) || rent > state.rentMax)) return false;
+  if (state.search) {
+    const hay = [r._loc.name, r._loc.address, r['거주지(아파트) 이름'], r['거주지 주소'], r['기타 현재 거주지의 장점 혹은 단점 (자유 서술)']].map(T).join(' ').toLowerCase();
+    if (!hay.includes(state.search)) return false;
+  }
+  return true;
+}
+
+const map = L.map('map', { zoomControl: true }).setView([33.785, -84.385], 12);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; OpenStreetMap &copy; CARTO',
+  maxZoom: 19,
+}).addTo(map);
+
+// Georgia Tech flag (always visible, not clustered)
+const GT_LAT = 33.7756, GT_LNG = -84.3963;
+const gtIcon = L.divIcon({
+  className: '',
+  html: `<div class="gt-flag"><span class="pole"></span><span class="banner">🐝 GT</span></div>`,
+  iconSize: [40, 38],
+  iconAnchor: [10, 38],
+  popupAnchor: [0, -36],
+});
+L.marker([GT_LAT, GT_LNG], { icon: gtIcon, zIndexOffset: 800 })
+ .bindPopup('<div class="pop-name">Georgia Institute of Technology</div><div class="pop-meta">캠퍼스 중심</div>')
+ .addTo(map);
+
+const cluster = L.markerClusterGroup({
+  showCoverageOnHover: false,
+  maxClusterRadius: 35,
+  spiderfyOnEveryZoom: false,
+});
+map.addLayer(cluster);
+
+function locTypes(loc) {
+  return new Set(loc.rows.map(r => shortType(r['현재 거주 형태'])));
+}
+function dominantClass(typeSet) {
+  if (typeSet.size > 1) return 'mixed';
+  return typeClass([...typeSet][0]);
+}
+function buildIcon(loc, visibleCount) {
+  const cls = dominantClass(locTypes(loc));
+  return L.divIcon({
+    className: '',
+    html: `<div class="marker-pin type-${cls}"><span class="count">${visibleCount}</span></div>`,
+    iconSize: [28, 28], iconAnchor: [14, 28], popupAnchor: [0, -28],
+  });
+}
+
+const markersByKey = {};
+const allLatLngs = [[GT_LAT, GT_LNG]];
+locations.forEach(loc => {
+  allLatLngs.push([loc.lat, loc.lon]);
+  const m = L.marker([loc.lat, loc.lon], { icon: buildIcon(loc, loc.rows.length) });
+  m._locRef = loc;
+  m.bindPopup(() => buildPopupContent(loc), {
+    maxWidth: 560,
+    minWidth: 440,
+    autoPanPadding: [40, 40],
+    className: 'housing-popup',
+  });
+  markersByKey[loc.key] = m;
+});
+const allBounds = L.latLngBounds(allLatLngs);
+
+function escapeHtml(s) {
+  return T(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function renderList(visibleByLoc) {
+  const list = document.getElementById('results-list');
+  list.innerHTML = '';
+  const visibleLocs = locations.filter(l => (visibleByLoc.get(l.key) || 0) > 0);
+  visibleLocs.sort((a,b) => (visibleByLoc.get(b.key) || 0) - (visibleByLoc.get(a.key) || 0) || a.name.localeCompare(b.name));
+  if (visibleLocs.length === 0) {
+    list.innerHTML = `<div style="color:var(--muted); font-size:13px;">선택한 조건에 해당하는 곳이 없어요.</div>`;
+  } else {
+    visibleLocs.forEach(loc => {
+      const chip = document.createElement('span');
+      chip.className = 'hm-loc-chip';
+      const n = visibleByLoc.get(loc.key);
+      chip.innerHTML = `${escapeHtml(loc.name)}<span class="hm-loc-count">${n}</span>`;
+      chip.title = `${loc.neighborhood} · ${loc.address}`;
+      chip.onclick = () => {
+        map.flyTo([loc.lat, loc.lon], 16, { duration: 0.6 });
+        setTimeout(() => markersByKey[loc.key].openPopup(), 650);
+      };
+      list.appendChild(chip);
+    });
+  }
+  document.getElementById('filter-summary').textContent =
+    `${visibleLocs.length} / ${locations.length} 위치 · ${[...visibleByLoc.values()].reduce((a,b)=>a+b,0)} / ${ALL_ROWS.length} 응답`;
+}
+
+function apply() {
+  const visibleByLoc = new Map();
+  ALL_ROWS.forEach(r => {
+    if (rowMatches(r)) visibleByLoc.set(r._loc.key, (visibleByLoc.get(r._loc.key) || 0) + 1);
+  });
+  cluster.clearLayers();
+  const visibleLatLngs = [];
+  locations.forEach(loc => {
+    const c = visibleByLoc.get(loc.key) || 0;
+    if (c > 0) {
+      const m = markersByKey[loc.key];
+      m.setIcon(buildIcon(loc, c));
+      cluster.addLayer(m);
+      visibleLatLngs.push([loc.lat, loc.lon]);
+    }
+  });
+  renderList(visibleByLoc);
+  // refresh the currently-open popup so its content reflects filters
+  for (const m of Object.values(markersByKey)) {
+    if (m.isPopupOpen()) {
+      m.getPopup().setContent(buildPopupContent(m._locRef));
+      break;
+    }
+  }
+  return visibleLatLngs;
+}
+
+function applyAndFit() {
+  const visibleLatLngs = apply();
+  if (visibleLatLngs.length > 0) {
+    const bounds = L.latLngBounds(visibleLatLngs);
+    map.flyToBounds(bounds, { padding: [60, 60], maxZoom: 16, duration: 0.5 });
+  }
+}
+
+function fmtUsd(v) {
+  const n = parseFloat(v);
+  if (isNaN(n)) return T(v);
+  return '$' + n.toLocaleString('en-US');
+}
+
+const FIELD_GROUPS = [
+  ['단위 정보', ['Bedroom', 'Bathroom', '룸메이트 수 (본인 포함)', '가구 유무', '주차장 형태', '방 특이사항']],
+  ['계약', ['입주 시기', '계약 기간', '월 수입 증빙 필요 유무', '월 수입 증빙 필요 유무__1', '보증인 필요 유무', '보증인 필요 유무__1']],
+  ['비용 (인당, USD)', ['인당 월 베이스 렌트 비용', '월 베이스 렌트 참고 사항', '인당 월 유틸리티 비용', '유틸리티 포함 항목', '인당 월 주차비', '초기 비용']],
+  ['통학', ['통학 수단', '통학 소요 시간 (편도)']],
+  ['주변 환경 (1=나쁨, 5=좋음)', ['치안', '소음', '벌레/동물', '악취']],
+  ['기타', ['Visitor Policy', '어메니티']],
+];
+
+function renderRowCardHtml(r) {
+  const ht = shortType(r['현재 거주 형태']);
+  const tcls = 't-' + typeClass(ht);
+  const rent = r['인당 월 베이스 렌트 비용'];
+  const bed = r['Bedroom'], bath = r['Bathroom'];
+  let bedDisp = '';
+  if (bed !== null && bed !== undefined && bed !== '') bedDisp = (parseFloat(bed) === 0 ? 'Studio' : bed + 'BR');
+  if (bath) bedDisp += (bedDisp ? ' / ' : '') + bath + 'BA';
+  const ppl = r['룸메이트 수 (본인 포함)'];
+  const apt = T(r['거주지(아파트) 이름']) || '(이름 없음)';
+
+  let html = `<div class="row-card">
+    <div class="row-head">
+      <div>
+        <span class="pill ${tcls}">${escapeHtml(ht)}</span>
+        ${bedDisp ? `<span class="pill">${escapeHtml(bedDisp)}</span>` : ''}
+        ${ppl ? `<span class="pill">룸메 ${escapeHtml(String(ppl))}</span>` : ''}
+      </div>
+      <div class="price">${rent ? fmtUsd(rent) : '<small style="color:var(--muted)">베이스 렌트 미기재</small>'}<small>/월</small></div>
+    </div>
+    <div class="row-sub">응답 #${r._row} · ${escapeHtml(apt)}</div>
+  `;
+
+  FIELD_GROUPS.forEach(([title, fields]) => {
+    const vals = fields.filter(f => T(r[f]).trim());
+    if (!vals.length) return;
+    const isOpen = (title === '단위 정보' || title === '비용 (인당, USD)' || title === '주변 환경 (1=나쁨, 5=좋음)');
+    let kv = '';
+    vals.forEach(f => {
+      let val = T(r[f]);
+      if (f.startsWith('인당') && /비용/.test(f)) val = fmtUsd(val);
+      const label = f.replace(/__1$/, ' (상세)');
+      kv += `<div class="k">${escapeHtml(label)}</div><div class="v">${escapeHtml(val)}</div>`;
+    });
+    html += `<details class="row-section"${isOpen ? ' open' : ''}>
+      <summary>${escapeHtml(title)}</summary>
+      <div class="kv-grid">${kv}</div>
+    </details>`;
+  });
+
+  const free = T(r['기타 현재 거주지의 장점 혹은 단점 (자유 서술)']).trim();
+  if (free) {
+    html += `<div class="free-text">${escapeHtml(free)}</div>`;
+  }
+  html += '</div>';
+  return html;
+}
+
+function buildPopupContent(loc) {
+  const visible = loc.rows.filter(rowMatches);
+  const head = `<div class="pop-housing-head">
+    <span class="nb-tag">${escapeHtml(loc.neighborhood)}</span>
+    <span class="title">${escapeHtml(loc.name)}${loc.approx ? ' <small style="color:var(--muted);font-weight:400;">(대략적 위치)</small>' : ''}</span>
+    <div class="addr">${escapeHtml(loc.address)}</div>
+  </div>`;
+  if (visible.length === 0) {
+    return head + '<div class="pop-housing-body"><p style="color:var(--muted);font-size:13px;margin:0;">현재 필터에 맞는 응답이 없습니다.</p></div>';
+  }
+  const cards = visible.map(renderRowCardHtml).join('');
+  return head + `<div class="pop-housing-body">${cards}</div>`;
+}
+
+apply();
+map.fitBounds(allBounds, { padding: [40, 40] });
+</script>
+<script src="assets/nav.js"></script>
+</body>
+</html>
