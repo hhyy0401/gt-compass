@@ -49,7 +49,7 @@ HARDCODE_COORDS = {
     # canonical key -> (lat, lon, label)
     'tenth and home': (33.7818, -84.3954, '251 10th St NW, Atlanta, GA 30332'),
     'paloma west midtown': (33.7917, -84.4136, 'Paloma West Midtown, 1062 Brady Ave NW, Atlanta, GA 30318'),
-    'rambler atlanta': (33.7849, -84.3849, 'Rambler Atlanta, 1080 Peachtree St NE, Atlanta, GA 30309'),
+    'rambler atlanta': (33.77452, -84.38516, 'Rambler Atlanta, 736 Peachtree St NE, Atlanta, GA 30308'),
     'camden brookwood': (33.8088, -84.3856, 'Camden Brookwood, 2500 Peachtree Rd NW, Atlanta, GA 30305'),
     'maa lenox': (33.84745, -84.35950, 'MAA Lenox, 600 Phipps Blvd NE, Atlanta, GA 30326'),
     'maa centennial park': (33.76098, -84.39348, 'MAA Centennial Park, 305 Centennial Olympic Park Dr NW, Atlanta, GA 30313'),
@@ -76,7 +76,7 @@ HARDCODE_COORDS = {
     'weatherstone condo': (33.82340, -84.35020, 'Weatherstone Condo, 1266 Weatherstone Dr NE, Atlanta, GA 30324'),
     'abberly skye': (33.80553, -84.28232, 'Abberly Skye, 2550 Blackmon Dr, Decatur, GA 30033'),
     'avana on main': (33.82010, -84.35050, 'Avana on Main, 508 Main St NE, Atlanta, GA 30324'),
-    'overton rise': (33.87807, -84.46692, 'Overton Rise, 3695 Cumberland Blvd SE, Atlanta, GA 30339'),
+    'overton rise': (33.87553, -84.45945, 'Overton Rise, 3695 Cumberland Blvd SE, Atlanta, GA 30339'),
     # Vague unnamed houses — approximate pins
     '__house__:marietta clipper lane': (33.9526, -84.5499, 'Clipper Ln, Marietta, GA (approx.)'),
     '__house__:piedmont ave': (33.7800, -84.3760, 'Piedmont Ave, Atlanta, GA (approx.)'),
