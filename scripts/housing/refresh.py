@@ -67,7 +67,7 @@ HARDCODE_COORDS = {
     'sora at spring quarter': (33.7825, -84.3892, 'Sora at Spring Quarter, 1000 Spring St NW, Atlanta, GA 30309'),
     # Nominatim mis-hits — pinned by hand
     'alexan on 8th': (33.77666, -84.38953, 'Alexan on 8th, 880 W Peachtree St NW, Atlanta, GA 30309'),
-    'the baxter decatur': (33.78195, -84.29685, 'The Baxter Decatur, 1605 Church St, Decatur, GA 30033'),
+    'the baxter decatur': (33.79335, -84.29380, 'The Baxter Decatur, 1605 Church St, Decatur, GA 30033'),
     'mix': (33.75696, -84.38260, 'The Mix, 120 Piedmont Ave NE, Atlanta, GA 30303'),
     'emmi': (33.78663, -84.38975, 'EMMI, 1405 Spring St NW, Atlanta, GA 30309'),
     'brooke': (33.90934, -84.27595, 'The Brooke, 2500 Shallowford Rd, Chamblee, GA'),
