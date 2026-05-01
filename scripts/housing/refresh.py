@@ -63,7 +63,7 @@ HARDCODE_COORDS = {
     'steelworks': (33.7867, -84.4070, 'Steelworks, 1220 Mecaslin St NW, Atlanta, GA 30318'),
     'momentum midtown': (33.7841, -84.3897, 'Momentum Midtown, 1018 W Peachtree St NW, Atlanta, GA 30309'),
     'tens on west': (33.78073, -84.38972, 'Tens on West, 1010 W Peachtree St NW, Atlanta, GA 30309'),
-    'society atlanta': (33.7793, -84.3833, 'Society Atlanta, 811 Peachtree St NE, Atlanta, GA 30308'),
+    'society atlanta': (33.77835, -84.38336, 'Society Atlanta, 811 Peachtree St NE, Atlanta, GA 30308'),
     'sora at spring quarter': (33.7825, -84.3892, 'Sora at Spring Quarter, 1000 Spring St NW, Atlanta, GA 30309'),
     # Nominatim mis-hits — pinned by hand
     'alexan on 8th': (33.77666, -84.38953, 'Alexan on 8th, 880 W Peachtree St NW, Atlanta, GA 30309'),
