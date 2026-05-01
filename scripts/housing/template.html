@@ -479,8 +479,11 @@ L.marker([GT_LAT, GT_LNG], { icon: gtIcon, zIndexOffset: 800 })
 
 const cluster = L.markerClusterGroup({
   showCoverageOnHover: false,
-  maxClusterRadius: 35,
-  spiderfyOnEveryZoom: false,
+  maxClusterRadius: 28,
+  spiderfyOnMaxZoom: true,
+  spiderfyOnEveryZoom: true,  // click cluster → fan out so individual popups are reachable
+  zoomToBoundsOnClick: false, // don't zoom; spiderfy directly
+  disableClusteringAtZoom: 17,
 });
 map.addLayer(cluster);
 
