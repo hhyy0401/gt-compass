@@ -1,31 +1,22 @@
 {
-  "fetchedAt": "2026-05-02T09:11:28.616Z",
+  "fetchedAt": "2026-05-03T09:24:35.353Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (11)",
+    "aso": "ok (10)",
     "musical": "ok (9)",
     "high": "ok (12)",
     "kpop": "ok (5)"
   },
-  "count": 37,
+  "count": 36,
   "events": [
     {
-      "id": "fox-Z7r9jZ1A73_rK",
+      "id": "fox-Z7r9jZ1A73_rf",
       "title": "🎭 Six (Touring)",
-      "start": "2026-05-02T18:00:00Z",
+      "start": "2026-05-03T17:00:00Z",
       "category": "musical",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/six-touring-tickets/artist/2725025",
       "desc": "Fox Theatre Atlanta"
-    },
-    {
-      "id": "aso-vvG1zZbcJN8SW6",
-      "title": "🎻 America@250: Spano conducts Rachmaninoff",
-      "start": "2026-05-03T00:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/america250-spano-conducts-rachmaninoff-atlanta-georgia-05-02-2026/event/0E0062D9A3433F47",
-      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "aso-vvG1zZbcJNDNTV",
