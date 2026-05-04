@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-05-03T09:24:35.353Z",
+  "fetchedAt": "2026-05-04T10:17:43.634Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (10)",
-    "musical": "ok (9)",
+    "musical": "ok (8)",
     "high": "ok (12)",
     "kpop": "ok (5)"
   },
-  "count": 36,
+  "count": 35,
   "events": [
-    {
-      "id": "fox-Z7r9jZ1A73_rf",
-      "title": "🎭 Six (Touring)",
-      "start": "2026-05-03T17:00:00Z",
-      "category": "musical",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/six-touring-tickets/artist/2725025",
-      "desc": "Fox Theatre Atlanta"
-    },
     {
       "id": "aso-vvG1zZbcJNDNTV",
       "title": "🎻 America@250: Spano Conducts Bernstein",
