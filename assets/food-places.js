@@ -124,6 +124,7 @@ const FOOD_PLACES = [
   { type:"dessert", name:"Five Daughters Bakery", lat:33.7865, lng:-84.4118, tags:["doughnut"],      note:"Westside Provisions",
     chainLocations:[ {lat:33.7553, lng:-84.3636, area:"Krog Street Market"} ]},
   { type:"dessert", name:"The Salty Donut",     lat:33.7577, lng:-84.3642, tags:["doughnut"],        note:"Krog Street" },
+  { type:"dessert", name:"Common Coffee & Cocktails", lat:33.90604, lng:-84.27018, tags:["bakery"],   note:"Doraville, 분위기 좋음" },
 ];
 
 const FOOD_TAGS = {
