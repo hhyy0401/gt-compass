@@ -49,7 +49,7 @@ HARDCODE_COORDS = {
     # canonical key -> (lat, lon, label)
     # Coords below verified 2026-05 against US Census Geocoder (TIGER/Line);
     # MAA Centennial Park + Avana on Main use Nominatim (Census didn't match).
-    'tenth and home': (33.78156, -84.39543, '251 10th St NW, Atlanta, GA 30332'),
+    'tenth and home': (33.78201, -84.39591, 'Tenth and Home, 251 10th St NW, Atlanta, GA 30332'),
     'paloma west midtown': (33.77456, -84.40631, 'Paloma West Midtown, 800 Marietta St NW, Atlanta, GA 30318'),
     'brady': (33.78025, -84.41059, 'The Brady, 930 Howell Mill Rd NW, Atlanta, GA 30318'),
     'rambler atlanta': (33.77475, -84.38473, 'Rambler Atlanta, 736 Peachtree St NE, Atlanta, GA 30308'),
