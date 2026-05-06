@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-05-05T10:06:27.596Z",
+  "fetchedAt": "2026-05-06T10:22:30.795Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (10)",
+    "aso": "ok (11)",
     "musical": "ok (8)",
     "high": "ok (12)",
     "kpop": "ok (5)"
   },
-  "count": 35,
+  "count": 36,
   "events": [
     {
       "id": "aso-vvG1zZbcJNDNTV",
@@ -107,6 +107,15 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "aso-vvG1zZ_1KLU5cf",
+      "title": "🎻 America@250 Encore: Bernstein, Copland + Barber",
+      "start": "2026-06-18T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/america250-encore-bernstein-copland-barber-atlanta-georgia-06-17-2026/event/0E0064A4DFD8BB54",
+      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "kpop-vvG1zZ_FLbemAt",
