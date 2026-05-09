@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-05-08T09:27:23.403Z",
+  "fetchedAt": "2026-05-09T09:23:28.599Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (11)",
     "musical": "ok (8)",
     "high": "ok (12)",
-    "kpop": "ok (5)"
+    "kpop": "ok (4)"
   },
-  "count": 36,
+  "count": 35,
   "events": [
     {
       "id": "high-secondsun-2026-05-10",
@@ -152,15 +152,6 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
-    },
-    {
-      "id": "kpop-vvG1zZ_kCl3nn0",
-      "title": "🎤 i-dle WORLD TOUR [Syncopation]",
-      "start": "2026-08-09T00:00:00Z",
-      "category": "kpop",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/idle-world-tour-syncopation-atlanta-georgia-08-08-2026/event/0E006463AB4AAAA4",
-      "desc": "State Farm Arena"
     },
     {
       "id": "fox-Z7r9jZ1A7-v7p",
