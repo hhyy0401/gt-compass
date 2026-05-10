@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-05-09T09:23:28.599Z",
+  "fetchedAt": "2026-05-10T09:41:11.886Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (11)",
+    "aso": "ok (10)",
     "musical": "ok (8)",
     "high": "ok (12)",
     "kpop": "ok (4)"
   },
-  "count": 35,
+  "count": 34,
   "events": [
     {
       "id": "high-secondsun-2026-05-10",
@@ -17,15 +17,6 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
-    },
-    {
-      "id": "aso-vvG1zZbcJNHSTU",
-      "title": "🎻 America@250: Spano Conducts Bernstein",
-      "start": "2026-05-10T00:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/america250-spano-conducts-bernstein-atlanta-georgia-05-09-2026/event/0E0062D9A3F33FF6",
-      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "aso-vvG1zZbcJ0c0A5",
