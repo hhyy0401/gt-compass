@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-05-10T09:41:11.886Z",
+  "fetchedAt": "2026-05-11T11:28:52.691Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (10)",
     "musical": "ok (8)",
-    "high": "ok (12)",
+    "high": "ok (11)",
     "kpop": "ok (4)"
   },
-  "count": 34,
+  "count": 33,
   "events": [
-    {
-      "id": "high-secondsun-2026-05-10",
-      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
-      "start": "2026-05-10",
-      "category": "high",
-      "source": "high.org",
-      "url": "https://high.org/visit",
-      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
-    },
     {
       "id": "aso-vvG1zZbcJ0c0A5",
       "title": "🎻 Mozart's Jupiter Symphony + ASO ",
