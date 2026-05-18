@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-05-17T09:49:39.460Z",
+  "fetchedAt": "2026-05-18T11:47:47.404Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (9)",
     "musical": "ok (8)",
     "high": "ok (11)",
-    "kpop": "ok (4)"
+    "kpop": "ok (3)"
   },
-  "count": 32,
+  "count": 31,
   "events": [
-    {
-      "id": "kpop-rZ7HnEZ1AfqoOK",
-      "title": "🎤 YVES TOUR 2026: THE AMERICAS",
-      "start": "2026-05-17T23:30:00Z",
-      "category": "kpop",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketweb.com/event/yves-tour-2026-the-americas-center-stage-theater-tickets/14751813",
-      "desc": "Center Stage Theater"
-    },
     {
       "id": "aso-vvG1zZbReguxIK",
       "title": "🎻 Georgia Symphony Orchestra: 75th Anniversary Concert",
