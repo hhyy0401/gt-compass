@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-05-18T11:47:47.404Z",
+  "fetchedAt": "2026-05-19T11:24:05.714Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (9)",
+    "aso": "ok (13)",
     "musical": "ok (8)",
     "high": "ok (11)",
     "kpop": "ok (3)"
   },
-  "count": 31,
+  "count": 35,
   "events": [
     {
       "id": "aso-vvG1zZbReguxIK",
@@ -199,6 +199,15 @@
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
+      "id": "aso-vvG1zZ_1M_raEM",
+      "title": "🎻 Christmas with the ASO",
+      "start": "2026-12-11T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/christmas-with-the-aso-atlanta-georgia-12-10-2026/event/0E0064ADD97899F7",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
       "id": "high-secondsun-2026-12-13",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
       "start": "2026-12-13",
@@ -215,6 +224,33 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/mrs-doubtfire-touring-tickets/artist/3007777",
       "desc": "Fox Theatre Atlanta"
+    },
+    {
+      "id": "aso-vvG1zZ_1MQqyVS",
+      "title": "🎻 Handel's Messiah",
+      "start": "2026-12-18T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/handels-messiah-atlanta-georgia-12-17-2026/event/0E0064ADDA779D33",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_1Mjd1Ap",
+      "title": "🎻 Sounds of the Season",
+      "start": "2026-12-24T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/sounds-of-the-season-atlanta-georgia-12-23-2026/event/0E0064ADDC0CA156",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_1MqNBf4",
+      "title": "🎻 Vivaldi Four Seasons",
+      "start": "2027-01-08T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/vivaldi-four-seasons-atlanta-georgia-01-07-2027/event/0E0064ADDD8FA515",
+      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "high-secondsun-2027-01-10",
