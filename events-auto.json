@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-05-31T10:18:55.632Z",
+  "fetchedAt": "2026-06-01T13:40:48.735Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (11)",
-    "musical": "ok (8)",
-    "high": "ok (11)",
+    "musical": "ok (7)",
+    "high": "ok (12)",
     "kpop": "ok (3)"
   },
   "count": 33,
   "events": [
-    {
-      "id": "fox-Z7r9jZ1A7fbos",
-      "title": "🎭 Beauty And The Beast (Touring)",
-      "start": "2026-05-31T17:00:00Z",
-      "category": "musical",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/disneys-beauty-and-the-beast-touring-tickets/artist/803726",
-      "desc": "Fox Theatre Atlanta"
-    },
     {
       "id": "aso-vvG1zZbcJ9rwz5",
       "title": "🎻 Stutzmann + Mahler's Second Symphony",
@@ -296,6 +287,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/the-notebook-touring-tickets/artist/3656159",
       "desc": "Fox Theatre Atlanta"
+    },
+    {
+      "id": "high-secondsun-2027-05-09",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2027-05-09",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
     },
     {
       "id": "fox-Z7r9jZ1A7OSZO",
