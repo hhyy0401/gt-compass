@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-06-02T12:08:09.142Z",
+  "fetchedAt": "2026-06-03T12:44:38.466Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (11)",
     "musical": "ok (7)",
     "high": "ok (12)",
-    "kpop": "ok (2)"
+    "kpop": "ok (3)"
   },
-  "count": 32,
+  "count": 33,
   "events": [
     {
       "id": "aso-vvG1zZbcJ9rwz5",
@@ -80,6 +80,15 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "kpop-vvG1zZ_G6rRWcF",
+      "title": "🎤 2026 CORTIS TOUR [PUT YOUR PHONE DOWN] IN ATLANTA",
+      "start": "2026-08-09T00:00:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://foxtheatre.evenue.net/events/COR",
+      "desc": "Fox Theatre Atlanta"
     },
     {
       "id": "fox-Z7r9jZ1A7-v7p",
