@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-04T11:18:40.381Z",
+  "fetchedAt": "2026-06-05T11:31:26.272Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (11)",
@@ -10,12 +10,12 @@
   "count": 33,
   "events": [
     {
-      "id": "aso-vvG1zZbcJ9rwz5",
+      "id": "aso-vvG1zZbcJ9L3zm",
       "title": "🎻 Stutzmann + Mahler's Second Symphony",
-      "start": "2026-06-05T00:00:00Z",
+      "start": "2026-06-07T00:00:00Z",
       "category": "aso",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/stutzmann-mahlers-second-symphony-atlanta-georgia-06-04-2026/event/0E0062D9977B2E0B",
+      "url": "https://www.ticketmaster.com/stutzmann-mahlers-second-symphony-atlanta-georgia-06-06-2026/event/0E0062D9977D2E2E",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
