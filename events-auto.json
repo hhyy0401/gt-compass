@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-06-07T10:31:57.024Z",
+  "fetchedAt": "2026-06-08T12:37:06.282Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (11)",
+    "aso": "ok (10)",
     "musical": "ok (7)",
     "high": "ok (12)",
     "kpop": "ok (3)"
   },
-  "count": 33,
+  "count": 32,
   "events": [
-    {
-      "id": "aso-vvG1zZbcJ9OeyX",
-      "title": "🎻 Stutzmann + Mahler's Second Symphony",
-      "start": "2026-06-07T19:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/stutzmann-mahlers-second-symphony-atlanta-georgia-06-07-2026/event/0E0062D997802E7E",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
     {
       "id": "aso-vvG1zZ_7VGx0DY",
       "title": "🎻 Max Richter with the American Contemporary Music Ensemble",
