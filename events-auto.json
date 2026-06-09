@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-06-08T12:37:06.282Z",
+  "fetchedAt": "2026-06-09T11:20:09.660Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (10)",
     "musical": "ok (7)",
     "high": "ok (12)",
-    "kpop": "ok (3)"
+    "kpop": "ok (4)"
   },
-  "count": 32,
+  "count": 33,
   "events": [
     {
       "id": "aso-vvG1zZ_7VGx0DY",
@@ -80,6 +80,15 @@
       "source": "Ticketmaster",
       "url": "https://foxtheatre.evenue.net/events/COR",
       "desc": "Fox Theatre Atlanta"
+    },
+    {
+      "id": "kpop-vvG1zZ_G22mRK_",
+      "title": "🎤 Baek Ji Young",
+      "start": "2026-08-22T23:00:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/baek-ji-young-atlanta-georgia-08-22-2026/event/0E0064C3CFBAF4D9",
+      "desc": "Atlanta Symphony Hall"
     },
     {
       "id": "fox-Z7r9jZ1A7-v7p",
