@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-06-09T11:20:09.660Z",
+  "fetchedAt": "2026-06-10T11:41:08.363Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (10)",
     "musical": "ok (7)",
     "high": "ok (12)",
-    "kpop": "ok (4)"
+    "kpop": "ok (5)"
   },
-  "count": 33,
+  "count": 34,
   "events": [
     {
       "id": "aso-vvG1zZ_7VGx0DY",
@@ -98,6 +98,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/hamilton-touring-tickets/artist/2336213",
       "desc": "Fox Theatre Atlanta"
+    },
+    {
+      "id": "kpop-vvG1zZ_GxzH5yj",
+      "title": "🎤 Jay Park featuring LNGSHOT: Serenades & Body Rolls",
+      "start": "2026-09-09T00:00:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/jay-park-featuring-lngshot-serenades-body-duluth-georgia-09-08-2026/event/0E0064C8B8F0BE5C",
+      "desc": "Gas South Arena"
     },
     {
       "id": "high-secondsun-2026-09-13",
