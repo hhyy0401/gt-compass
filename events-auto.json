@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-06-12T11:46:08.908Z",
+  "fetchedAt": "2026-06-13T10:32:45.177Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (10)",
+    "aso": "ok (9)",
     "musical": "ok (7)",
     "high": "ok (12)",
     "kpop": "ok (5)"
   },
-  "count": 34,
+  "count": 33,
   "events": [
-    {
-      "id": "aso-vvG1zZ_7VGx0DY",
-      "title": "🎻 Max Richter with the American Contemporary Music Ensemble",
-      "start": "2026-06-12T23:30:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/max-richter-with-the-american-contemporary-atlanta-georgia-06-12-2026/event/0E00644D0C8A4EF0",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
     {
       "id": "high-secondsun-2026-06-14",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
