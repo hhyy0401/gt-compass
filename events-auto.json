@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-06-14T10:50:51.592Z",
+  "fetchedAt": "2026-06-15T14:27:23.793Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (9)",
+    "aso": "ok (10)",
     "musical": "ok (7)",
-    "high": "ok (12)",
+    "high": "ok (11)",
     "kpop": "ok (5)"
   },
   "count": 33,
   "events": [
-    {
-      "id": "high-secondsun-2026-06-14",
-      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
-      "start": "2026-06-14",
-      "category": "high",
-      "source": "high.org",
-      "url": "https://high.org/visit",
-      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
-    },
     {
       "id": "aso-vvG1zZ_1KLU5cf",
       "title": "🎻 America@250 Encore: Bernstein, Copland + Barber",
@@ -107,6 +98,15 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "aso-vvG1zZ_GJ4GbJJ",
+      "title": "🎻 Joshua Bell with the ASO",
+      "start": "2026-09-17T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/joshua-bell-with-the-aso-atlanta-georgia-09-16-2026/event/0E0064C9953189A6",
+      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "aso-vvG1zZ_aS1maiD",
