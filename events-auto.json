@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-06-21T11:18:45.310Z",
+  "fetchedAt": "2026-06-22T13:37:57.051Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (9)",
+    "aso": "ok (11)",
     "musical": "ok (7)",
     "high": "ok (11)",
     "kpop": "ok (5)"
   },
-  "count": 32,
+  "count": 34,
   "events": [
     {
       "id": "kpop-vvG1zZ_FLbemAt",
@@ -124,6 +124,24 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/la-la-land-live-with-the-atlanta-georgia-09-26-2026/event/0E00636EE10CCDB3",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_GRfp0Kk",
+      "title": "🎻 Opening Weekend with Nathalie Stutzmann",
+      "start": "2026-10-02T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/opening-weekend-with-nathalie-stutzmann-atlanta-georgia-10-01-2026/event/0E0064CBD45A44C6",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_GR4m7Nq",
+      "title": "🎻 Brahms + Wagner",
+      "start": "2026-10-09T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/brahms-wagner-atlanta-georgia-10-08-2026/event/0E0064CBD5B848DD",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
