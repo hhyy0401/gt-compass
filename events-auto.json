@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-06-30T11:13:12.986Z",
+  "fetchedAt": "2026-07-01T11:27:16.345Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (11)",
-    "musical": "ok (7)",
-    "high": "ok (11)",
+    "musical": "ok (8)",
+    "high": "ok (12)",
     "kpop": "ok (5)"
   },
-  "count": 34,
+  "count": 36,
   "events": [
     {
       "id": "kpop-vvG1zZ_FLbemAt",
@@ -244,6 +244,15 @@
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
     },
     {
+      "id": "fox-Z7r9jZ1A7-vFk",
+      "title": "🎭 BOOP! The Musical (Touring)",
+      "start": "2027-01-13T00:30:00Z",
+      "category": "musical",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/boop-the-musical-touring-tickets/artist/4248974",
+      "desc": "Fox Theatre Atlanta"
+    },
+    {
       "id": "fox-Z7r9jZ1A7-vFF",
       "title": "🎭 Water for Elephants (Touring)",
       "start": "2027-02-03T00:30:00Z",
@@ -314,6 +323,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/beetlejuice-touring-tickets/artist/2867362",
       "desc": "Fox Theatre Atlanta"
+    },
+    {
+      "id": "high-secondsun-2027-06-13",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2027-06-13",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
     }
   ]
 }
