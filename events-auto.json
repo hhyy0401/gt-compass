@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-07-01T11:27:16.345Z",
+  "fetchedAt": "2026-07-02T10:44:01.369Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (11)",
     "musical": "ok (8)",
     "high": "ok (12)",
-    "kpop": "ok (5)"
+    "kpop": "ok (6)"
   },
-  "count": 36,
+  "count": 37,
   "events": [
     {
       "id": "kpop-vvG1zZ_FLbemAt",
@@ -35,6 +35,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/monty-pythons-spamalot-touring-tickets/artist/1424801",
       "desc": "Fox Theatre Atlanta"
+    },
+    {
+      "id": "kpop-Z7r9jZ1A7PdaN",
+      "title": "🎤 Golden: A K-Pop Kids Party",
+      "start": "2026-08-02T16:00:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7PdaN",
+      "desc": "Terminal West"
     },
     {
       "id": "high-secondsun-2026-08-09",
