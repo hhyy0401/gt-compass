@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-07-10T10:57:48.520Z",
+  "fetchedAt": "2026-07-11T09:40:47.938Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (11)",
     "musical": "ok (8)",
     "high": "ok (12)",
-    "kpop": "ok (6)"
+    "kpop": "ok (5)"
   },
-  "count": 37,
+  "count": 36,
   "events": [
-    {
-      "id": "kpop-vvG1zZ_FLbemAt",
-      "title": "🎤 KPOP CLUB NIGHT WITH DJ CHEN | 18+",
-      "start": "2026-07-11T01:00:00Z",
-      "category": "kpop",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/kpop-club-night-with-dj-chen-atlanta-georgia-07-10-2026/event/0E006487D80AE169",
-      "desc": "The Masquerade - Hell"
-    },
     {
       "id": "high-secondsun-2026-07-12",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
