@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-07-12T09:53:17.321Z",
+  "fetchedAt": "2026-07-13T11:15:32.046Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (11)",
     "musical": "ok (8)",
-    "high": "ok (12)",
+    "high": "ok (11)",
     "kpop": "ok (5)"
   },
-  "count": 36,
+  "count": 35,
   "events": [
-    {
-      "id": "high-secondsun-2026-07-12",
-      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
-      "start": "2026-07-12",
-      "category": "high",
-      "source": "high.org",
-      "url": "https://high.org/visit",
-      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
-    },
     {
       "id": "fox-Z7r9jZ1A74Ka3",
       "title": "🎭 Monty Python Spamalot (Touring)",
