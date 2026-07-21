@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-07-20T10:55:40.985Z",
+  "fetchedAt": "2026-07-21T10:27:22.367Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (11)",
+    "aso": "ok (12)",
     "musical": "ok (8)",
     "high": "ok (11)",
     "kpop": "ok (5)"
   },
-  "count": 35,
+  "count": 36,
   "events": [
     {
       "id": "fox-Z7r9jZ1A74Ka3",
@@ -128,11 +128,11 @@
     },
     {
       "id": "aso-vvG1zZ_GR4m7Nq",
-      "title": "🎻 Brahms + Wagner",
+      "title": "🎻 Wagner + Brahms",
       "start": "2026-10-09T00:00:00Z",
       "category": "aso",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/brahms-wagner-atlanta-georgia-10-08-2026/event/0E0064CBD5B848DD",
+      "url": "https://www.ticketmaster.com/wagner-brahms-atlanta-georgia-10-08-2026/event/0E0064CBD5B848DD",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
@@ -143,6 +143,15 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "aso-vvG1zZ_uL2IcUy",
+      "title": "🎻 Rhapsody in Blue with the ASO",
+      "start": "2026-10-23T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/rhapsody-in-blue-with-the-aso-atlanta-georgia-10-22-2026/event/0E0064D7CFA2DDB9",
+      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "high-secondsun-2026-11-08",
@@ -218,11 +227,11 @@
     },
     {
       "id": "aso-vvG1zZ_1MqNBf4",
-      "title": "🎻 Vivaldi Four Seasons",
+      "title": "🎻 The Four Seasons + Coucheron",
       "start": "2027-01-08T01:00:00Z",
       "category": "aso",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/vivaldi-four-seasons-atlanta-georgia-01-07-2027/event/0E0064ADDD8FA515",
+      "url": "https://www.ticketmaster.com/the-four-seasons-coucheron-atlanta-georgia-01-07-2027/event/0E0064ADDD8FA515",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
