@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-21T10:27:22.367Z",
+  "fetchedAt": "2026-07-22T10:28:29.823Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (12)",
@@ -10,9 +10,9 @@
   "count": 36,
   "events": [
     {
-      "id": "fox-Z7r9jZ1A74Ka3",
+      "id": "fox-Z7r9jZ1A74KaK",
       "title": "🎭 Monty Python Spamalot (Touring)",
-      "start": "2026-07-21T23:30:00Z",
+      "start": "2026-07-22T23:30:00Z",
       "category": "musical",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/monty-pythons-spamalot-touring-tickets/artist/1424801",
