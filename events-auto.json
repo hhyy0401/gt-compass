@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-07-26T10:02:49.544Z",
+  "fetchedAt": "2026-07-27T11:27:51.606Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (12)",
-    "musical": "ok (8)",
+    "musical": "ok (7)",
     "high": "ok (11)",
     "kpop": "ok (5)"
   },
-  "count": 36,
+  "count": 35,
   "events": [
-    {
-      "id": "fox-Z7r9jZ1A7fboz",
-      "title": "🎭 Monty Python Spamalot (Touring)",
-      "start": "2026-07-26T17:00:00Z",
-      "category": "musical",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/monty-pythons-spamalot-touring-tickets/artist/1424801",
-      "desc": "Fox Theatre Atlanta"
-    },
     {
       "id": "kpop-Z7r9jZ1A7PdaN",
       "title": "🎤 Golden: A K-Pop Kids Party",
