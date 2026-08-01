@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-07-31T10:42:16.052Z",
+  "fetchedAt": "2026-08-01T10:02:00.129Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (12)",
+    "aso": "ok (15)",
     "musical": "ok (7)",
-    "high": "ok (11)",
+    "high": "ok (12)",
     "kpop": "ok (5)"
   },
-  "count": 35,
+  "count": 39,
   "events": [
     {
       "id": "kpop-Z7r9jZ1A7PdaN",
@@ -145,6 +145,15 @@
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
+      "id": "aso-vvG1zZ_2SCtG2y",
+      "title": "🎻 Halloween, Hogwarts & More",
+      "start": "2026-10-25T17:30:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/halloween-hogwarts-more-atlanta-georgia-10-25-2026/event/0E0064FCCEA4C3F9",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
       "id": "high-secondsun-2026-11-08",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
       "start": "2026-11-08",
@@ -169,6 +178,15 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/elf-in-concert-live-with-the-atlanta-georgia-11-28-2026/event/0E00646AE00DD0CC",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_2S-acBy",
+      "title": "🎻 Family Concert: Winter Wonderland",
+      "start": "2026-12-06T18:30:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/family-concert-winter-wonderland-atlanta-georgia-12-06-2026/event/0E0064FCE126DEB9",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
@@ -298,6 +316,15 @@
       "desc": "Fox Theatre Atlanta"
     },
     {
+      "id": "aso-vvG1zZ_2S2Bi_G",
+      "title": "🎻 Peter and the Wolf with the ASO",
+      "start": "2027-05-02T17:30:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/peter-and-the-wolf-with-the-atlanta-georgia-05-02-2027/event/0E0064FCCFEAC64C",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
       "id": "high-secondsun-2027-05-09",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
       "start": "2027-05-09",
@@ -319,6 +346,15 @@
       "id": "high-secondsun-2027-06-13",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
       "start": "2027-06-13",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "high-secondsun-2027-07-11",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2027-07-11",
       "category": "high",
       "source": "high.org",
       "url": "https://high.org/visit",
