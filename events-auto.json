@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-08-06T10:42:37.584Z",
+  "fetchedAt": "2026-08-07T09:02:47.246Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (15)",
+    "aso": "ok (27)",
     "musical": "ok (7)",
     "high": "ok (12)",
     "kpop": "ok (5)"
   },
-  "count": 39,
+  "count": 51,
   "events": [
     {
       "id": "high-secondsun-2026-08-09",
@@ -154,6 +154,15 @@
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
+      "id": "aso-vvG1zZ_ux2Ak5F",
+      "title": "🎻 Bach + Brahms",
+      "start": "2026-11-06T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/bach-brahms-atlanta-georgia-11-05-2026/event/0E0064D88F1462C8",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
       "id": "high-secondsun-2026-11-08",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
       "start": "2026-11-08",
@@ -161,6 +170,24 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "aso-vvG1zZ_uxOR_12",
+      "title": "🎻 Fauré's Requiem with ASO",
+      "start": "2026-11-13T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/faures-requiem-with-aso-atlanta-georgia-11-12-2026/event/0E0064D8A0BD928F",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_uxNqtr1",
+      "title": "🎻 Schumann + Bruckner",
+      "start": "2026-11-20T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/schumann-bruckner-atlanta-georgia-11-19-2026/event/0E0064D8A376978A",
+      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "aso-vvG1zZ_aQnj5YI",
@@ -178,6 +205,15 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/elf-in-concert-live-with-the-atlanta-georgia-11-28-2026/event/0E00646AE00DD0CC",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_uxJqtyC",
+      "title": "🎻 French Opera Night",
+      "start": "2026-12-04T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/french-opera-night-atlanta-georgia-12-03-2026/event/0E0064D8A6769E4E",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
@@ -262,6 +298,33 @@
       "desc": "Fox Theatre Atlanta"
     },
     {
+      "id": "aso-vvG1zZ_uxBuHLL",
+      "title": "🎻 Brahms Fourth Symphony",
+      "start": "2027-01-15T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/brahms-fourth-symphony-atlanta-georgia-01-14-2027/event/0E0064D8BA37C7DF",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_uxHBiDO",
+      "title": "🎻 Concerto for Orchestra with the ASO",
+      "start": "2027-01-22T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/concerto-for-orchestra-with-the-aso-atlanta-georgia-01-21-2027/event/0E0064D8BCEACEE0",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_uNZkqfd",
+      "title": "🎻 Chopin Piano Concerto No. 1",
+      "start": "2027-01-29T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/chopin-piano-concerto-no-1-atlanta-georgia-01-28-2027/event/0E0064D8C019D503",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
       "id": "fox-Z7r9jZ1A7-vFF",
       "title": "🎭 Water for Elephants (Touring)",
       "start": "2027-02-03T00:30:00Z",
@@ -269,6 +332,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/water-for-elephants-touring-tickets/artist/3627249",
       "desc": "Fox Theatre Atlanta"
+    },
+    {
+      "id": "aso-vvG1zZ_uN7-uw0",
+      "title": "🎻 Elliott Plays Tchaikovsky",
+      "start": "2027-02-05T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/elliott-plays-tchaikovsky-atlanta-georgia-02-04-2027/event/0E0064D8C484DCA4",
+      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "high-secondsun-2027-02-14",
@@ -280,6 +352,24 @@
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
     },
     {
+      "id": "aso-vvG1zZ_uNFbC2-",
+      "title": "🎻 Sibelius + Prokofiev",
+      "start": "2027-02-19T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/sibelius-prokofiev-atlanta-georgia-02-18-2027/event/0E0064D8C860E3E1",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_uNuGXRW",
+      "title": "🎻 Sallinen Conducts Sibelius",
+      "start": "2027-02-26T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/sallinen-conducts-sibelius-atlanta-georgia-02-25-2027/event/0E0064D8CD33EBFD",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
       "id": "fox-Z7r9jZ1A7-vF_",
       "title": "🎭 Wicked (Touring)",
       "start": "2027-03-04T00:30:00Z",
@@ -289,6 +379,15 @@
       "desc": "Fox Theatre Atlanta"
     },
     {
+      "id": "aso-vvG1zZ_uNfQL9i",
+      "title": "🎻 All-Mozart Showcase",
+      "start": "2027-03-12T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/allmozart-showcase-atlanta-georgia-03-11-2027/event/0E0064D8D469F5EC",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
       "id": "high-secondsun-2027-03-14",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
       "start": "2027-03-14",
@@ -296,6 +395,24 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "aso-vvG1zZ_uNpJ2Pd",
+      "title": "🎻 Mozart + Mendelssohn",
+      "start": "2027-03-19T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/mozart-mendelssohn-atlanta-georgia-03-18-2027/event/0E0064D8D698F943",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_uNbWTVf",
+      "title": "🎻 Brahms + Shostakovich",
+      "start": "2027-04-02T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/brahms-shostakovich-atlanta-georgia-04-01-2027/event/0E0064D8D8F7FD14",
+      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "high-secondsun-2027-04-11",
@@ -314,15 +431,6 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/the-notebook-touring-tickets/artist/3656159",
       "desc": "Fox Theatre Atlanta"
-    },
-    {
-      "id": "aso-vvG1zZ_2S2Bi_G",
-      "title": "🎻 Peter and the Wolf with the ASO",
-      "start": "2027-05-02T17:30:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/peter-and-the-wolf-with-the-atlanta-georgia-05-02-2027/event/0E0064FCCFEAC64C",
-      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "high-secondsun-2027-05-09",
