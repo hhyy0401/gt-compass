@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-08-10T09:25:38.510Z",
+  "fetchedAt": "2026-08-11T09:01:11.186Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (27)",
+    "aso": "ok (26)",
     "musical": "ok (7)",
     "high": "ok (11)",
     "kpop": "ok (4)"
   },
-  "count": 49,
+  "count": 48,
   "events": [
     {
       "id": "kpop-vvG1zZ_G22mRK_",
@@ -385,15 +385,6 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/mozart-mendelssohn-atlanta-georgia-03-18-2027/event/0E0064D8D698F943",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
-    {
-      "id": "aso-vvG1zZ_uNbWTVf",
-      "title": "🎻 Brahms + Shostakovich",
-      "start": "2027-04-02T00:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/brahms-shostakovich-atlanta-georgia-04-01-2027/event/0E0064D8D8F7FD14",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
