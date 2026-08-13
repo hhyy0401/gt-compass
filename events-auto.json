@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-08-12T09:14:30.424Z",
+  "fetchedAt": "2026-08-13T09:15:44.382Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (26)",
     "musical": "ok (7)",
     "high": "ok (11)",
-    "kpop": "ok (4)"
+    "kpop": "ok (5)"
   },
-  "count": 48,
+  "count": 49,
   "events": [
     {
       "id": "kpop-vvG1zZ_G22mRK_",
@@ -71,6 +71,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/students-at-the-symphony-with-the-atlanta-georgia-09-18-2026/event/0E00649CCAB89B3B",
       "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "kpop-vvG1zZ_8RuECD0",
+      "title": "🎤 ChikaATL",
+      "start": "2026-09-21T00:00:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/chikaatl-atlanta-georgia-09-20-2026/event/0E00650BCD9CEEE4",
+      "desc": "Vinyl"
     },
     {
       "id": "kpop-vvG1zZ_a9AH7kj",
