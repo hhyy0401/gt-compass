@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-08-15T08:32:22.594Z",
+  "fetchedAt": "2026-08-16T08:33:06.052Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (26)",
+    "aso": "ok (27)",
     "musical": "ok (7)",
     "high": "ok (11)",
     "kpop": "ok (6)"
   },
-  "count": 50,
+  "count": 51,
   "events": [
     {
       "id": "kpop-vvG1zZ_G22mRK_",
@@ -128,11 +128,11 @@
     },
     {
       "id": "kpop-vvG1zZ_kUE_b2x",
-      "title": "🎤 KPop Night",
+      "title": "🎤 KPop After Dark",
       "start": "2026-10-17T01:00:00Z",
       "category": "kpop",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/kpop-night-atlanta-georgia-10-16-2026/event/0E00646DA76583E2",
+      "url": "https://www.ticketmaster.com/kpop-after-dark-atlanta-georgia-10-16-2026/event/0E00646DA76583E2",
       "desc": "Vinyl"
     },
     {
@@ -403,6 +403,15 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/mozart-mendelssohn-atlanta-georgia-03-18-2027/event/0E0064D8D698F943",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_uNbWTVf",
+      "title": "🎻 Brahms + Shostakovich",
+      "start": "2027-04-02T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/brahms-shostakovich-atlanta-georgia-04-01-2027/event/0E0064D8D8F7FD14",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
