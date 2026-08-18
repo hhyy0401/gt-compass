@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-08-17T08:46:46.982Z",
+  "fetchedAt": "2026-08-18T08:40:27.245Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (27)",
+    "aso": "ok (21)",
     "musical": "ok (7)",
     "high": "ok (11)",
     "kpop": "ok (6)"
   },
-  "count": 51,
+  "count": 45,
   "events": [
     {
       "id": "kpop-vvG1zZ_G22mRK_",
@@ -334,15 +334,6 @@
       "desc": "Fox Theatre Atlanta"
     },
     {
-      "id": "aso-vvG1zZ_uN7-uw0",
-      "title": "🎻 Elliott Plays Tchaikovsky",
-      "start": "2027-02-05T01:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/elliott-plays-tchaikovsky-atlanta-georgia-02-04-2027/event/0E0064D8C484DCA4",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
-    {
       "id": "high-secondsun-2027-02-14",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
       "start": "2027-02-14",
@@ -350,24 +341,6 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
-    },
-    {
-      "id": "aso-vvG1zZ_uNFbC2-",
-      "title": "🎻 Sibelius + Prokofiev",
-      "start": "2027-02-19T01:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/sibelius-prokofiev-atlanta-georgia-02-18-2027/event/0E0064D8C860E3E1",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
-    {
-      "id": "aso-vvG1zZ_uNuGXRW",
-      "title": "🎻 Sallinen Conducts Sibelius",
-      "start": "2027-02-26T01:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/sallinen-conducts-sibelius-atlanta-georgia-02-25-2027/event/0E0064D8CD33EBFD",
-      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "fox-Z7r9jZ1A7-vF_",
@@ -379,15 +352,6 @@
       "desc": "Fox Theatre Atlanta"
     },
     {
-      "id": "aso-vvG1zZ_uNfQL9i",
-      "title": "🎻 All-Mozart Showcase",
-      "start": "2027-03-12T01:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/allmozart-showcase-atlanta-georgia-03-11-2027/event/0E0064D8D469F5EC",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
-    {
       "id": "high-secondsun-2027-03-14",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
       "start": "2027-03-14",
@@ -395,24 +359,6 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
-    },
-    {
-      "id": "aso-vvG1zZ_uNpJ2Pd",
-      "title": "🎻 Mozart + Mendelssohn",
-      "start": "2027-03-19T00:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/mozart-mendelssohn-atlanta-georgia-03-18-2027/event/0E0064D8D698F943",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
-    {
-      "id": "aso-vvG1zZ_uNbWTVf",
-      "title": "🎻 Brahms + Shostakovich",
-      "start": "2027-04-02T00:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/brahms-shostakovich-atlanta-georgia-04-01-2027/event/0E0064D8D8F7FD14",
-      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "high-secondsun-2027-04-11",
