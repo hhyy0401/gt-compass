@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-08-18T08:40:27.245Z",
+  "fetchedAt": "2026-08-19T08:40:34.769Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (21)",
-    "musical": "ok (7)",
+    "musical": "ok (8)",
     "high": "ok (11)",
     "kpop": "ok (6)"
   },
-  "count": 45,
+  "count": 46,
   "events": [
     {
       "id": "kpop-vvG1zZ_G22mRK_",
@@ -179,6 +179,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/faures-requiem-with-aso-atlanta-georgia-11-12-2026/event/0E0064D8A0BD928F",
       "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "fox-Z7r9jZ1A7-vkd",
+      "title": "🎭 Death Becomes Her (Touring)",
+      "start": "2026-11-18T00:30:00Z",
+      "category": "musical",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/death-becomes-her-touring-tickets/artist/4217954",
+      "desc": "Fox Theatre Atlanta"
     },
     {
       "id": "aso-vvG1zZ_uxNqtr1",
