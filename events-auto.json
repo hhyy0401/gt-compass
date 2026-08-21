@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-08-20T08:41:33.532Z",
+  "fetchedAt": "2026-08-21T08:43:59.238Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (21)",
+    "aso": "ok (22)",
     "musical": "ok (8)",
     "high": "ok (11)",
     "kpop": "ok (6)"
   },
-  "count": 46,
+  "count": 47,
   "events": [
     {
       "id": "kpop-vvG1zZ_G22mRK_",
@@ -341,6 +341,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/water-for-elephants-touring-tickets/artist/3627249",
       "desc": "Fox Theatre Atlanta"
+    },
+    {
+      "id": "aso-vvG1zZ_uN7-uw0",
+      "title": "🎻 Elliott Plays Tchaikovsky",
+      "start": "2027-02-05T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/elliott-plays-tchaikovsky-atlanta-georgia-02-04-2027/event/0E0064D8C484DCA4",
+      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "high-secondsun-2027-02-14",
