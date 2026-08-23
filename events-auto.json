@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-08-22T08:33:39.379Z",
+  "fetchedAt": "2026-08-23T08:33:43.420Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (22)",
     "musical": "ok (8)",
     "high": "ok (11)",
-    "kpop": "ok (6)"
+    "kpop": "ok (5)"
   },
-  "count": 47,
+  "count": 46,
   "events": [
-    {
-      "id": "kpop-vvG1zZ_G22mRK_",
-      "title": "🎤 Baek Ji Young",
-      "start": "2026-08-22T23:00:00Z",
-      "category": "kpop",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/baek-ji-young-atlanta-georgia-08-22-2026/event/0E0064C3CFBAF4D9",
-      "desc": "Atlanta Symphony Hall"
-    },
     {
       "id": "kpop-vvG1zZ_2D1VHPt",
       "title": "🎤 ONE PACT",
