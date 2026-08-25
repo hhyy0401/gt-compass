@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-08-24T08:51:40.059Z",
+  "fetchedAt": "2026-08-25T08:47:06.899Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (22)",
+    "aso": "ok (23)",
     "musical": "ok (8)",
     "high": "ok (11)",
     "kpop": "ok (5)"
   },
-  "count": 46,
+  "count": 47,
   "events": [
     {
       "id": "kpop-vvG1zZ_2D1VHPt",
@@ -142,6 +142,15 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/halloween-hogwarts-more-atlanta-georgia-10-25-2026/event/0E0064FCCEA4C3F9",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_8wnDQBj",
+      "title": "🎻 Zade Dirani",
+      "start": "2026-11-03T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/zade-dirani-atlanta-georgia-11-02-2026/event/0E00650CAAEDAE9C",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
