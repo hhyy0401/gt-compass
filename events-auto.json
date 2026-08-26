@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-08-25T08:47:06.899Z",
+  "fetchedAt": "2026-08-26T08:48:32.496Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (23)",
     "musical": "ok (8)",
     "high": "ok (11)",
-    "kpop": "ok (5)"
+    "kpop": "ok (6)"
   },
-  "count": 47,
+  "count": 48,
   "events": [
     {
       "id": "kpop-vvG1zZ_2D1VHPt",
@@ -152,6 +152,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/zade-dirani-atlanta-georgia-11-02-2026/event/0E00650CAAEDAE9C",
       "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "kpop-vvG1zZ_oGv-VzT",
+      "title": "🎤 TEN - US Showcase Tour",
+      "start": "2026-11-04T01:00:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/ten-us-showcase-tour-atlanta-georgia-11-03-2026/event/0E00651301874E3F",
+      "desc": "Buckhead Theatre"
     },
     {
       "id": "aso-vvG1zZ_ux2Ak5F",
