@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-08-30T13:40:21.413Z",
+  "fetchedAt": "2026-08-31T15:58:55.694Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (23)",
     "musical": "ok (8)",
     "high": "ok (11)",
-    "kpop": "ok (6)"
+    "kpop": "ok (7)"
   },
-  "count": 48,
+  "count": 49,
   "events": [
     {
       "id": "kpop-vvG1zZ_2D1VHPt",
@@ -278,6 +278,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/handels-messiah-atlanta-georgia-12-17-2026/event/0E0064ADDA779D33",
       "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "kpop-vvG1zZ_oSx1ht6",
+      "title": "🎤 2026 ONEUS World Tour: Full Moon",
+      "start": "2026-12-19T00:30:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/2026-oneus-world-tour-full-moon-atlanta-georgia-12-18-2026/event/0E00651CE229BA47",
+      "desc": "Center Stage Theater"
     },
     {
       "id": "aso-vvG1zZ_1Mjd1Ap",
