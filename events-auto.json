@@ -1,27 +1,18 @@
 {
-  "fetchedAt": "2026-09-02T12:38:26.461Z",
+  "fetchedAt": "2026-09-03T12:41:29.395Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (23)",
     "musical": "ok (9)",
     "high": "ok (12)",
-    "kpop": "ok (7)"
+    "kpop": "ok (6)"
   },
-  "count": 51,
+  "count": 50,
   "events": [
     {
-      "id": "kpop-vvG1zZ_2D1VHPt",
-      "title": "🎤 ONE PACT",
-      "start": "2026-09-02T23:00:00Z",
-      "category": "kpop",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/one-pact-atlanta-georgia-09-02-2026/event/0E0064FECAD3C969",
-      "desc": "Center Stage Theater"
-    },
-    {
-      "id": "fox-Z7r9jZ1A7-v7p",
+      "id": "fox-Z7r9jZ1A7-v79",
       "title": "🎭 Hamilton (Touring)",
-      "start": "2026-09-02T23:30:00Z",
+      "start": "2026-09-03T17:00:00Z",
       "category": "musical",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/hamilton-touring-tickets/artist/2336213",
