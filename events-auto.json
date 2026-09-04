@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-03T12:41:29.395Z",
+  "fetchedAt": "2026-09-04T12:35:20.135Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (23)",
@@ -10,9 +10,9 @@
   "count": 50,
   "events": [
     {
-      "id": "fox-Z7r9jZ1A7-v79",
+      "id": "fox-Z7r9jZ1A7OwJf",
       "title": "🎭 Hamilton (Touring)",
-      "start": "2026-09-03T17:00:00Z",
+      "start": "2026-09-04T23:30:00Z",
       "category": "musical",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/hamilton-touring-tickets/artist/2336213",
