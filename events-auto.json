@@ -1,32 +1,14 @@
 {
-  "fetchedAt": "2026-09-20T12:56:21.665Z",
+  "fetchedAt": "2026-09-21T14:56:34.215Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (23)",
-    "musical": "ok (9)",
+    "aso": "ok (24)",
+    "musical": "ok (8)",
     "high": "ok (11)",
-    "kpop": "ok (5)"
+    "kpop": "ok (4)"
   },
-  "count": 48,
+  "count": 47,
   "events": [
-    {
-      "id": "kpop-vvG1zZ_8RuECD0",
-      "title": "🎤 ChikaATL",
-      "start": "2026-09-20T16:00:00Z",
-      "category": "kpop",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/chikaatl-atlanta-georgia-09-20-2026/event/0E00650BCD9CEEE4",
-      "desc": "Vinyl"
-    },
-    {
-      "id": "fox-Z7r9jZ1A7PYk3",
-      "title": "🎭 Hamilton (Touring)",
-      "start": "2026-09-20T17:00:00Z",
-      "category": "musical",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/hamilton-touring-tickets/artist/2336213",
-      "desc": "Fox Theatre Atlanta"
-    },
     {
       "id": "aso-vvG1zZ_aS1Ytcj",
       "title": "🎻 Students at the Symphony with the Atlanta Symphony Orchestra",
@@ -233,6 +215,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/mrs-doubtfire-touring-tickets/artist/3007777",
       "desc": "Fox Theatre Atlanta"
+    },
+    {
+      "id": "aso-vvG1zZ_KeIFcOm",
+      "title": "🎻 Kristin Chenoweth With The Atlanta Symphony Orchestra",
+      "start": "2026-12-17T00:30:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/kristin-chenoweth-with-the-atlanta-symphony-atlanta-georgia-12-16-2026/event/0E006530A822D82E",
+      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "aso-vvG1zZ_1MQqyVS",
