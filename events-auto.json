@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-23T13:27:47.909Z",
+  "fetchedAt": "2026-09-24T13:23:37.072Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (24)",
@@ -10,12 +10,12 @@
   "count": 47,
   "events": [
     {
-      "id": "aso-vvG1zZ_aS1Ytcj",
+      "id": "aso-vvG1zZ_aS1Stmv",
       "title": "🎻 Students at the Symphony with the Atlanta Symphony Orchestra",
-      "start": "2026-09-23T14:15:00Z",
+      "start": "2026-09-24T14:15:00Z",
       "category": "aso",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/students-at-the-symphony-with-the-atlanta-georgia-09-23-2026/event/0E00649CCAC29B5C",
+      "url": "https://www.ticketmaster.com/students-at-the-symphony-with-the-atlanta-georgia-09-24-2026/event/0E00649CCACE9B81",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
