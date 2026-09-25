@@ -1,32 +1,14 @@
 {
-  "fetchedAt": "2026-09-24T13:23:37.072Z",
+  "fetchedAt": "2026-09-25T13:24:54.392Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (24)",
+    "aso": "ok (25)",
     "musical": "ok (8)",
     "high": "ok (11)",
-    "kpop": "ok (4)"
+    "kpop": "ok (3)"
   },
   "count": 47,
   "events": [
-    {
-      "id": "aso-vvG1zZ_aS1Stmv",
-      "title": "🎻 Students at the Symphony with the Atlanta Symphony Orchestra",
-      "start": "2026-09-24T14:15:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/students-at-the-symphony-with-the-atlanta-georgia-09-24-2026/event/0E00649CCACE9B81",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
-    {
-      "id": "kpop-vvG1zZ_a9AH7kj",
-      "title": "🎤 aespa LIVE TOUR - SYNK : COMPLÆXITY - in ATLANTA",
-      "start": "2026-09-25T00:00:00Z",
-      "category": "kpop",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/aespa-live-tour-synk-complxity-in-atlanta-georgia-09-24-2026/event/0E006495C5F0419C",
-      "desc": "State Farm Arena"
-    },
     {
       "id": "aso-vvG1zZbUD-dGUS",
       "title": "🎻 La La Land: Live With The Atlanta Symphony Orchestra",
@@ -88,6 +70,15 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/halloween-hogwarts-more-atlanta-georgia-10-25-2026/event/0E0064FCCEA4C3F9",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_aS1Uamp",
+      "title": "🎻 Students at the Symphony with the Atlanta Symphony Orchestra",
+      "start": "2026-10-27T14:15:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/students-at-the-symphony-with-the-atlanta-georgia-10-27-2026/event/0E00649CCAD89B96",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
@@ -341,6 +332,15 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "aso-vvG1zZ_uNFbC2-",
+      "title": "🎻 Sibelius + Prokofiev",
+      "start": "2027-02-19T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/sibelius-prokofiev-atlanta-georgia-02-18-2027/event/0E0064D8C860E3E1",
+      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "fox-Z7r9jZ1A7-vF_",
