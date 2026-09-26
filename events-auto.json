@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-09-25T13:24:54.392Z",
+  "fetchedAt": "2026-09-26T12:47:58.904Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (25)",
+    "aso": "ok (24)",
     "musical": "ok (8)",
     "high": "ok (11)",
     "kpop": "ok (3)"
   },
-  "count": 47,
+  "count": 46,
   "events": [
     {
       "id": "aso-vvG1zZbUD-dGUS",
@@ -332,15 +332,6 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
-    },
-    {
-      "id": "aso-vvG1zZ_uNFbC2-",
-      "title": "🎻 Sibelius + Prokofiev",
-      "start": "2027-02-19T01:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/sibelius-prokofiev-atlanta-georgia-02-18-2027/event/0E0064D8C860E3E1",
-      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "fox-Z7r9jZ1A7-vF_",
