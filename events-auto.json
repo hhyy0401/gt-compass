@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-09-27T13:40:19.472Z",
+  "fetchedAt": "2026-09-28T16:35:15.616Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (25)",
+    "aso": "ok (24)",
     "musical": "ok (8)",
     "high": "ok (11)",
     "kpop": "ok (3)"
   },
-  "count": 47,
+  "count": 46,
   "events": [
-    {
-      "id": "aso-vvG1zZbUDPTc6A",
-      "title": "🎻 La La Land: Live With The Atlanta Symphony Orchestra",
-      "start": "2026-09-27T19:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/la-la-land-live-with-the-atlanta-georgia-09-27-2026/event/0E00636EE5FED1C5",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
     {
       "id": "aso-vvG1zZ_GRfp0Kk",
       "title": "🎻 Opening Weekend with Nathalie Stutzmann",
