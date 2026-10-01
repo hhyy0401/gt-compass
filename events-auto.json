@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-09-30T14:44:46.593Z",
+  "fetchedAt": "2026-10-01T15:14:22.257Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (24)",
     "musical": "ok (8)",
-    "high": "ok (11)",
-    "kpop": "ok (3)"
+    "high": "ok (12)",
+    "kpop": "ok (4)"
   },
-  "count": 46,
+  "count": 48,
   "events": [
     {
       "id": "aso-vvG1zZ_GRfp0Kk",
@@ -125,6 +125,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/death-becomes-her-touring-tickets/artist/4217954",
       "desc": "Fox Theatre Atlanta"
+    },
+    {
+      "id": "kpop-rZ7HnEZ1Afu4p7",
+      "title": "🎤 2026 82MAJOR [82CLUB : out of control] TOUR in Atlanta",
+      "start": "2026-11-20T00:00:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketweb.com/event/2026-82major-82club-out-ray-charles-performing-arts-center-tickets/14355584",
+      "desc": "Ray Charles Performing Arts Center"
     },
     {
       "id": "aso-vvG1zZ_uxNqtr1",
@@ -418,6 +427,15 @@
       "id": "high-secondsun-2027-08-08",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
       "start": "2027-08-08",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "high-secondsun-2027-09-12",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2027-09-12",
       "category": "high",
       "source": "high.org",
       "url": "https://high.org/visit",
