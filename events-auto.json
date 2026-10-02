@@ -1,21 +1,21 @@
 {
-  "fetchedAt": "2026-10-01T15:14:22.257Z",
+  "fetchedAt": "2026-10-02T14:34:03.892Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (24)",
     "musical": "ok (8)",
     "high": "ok (12)",
-    "kpop": "ok (4)"
+    "kpop": "ok (5)"
   },
-  "count": 48,
+  "count": 49,
   "events": [
     {
-      "id": "aso-vvG1zZ_GRfp0Kk",
+      "id": "aso-vvG1zZ_GRfpVKO",
       "title": "🎻 Opening Weekend with Nathalie Stutzmann",
-      "start": "2026-10-02T00:00:00Z",
+      "start": "2026-10-04T00:00:00Z",
       "category": "aso",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/opening-weekend-with-nathalie-stutzmann-atlanta-georgia-10-01-2026/event/0E0064CBD45A44C6",
+      "url": "https://www.ticketmaster.com/opening-weekend-with-nathalie-stutzmann-atlanta-georgia-10-03-2026/event/0E0064CBD45B44E0",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
@@ -296,6 +296,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/chopin-piano-concerto-no-1-atlanta-georgia-01-28-2027/event/0E0064D8C019D503",
       "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "kpop-vvG1zZ_fkUOxhq",
+      "title": "🎤 EVNNE FAN-CONCERT [ONE TAKE] IN NORTH AMERICA",
+      "start": "2027-01-30T00:30:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/evnne-fanconcert-one-take-in-north-atlanta-georgia-01-29-2027/event/0E006541B68226DD",
+      "desc": "Center Stage Theater"
     },
     {
       "id": "fox-Z7r9jZ1A7-vFF",
