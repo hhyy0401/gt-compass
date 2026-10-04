@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-03T13:11:02.030Z",
+  "fetchedAt": "2026-10-04T13:49:04.895Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (24)",
@@ -10,12 +10,12 @@
   "count": 49,
   "events": [
     {
-      "id": "aso-vvG1zZ_GRfpVKO",
+      "id": "aso-vvG1zZ_GRf90Km",
       "title": "🎻 Opening Weekend with Nathalie Stutzmann",
-      "start": "2026-10-04T00:00:00Z",
+      "start": "2026-10-04T19:00:00Z",
       "category": "aso",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/opening-weekend-with-nathalie-stutzmann-atlanta-georgia-10-03-2026/event/0E0064CBD45B44E0",
+      "url": "https://www.ticketmaster.com/opening-weekend-with-nathalie-stutzmann-atlanta-georgia-10-04-2026/event/0E0064CBD45E44EE",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
