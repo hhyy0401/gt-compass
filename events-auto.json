@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-10-09T15:05:25.377Z",
+  "fetchedAt": "2026-10-10T14:20:17.933Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (23)",
+    "aso": "ok (24)",
     "musical": "ok (8)",
     "high": "ok (12)",
     "kpop": "ok (5)"
   },
-  "count": 48,
+  "count": 49,
   "events": [
     {
       "id": "high-secondsun-2026-10-11",
@@ -340,6 +340,15 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/sibelius-prokofiev-atlanta-georgia-02-18-2027/event/0E0064D8C860E3E1",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_uNuGXRW",
+      "title": "🎻 Sallinen Conducts Sibelius",
+      "start": "2027-02-26T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/sallinen-conducts-sibelius-atlanta-georgia-02-25-2027/event/0E0064D8CD33EBFD",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
