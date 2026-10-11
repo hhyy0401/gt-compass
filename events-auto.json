@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-10-10T14:20:17.933Z",
+  "fetchedAt": "2026-10-11T14:45:45.262Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (24)",
+    "aso": "ok (23)",
     "musical": "ok (8)",
     "high": "ok (12)",
     "kpop": "ok (5)"
   },
-  "count": 49,
+  "count": 48,
   "events": [
     {
       "id": "high-secondsun-2026-10-11",
@@ -17,15 +17,6 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
-    },
-    {
-      "id": "aso-vvG1zZ_GR4m0Nm",
-      "title": "🎻 Wagner + Brahms",
-      "start": "2026-10-11T00:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/wagner-brahms-atlanta-georgia-10-10-2026/event/0E0064CBD5BA48EE",
-      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "kpop-vvG1zZ_kUE_b2x",
