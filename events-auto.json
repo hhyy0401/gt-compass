@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-10-16T13:05:19.369Z",
+  "fetchedAt": "2026-10-17T12:02:08.483Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (24)",
+    "aso": "ok (25)",
     "musical": "ok (8)",
     "high": "ok (11)",
-    "kpop": "ok (5)"
+    "kpop": "ok (4)"
   },
   "count": 48,
   "events": [
-    {
-      "id": "kpop-vvG1zZ_kUE_b2x",
-      "title": "🎤 KPop After Dark",
-      "start": "2026-10-17T01:00:00Z",
-      "category": "kpop",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/kpop-after-dark-atlanta-georgia-10-16-2026/event/0E00646DA76583E2",
-      "desc": "Vinyl"
-    },
     {
       "id": "aso-vvG1zZ_uL2IcUy",
       "title": "🎻 Rhapsody in Blue with the ASO",
@@ -359,6 +350,15 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "aso-vvG1zZ_uNpJ2Pd",
+      "title": "🎻 Mozart + Mendelssohn",
+      "start": "2027-03-19T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/mozart-mendelssohn-atlanta-georgia-03-18-2027/event/0E0064D8D698F943",
+      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "high-secondsun-2027-04-11",
