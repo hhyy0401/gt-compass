@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-10-18T12:30:17.433Z",
+  "fetchedAt": "2026-10-19T15:21:58.150Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (25)",
     "musical": "ok (8)",
     "high": "ok (11)",
-    "kpop": "ok (4)"
+    "kpop": "ok (5)"
   },
-  "count": 48,
+  "count": 49,
   "events": [
     {
       "id": "aso-vvG1zZ_uL2IcUy",
@@ -134,6 +134,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/music-from-carmen-and-romeo-and-atlanta-georgia-12-03-2026/event/0E0064D8A6769E4E",
       "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "kpop-vvG1zZ_4dBPsqe",
+      "title": "🎤 K-Pop Club Night | 18+",
+      "start": "2026-12-06T02:00:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/kpop-club-night-18-atlanta-georgia-12-05-2026/event/0E006550FA971742",
+      "desc": "The Masquerade - Hell"
     },
     {
       "id": "aso-vvG1zZ_2S-acBy",
