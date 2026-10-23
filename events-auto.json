@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-22T13:36:48.073Z",
+  "fetchedAt": "2026-10-23T13:12:27.655Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (26)",
@@ -10,12 +10,12 @@
   "count": 50,
   "events": [
     {
-      "id": "aso-vvG1zZ_uL2IcUy",
+      "id": "aso-vvG1zZ_uL2tqMe",
       "title": "🎻 Rhapsody in Blue with the ASO",
-      "start": "2026-10-23T00:00:00Z",
+      "start": "2026-10-25T00:00:00Z",
       "category": "aso",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/rhapsody-in-blue-with-the-aso-atlanta-georgia-10-22-2026/event/0E0064D7CFA2DDB9",
+      "url": "https://www.ticketmaster.com/rhapsody-in-blue-with-the-aso-atlanta-georgia-10-24-2026/event/0E0064D7CFA5DDC2",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
