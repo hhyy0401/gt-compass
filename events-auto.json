@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-25T13:02:48.047Z",
+  "fetchedAt": "2026-10-26T14:57:52.105Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (25)",
@@ -9,15 +9,6 @@
   },
   "count": 49,
   "events": [
-    {
-      "id": "aso-vvG1zZ_2SCtG2y",
-      "title": "🎻 Halloween, Hogwarts & More",
-      "start": "2026-10-25T17:30:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/halloween-hogwarts-more-atlanta-georgia-10-25-2026/event/0E0064FCCEA4C3F9",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
     {
       "id": "aso-vvG1zZ_aS1Uamp",
       "title": "🎻 Students at the Symphony with the Atlanta Symphony Orchestra",
@@ -367,6 +358,15 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/mozart-mendelssohn-atlanta-georgia-03-18-2027/event/0E0064D8D698F943",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_o5EPsok",
+      "title": "🎻 Matilda In Concert Feat. Danny Devito & The Atlanta Symphony Orchestra",
+      "start": "2027-03-26T23:30:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/matilda-in-concert-feat-danny-devito-atlanta-georgia-03-26-2027/event/0E006512E7971446",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
