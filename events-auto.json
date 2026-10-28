@@ -1,21 +1,21 @@
 {
-  "fetchedAt": "2026-10-27T14:10:28.832Z",
+  "fetchedAt": "2026-10-28T14:56:24.162Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (25)",
+    "aso": "ok (26)",
     "musical": "ok (8)",
     "high": "ok (11)",
     "kpop": "ok (5)"
   },
-  "count": 49,
+  "count": 50,
   "events": [
     {
-      "id": "aso-vvG1zZ_aS1Uamp",
+      "id": "aso-vvG1zZ_aS1ztR7",
       "title": "🎻 Students at the Symphony with the Atlanta Symphony Orchestra",
-      "start": "2026-10-27T14:15:00Z",
+      "start": "2026-10-28T14:15:00Z",
       "category": "aso",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/students-at-the-symphony-with-the-atlanta-georgia-10-27-2026/event/0E00649CCAD89B96",
+      "url": "https://www.ticketmaster.com/students-at-the-symphony-with-the-atlanta-georgia-10-28-2026/event/0E00649CCAE29BC4",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
@@ -367,6 +367,15 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/matilda-in-concert-feat-danny-devito-atlanta-georgia-03-26-2027/event/0E006512E7971446",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_uNbWTVf",
+      "title": "🎻 Brahms + Shostakovich",
+      "start": "2027-04-02T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/brahms-shostakovich-atlanta-georgia-04-01-2027/event/0E0064D8D8F7FD14",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
