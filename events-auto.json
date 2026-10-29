@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-28T14:56:24.162Z",
+  "fetchedAt": "2026-10-29T15:01:44.572Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (26)",
@@ -9,15 +9,6 @@
   },
   "count": 50,
   "events": [
-    {
-      "id": "aso-vvG1zZ_aS1ztR7",
-      "title": "🎻 Students at the Symphony with the Atlanta Symphony Orchestra",
-      "start": "2026-10-28T14:15:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/students-at-the-symphony-with-the-atlanta-georgia-10-28-2026/event/0E00649CCAE29BC4",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
     {
       "id": "aso-vvG1zZ_8wnDQBj",
       "title": "🎻 Zade Dirani",
@@ -286,6 +277,15 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/elliott-plays-tchaikovsky-atlanta-georgia-02-04-2027/event/0E0064D8C484DCA4",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_aS1xyn8",
+      "title": "🎻 Students at the Symphony with the Atlanta Symphony Orchestra",
+      "start": "2027-02-09T15:15:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/students-at-the-symphony-with-the-atlanta-georgia-02-09-2027/event/0E00649CCA8B9A90",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
