@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-10-31T14:24:05.045Z",
+  "fetchedAt": "2026-11-01T14:50:32.873Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (27)",
     "musical": "ok (8)",
-    "high": "ok (11)",
+    "high": "ok (12)",
     "kpop": "ok (5)"
   },
-  "count": 51,
+  "count": 52,
   "events": [
     {
       "id": "aso-vvG1zZ_8wnDQBj",
@@ -463,6 +463,15 @@
       "id": "high-secondsun-2027-09-12",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
       "start": "2027-09-12",
+      "category": "high",
+      "source": "high.org",
+      "url": "https://high.org/visit",
+      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "high-secondsun-2027-10-10",
+      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
+      "start": "2027-10-10",
       "category": "high",
       "source": "high.org",
       "url": "https://high.org/visit",
