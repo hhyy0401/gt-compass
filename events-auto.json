@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-11-03T15:58:44.192Z",
+  "fetchedAt": "2026-11-04T16:02:37.310Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (26)",
     "musical": "ok (8)",
     "high": "ok (12)",
-    "kpop": "ok (5)"
+    "kpop": "ok (4)"
   },
-  "count": 51,
+  "count": 50,
   "events": [
-    {
-      "id": "kpop-vvG1zZ_oGv-VzT",
-      "title": "🎤 TEN - US Showcase Tour",
-      "start": "2026-11-04T01:00:00Z",
-      "category": "kpop",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/ten-us-showcase-tour-atlanta-georgia-11-03-2026/event/0E00651301874E3F",
-      "desc": "Buckhead Theatre"
-    },
     {
       "id": "aso-vvG1zZ_ux2Ak5F",
       "title": "🎻 Bach + Brahms",
