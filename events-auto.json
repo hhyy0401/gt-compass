@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-11-05T16:16:59.781Z",
+  "fetchedAt": "2026-11-06T15:46:23.402Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (26)",
+    "aso": "ok (27)",
     "musical": "ok (8)",
     "high": "ok (12)",
     "kpop": "ok (4)"
   },
-  "count": 50,
+  "count": 51,
   "events": [
-    {
-      "id": "aso-vvG1zZ_ux2Ak5F",
-      "title": "🎻 Bach + Brahms",
-      "start": "2026-11-06T01:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/bach-brahms-atlanta-georgia-11-05-2026/event/0E0064D88F1462C8",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
     {
       "id": "high-secondsun-2026-11-08",
       "title": "🎨 High Museum 무료 입장 (Second Sundays)",
@@ -26,6 +17,15 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "aso-vvG1zZ_ux2AJ5-",
+      "title": "🎻 Bach + Brahms",
+      "start": "2026-11-08T01:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/bach-brahms-atlanta-georgia-11-07-2026/event/0E0064D88F1662E1",
+      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "aso-vvG1zZ_uxOR_12",
@@ -386,6 +386,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/the-notebook-touring-tickets/artist/3656159",
       "desc": "Fox Theatre Atlanta"
+    },
+    {
+      "id": "aso-vvG1zZ_uNO537T",
+      "title": "🎻 Spano Conducts Romeo and Juliet",
+      "start": "2027-04-16T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/spano-conducts-romeo-and-juliet-atlanta-georgia-04-15-2027/event/0E0064D8E02D213F",
+      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "high-secondsun-2027-05-09",
