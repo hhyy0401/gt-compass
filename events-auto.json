@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-11-06T15:46:23.402Z",
+  "fetchedAt": "2026-11-07T14:45:54.036Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (27)",
     "musical": "ok (8)",
     "high": "ok (12)",
-    "kpop": "ok (4)"
+    "kpop": "ok (5)"
   },
-  "count": 51,
+  "count": 52,
   "events": [
     {
       "id": "high-secondsun-2026-11-08",
@@ -89,6 +89,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/music-from-carmen-and-romeo-and-atlanta-georgia-12-03-2026/event/0E0064D8A6769E4E",
       "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "kpop-vvG1zZ_pKi0kAX",
+      "title": "🎤 Junhee",
+      "start": "2026-12-06T00:00:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/junhee-atlanta-georgia-12-05-2026/event/0E006564EC90617E",
+      "desc": "The Loft"
     },
     {
       "id": "kpop-vvG1zZ_4dBPsqe",
