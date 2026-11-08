@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-11-07T14:45:54.036Z",
+  "fetchedAt": "2026-11-08T14:52:41.260Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (27)",
+    "aso": "ok (26)",
     "musical": "ok (8)",
     "high": "ok (12)",
     "kpop": "ok (5)"
   },
-  "count": 52,
+  "count": 51,
   "events": [
     {
       "id": "high-secondsun-2026-11-08",
@@ -17,15 +17,6 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
-    },
-    {
-      "id": "aso-vvG1zZ_ux2AJ5-",
-      "title": "🎻 Bach + Brahms",
-      "start": "2026-11-08T01:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/bach-brahms-atlanta-georgia-11-07-2026/event/0E0064D88F1662E1",
-      "desc": "Atlanta Symphony Hall · Classical"
     },
     {
       "id": "aso-vvG1zZ_uxOR_12",
