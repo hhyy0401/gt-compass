@@ -1,23 +1,14 @@
 {
-  "fetchedAt": "2026-11-08T14:52:41.260Z",
+  "fetchedAt": "2026-11-10T16:14:49.781Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (26)",
     "musical": "ok (8)",
-    "high": "ok (12)",
-    "kpop": "ok (5)"
+    "high": "ok (11)",
+    "kpop": "ok (6)"
   },
   "count": 51,
   "events": [
-    {
-      "id": "high-secondsun-2026-11-08",
-      "title": "🎨 High Museum 무료 입장 (Second Sundays)",
-      "start": "2026-11-08",
-      "category": "high",
-      "source": "high.org",
-      "url": "https://high.org/visit",
-      "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
-    },
     {
       "id": "aso-vvG1zZ_uxOR_12",
       "title": "🎻 Fauré's Requiem with ASO",
@@ -413,6 +404,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/the-bodyguard-touring-tickets/artist/1721733",
       "desc": "Fox Theatre Atlanta"
+    },
+    {
+      "id": "kpop-vvG1zZ_phZq3g7",
+      "title": "🎤 Stray Kids World Tour [RUN IT ATLANTA]",
+      "start": "2027-06-08T23:30:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/stray-kids-world-tour-run-it-atlanta-georgia-06-08-2027/event/0E006566C0752D44",
+      "desc": "Mercedes-Benz Stadium"
     },
     {
       "id": "fox-Z7r9jZ1A7OSZO",
