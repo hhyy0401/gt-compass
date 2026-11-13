@@ -1,21 +1,21 @@
 {
-  "fetchedAt": "2026-11-12T16:40:08.884Z",
+  "fetchedAt": "2026-11-13T15:59:06.420Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (26)",
     "musical": "ok (8)",
     "high": "ok (11)",
-    "kpop": "ok (6)"
+    "kpop": "ok (7)"
   },
-  "count": 51,
+  "count": 52,
   "events": [
     {
-      "id": "aso-vvG1zZ_uxOR_12",
+      "id": "aso-vvG1zZ_uxORy1b",
       "title": "🎻 Fauré's Requiem with ASO",
-      "start": "2026-11-13T01:00:00Z",
+      "start": "2026-11-15T01:00:00Z",
       "category": "aso",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/faures-requiem-with-aso-atlanta-georgia-11-12-2026/event/0E0064D8A0BD928F",
+      "url": "https://www.ticketmaster.com/faures-requiem-with-aso-atlanta-georgia-11-14-2026/event/0E0064D8A0BF9298",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
@@ -431,6 +431,15 @@
       "source": "high.org",
       "url": "https://high.org/visit",
       "desc": "매월 둘째 일요일 무료 입장 (사전 예약 권장)."
+    },
+    {
+      "id": "kpop-vvG1zZ_p9Cj0zU",
+      "title": "🎤 KPop Demon Hunters Golden World Tour",
+      "start": "2027-07-10T18:00:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/kpop-demon-hunters-golden-world-tour-atlanta-georgia-07-10-2027/event/0E006565CE724E36",
+      "desc": "State Farm Arena"
     },
     {
       "id": "high-secondsun-2027-07-11",
