@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-15T15:28:32.076Z",
+  "fetchedAt": "2026-11-16T18:07:15.792Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (27)",
@@ -9,15 +9,6 @@
   },
   "count": 53,
   "events": [
-    {
-      "id": "aso-vvG1zZ_uxOY_1j",
-      "title": "🎻 Fauré's Requiem with ASO",
-      "start": "2026-11-15T20:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/faures-requiem-with-aso-atlanta-georgia-11-15-2026/event/0E0064D8A0C1929C",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
     {
       "id": "fox-Z7r9jZ1A7-vkd",
       "title": "🎭 Death Becomes Her (Touring)",
@@ -394,6 +385,15 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/mendelssohns-double-concerto-atlanta-georgia-04-22-2027/event/0E0064D8E24428E6",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_uNIeSp_",
+      "title": "🎻 A Tribute to Coretta Scott King",
+      "start": "2027-04-30T00:00:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/a-tribute-to-coretta-scott-king-atlanta-georgia-04-29-2027/event/0E0064D8E80B3599",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
