@@ -1,18 +1,18 @@
 {
-  "fetchedAt": "2026-11-17T17:28:15.833Z",
+  "fetchedAt": "2026-11-18T17:01:32.778Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (27)",
     "musical": "ok (8)",
     "high": "ok (11)",
-    "kpop": "ok (7)"
+    "kpop": "ok (8)"
   },
-  "count": 53,
+  "count": 54,
   "events": [
     {
-      "id": "fox-Z7r9jZ1A7-vkd",
+      "id": "fox-Z7r9jZ1A7-vk7",
       "title": "🎭 Death Becomes Her (Touring)",
-      "start": "2026-11-18T00:30:00Z",
+      "start": "2026-11-19T00:30:00Z",
       "category": "musical",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/death-becomes-her-touring-tickets/artist/4217954",
@@ -188,6 +188,15 @@
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/brahms-fourth-symphony-atlanta-georgia-01-14-2027/event/0E0064D8BA37C7DF",
       "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "kpop-Z7r9jZ1AA7s0o",
+      "title": "🎤 K-POP Superstars",
+      "start": "2027-01-16T22:30:00Z",
+      "category": "kpop",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AA7s0o",
+      "desc": "Classic Center Theatre"
     },
     {
       "id": "aso-vvG1zZ_uxHBiDO",
