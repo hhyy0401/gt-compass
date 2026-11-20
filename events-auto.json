@@ -1,39 +1,30 @@
 {
-  "fetchedAt": "2026-11-19T17:10:23.984Z",
+  "fetchedAt": "2026-11-20T16:48:37.213Z",
   "sourceStatus": {
     "braves": "ok (0)",
     "aso": "ok (27)",
     "musical": "ok (8)",
     "high": "ok (11)",
-    "kpop": "ok (8)"
+    "kpop": "ok (7)"
   },
-  "count": 54,
+  "count": 53,
   "events": [
     {
-      "id": "kpop-rZ7HnEZ1Afu4p7",
-      "title": "🎤 2026 82MAJOR [82CLUB : out of control] TOUR in Atlanta",
-      "start": "2026-11-20T00:00:00Z",
-      "category": "kpop",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketweb.com/event/2026-82major-82club-out-ray-charles-performing-arts-center-tickets/14355584",
-      "desc": "Ray Charles Performing Arts Center"
-    },
-    {
-      "id": "fox-Z7r9jZ1A7OSZk",
+      "id": "fox-Z7r9jZ1A7OSZ6",
       "title": "🎭 Death Becomes Her (Touring)",
-      "start": "2026-11-20T00:30:00Z",
+      "start": "2026-11-21T00:30:00Z",
       "category": "musical",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/death-becomes-her-touring-tickets/artist/4217954",
       "desc": "Fox Theatre Atlanta"
     },
     {
-      "id": "aso-vvG1zZ_uxNqtr1",
+      "id": "aso-vvG1zZ_uxNrar3",
       "title": "🎻 Schumann + Bruckner",
-      "start": "2026-11-20T01:00:00Z",
+      "start": "2026-11-22T01:00:00Z",
       "category": "aso",
       "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/schumann-bruckner-atlanta-georgia-11-19-2026/event/0E0064D8A376978A",
+      "url": "https://www.ticketmaster.com/schumann-bruckner-atlanta-georgia-11-21-2026/event/0E0064D8A3789792",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
