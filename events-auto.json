@@ -1,32 +1,14 @@
 {
-  "fetchedAt": "2026-11-22T16:02:45.889Z",
+  "fetchedAt": "2026-11-23T19:57:37.439Z",
   "sourceStatus": {
     "braves": "ok (0)",
-    "aso": "ok (27)",
-    "musical": "ok (8)",
+    "aso": "ok (26)",
+    "musical": "ok (7)",
     "high": "ok (11)",
     "kpop": "ok (7)"
   },
-  "count": 53,
+  "count": 51,
   "events": [
-    {
-      "id": "fox-Z7r9jZ1A7OSZo",
-      "title": "🎭 Death Becomes Her (Touring)",
-      "start": "2026-11-22T18:00:00Z",
-      "category": "musical",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/death-becomes-her-touring-tickets/artist/4217954",
-      "desc": "Fox Theatre Atlanta"
-    },
-    {
-      "id": "aso-vvG1zZ_aQnj5YI",
-      "title": "🎻 Art Space Production Presents Swan Lake: Symphony of Lights",
-      "start": "2026-11-22T21:00:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/art-space-production-presents-swan-lake-atlanta-georgia-11-22-2026/event/0E006496AA70BC28",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
     {
       "id": "aso-vvG1zZ_klOdqdG",
       "title": "🎻 Elf In Concert: Live With The Atlanta Symphony Orchestra",
@@ -70,6 +52,15 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/family-concert-winter-wonderland-atlanta-georgia-12-06-2026/event/0E0064FCE126DEB9",
+      "desc": "Atlanta Symphony Hall · Classical"
+    },
+    {
+      "id": "aso-vvG1zZ_9K8SXDQ",
+      "title": "🎻 Winter Wonderland: Child Lap Pass",
+      "start": "2026-12-06T18:30:00Z",
+      "category": "aso",
+      "source": "Ticketmaster",
+      "url": "https://www.ticketmaster.com/winter-wonderland-child-lap-pass-atlanta-georgia-12-06-2026/event/0E006574D0CFEEDA",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
@@ -385,15 +376,6 @@
       "category": "aso",
       "source": "Ticketmaster",
       "url": "https://www.ticketmaster.com/a-tribute-to-coretta-scott-king-atlanta-georgia-04-29-2027/event/0E0064D8E80B3599",
-      "desc": "Atlanta Symphony Hall · Classical"
-    },
-    {
-      "id": "aso-vvG1zZ_2S2Bi_G",
-      "title": "🎻 Peter and the Wolf with the ASO",
-      "start": "2027-05-02T17:30:00Z",
-      "category": "aso",
-      "source": "Ticketmaster",
-      "url": "https://www.ticketmaster.com/peter-and-the-wolf-with-the-atlanta-georgia-05-02-2027/event/0E0064FCCFEAC64C",
       "desc": "Atlanta Symphony Hall · Classical"
     },
     {
