@@ -459,7 +459,7 @@ function rowMatches(r) {
 }
 
 const map = L.map('map', { zoomControl: true }).setView([33.785, -84.385], 12);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap &copy; CARTO',
   maxZoom: 19,
 }).addTo(map);
