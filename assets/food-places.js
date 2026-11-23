@@ -21,6 +21,8 @@ const FOOD_PLACES = [
   { type:"cafe", name:"Chattahoochee Coffee Co.", lat:33.7868, lng:-84.4139, tags:["vibe","study"],  note:"Westside",
     chainLocations:[ {lat:33.8966, lng:-84.4452, area:"Riverside"} ]},
   { type:"cafe", name:"San Francisco Coffee",   lat:33.7935, lng:-84.3868, tags:["coffee"],          note:"Midtown" },
+  { type:"cafe", name:"Saint Nobody's",         lat:33.7466, lng:-84.3614, tags:["vibe","coffee"],  note:"Atlanta Dairies, 커피 + LP 바" },
+  { type:"cafe", name:"Cafe Onten",             lat:33.7818, lng:-84.3813, tags:["vibe"],           note:"Midtown, 필리핀 카페 (우베 라떼)" },
   { type:"cafe", name:"GONGGAN ATL",            lat:33.9756, lng:-84.1602, tags:["vibe"],            note:"Duluth" },
 
   // ── 🍴 맛집 ─────

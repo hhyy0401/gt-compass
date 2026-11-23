@@ -5,6 +5,7 @@
 <title>Atlanta Overview · GTKSA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 <link rel="stylesheet" href="assets/style.css" />
@@ -76,6 +77,9 @@
 </main>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js"></script>
+<script src="assets/basemap.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="assets/places.js"></script>
 <script>
@@ -117,10 +121,7 @@ document.getElementById('filter-clear').onclick = () => {
 
 // ── 지도 ──
 const map = L.map('map').setView([33.82, -84.36], 11);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution:'&copy; OpenStreetMap',
-  maxZoom: 19
-}).addTo(map);
+addBasemap(map);
 
 // Beltline 라인
 const eastBL = [[33.7905,-84.3702],[33.7860,-84.3680],[33.7800,-84.3670],[33.7765,-84.3662],[33.7726,-84.3657],[33.7685,-84.3651],[33.7639,-84.3645],[33.7595,-84.3640],[33.7553,-84.3636],[33.7515,-84.3640],[33.7475,-84.3660],[33.7440,-84.3690]];
@@ -237,9 +238,7 @@ applyFilter();
 // ── Food / Cafe / Dessert 지도 ──
 const foodState = { types: new Set(['cafe','food','dessert']), tags: new Set() };
 const foodMap = L.map('food-map').setView([33.82, -84.36], 11);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution:'&copy; OpenStreetMap', maxZoom: 19
-}).addTo(foodMap);
+addBasemap(foodMap);
 
 const foodCluster = L.markerClusterGroup({
   showCoverageOnHover: false,
