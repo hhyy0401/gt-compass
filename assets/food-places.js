@@ -9,7 +9,7 @@ const FOOD_PLACES = [
   { type:"cafe", name:"East Pole Coffee",       lat:33.8109, lng:-84.3789, tags:["coffee","study"],  note:"Armour Yards" },
   { type:"cafe", name:"Ash Coffee",             lat:33.7798, lng:-84.3489, tags:["vibe"],            note:"Virginia Highland" },
   { type:"cafe", name:"Laylo Cafe",             lat:33.8908, lng:-84.3112, tags:["vibe"],            note:"Chamblee, 베이커리도" },
-  { type:"cafe", name:"Wise Coffee",            lat:34.0017, lng:-84.0750, tags:["vibe"],            note:"Suwanee, 한인 카페" },
+  { type:"cafe", name:"Wise Coffee",            lat:34.0017, lng:-84.0750, tags:["study"],           note:"Suwanee, 한인 카페" },
   { type:"cafe", name:"Cafe Blue",              lat:33.9699, lng:-84.0969, tags:["study"],           note:"Suwanee, 카공" },
   { type:"cafe", name:"Blue Mountain Roasters", lat:34.0246, lng:-84.0442, tags:["coffee","study"],  note:"Suwanee" },
   { type:"cafe", name:"Cafe Seesaw",            lat:34.0252, lng:-84.0447, tags:["study"],           note:"Suwanee, 베이커리도" },
@@ -21,6 +21,8 @@ const FOOD_PLACES = [
   { type:"cafe", name:"Chattahoochee Coffee Co.", lat:33.7868, lng:-84.4139, tags:["vibe","study"],  note:"Westside",
     chainLocations:[ {lat:33.8966, lng:-84.4452, area:"Riverside"} ]},
   { type:"cafe", name:"San Francisco Coffee",   lat:33.7935, lng:-84.3868, tags:["coffee"],          note:"Midtown" },
+  { type:"cafe", name:"Brash Coffee",           lat:33.7571, lng:-84.3662, tags:["coffee"],          note:"Beltline (Old Fourth Ward)",
+    chainLocations:[ {lat:33.8425, lng:-84.3862, area:"Atlanta History Center"}, {lat:33.8005, lng:-84.4269, area:"The Works"} ]},
   { type:"cafe", name:"Saint Nobody's",         lat:33.7466, lng:-84.3614, tags:["vibe","coffee"],  note:"Atlanta Dairies, 커피 + LP 바" },
   { type:"cafe", name:"Cafe Onten",             lat:33.7818, lng:-84.3813, tags:["vibe"],           note:"Midtown, 필리핀 카페 (우베 라떼)" },
   { type:"cafe", name:"GONGGAN ATL",            lat:33.9756, lng:-84.1602, tags:["vibe"],            note:"Duluth" },
@@ -49,7 +51,7 @@ const FOOD_PLACES = [
   { type:"food", name:"J's Mini Hotpot",        lat:33.9599, lng:-84.1348, tags:["chinese"],         note:"Duluth, 핫팟" },
   { type:"food", name:"Blue India",             lat:33.7796, lng:-84.3838, tags:["indian"],          note:"Midtown, 카레" },
   { type:"food", name:"Umma Kitchen",           lat:33.7799, lng:-84.3692, tags:["korean"],          note:"Piedmont Park 옆" },
-  { type:"food", name:"Lady Bird",              lat:33.7595, lng:-84.3653, tags:["bbq","american"],  note:"BeltLine" },
+  { type:"food", name:"Lady Bird",              lat:33.7595, lng:-84.3653, tags:["american"],  note:"BeltLine" },
   { type:"food", name:"Superica",               lat:33.7570, lng:-84.3642, tags:["mexican"],         note:"Krog Street",
     chainLocations:[ {lat:33.7790, lng:-84.4099, area:"Westside"} ]},
   { type:"food", name:"Rreal Tacos",            lat:33.7774, lng:-84.3843, tags:["mexican"],         note:"Midtown",
@@ -129,7 +131,7 @@ const FOOD_PLACES = [
   { type:"dessert", name:"Five Daughters Bakery", lat:33.7865, lng:-84.4118, tags:["doughnut"],      note:"Westside Provisions",
     chainLocations:[ {lat:33.7553, lng:-84.3636, area:"Krog Street Market"} ]},
   { type:"dessert", name:"The Salty Donut",     lat:33.7577, lng:-84.3642, tags:["doughnut"],        note:"Krog Street" },
-  { type:"dessert", name:"Common Coffee & Cocktails", lat:33.90604, lng:-84.27018, tags:["bakery"],   note:"Doraville, 분위기 좋음" },
+  { type:"cafe", name:"Common Coffee & Cocktails", lat:33.90604, lng:-84.27018, tags:["vibe"],   note:"Doraville" },
 ];
 
 const FOOD_TAGS = {
