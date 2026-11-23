@@ -2,6 +2,7 @@
 // WebGL이 안 되는 환경에서는 OSM 기본 타일로 대체.
 function addBasemap(map) {
   const attribution = '&copy; <a href="https://openfreemap.org" target="_blank">OpenFreeMap</a> &copy; OpenStreetMap';
+  map.setMaxZoom(19); // markercluster가 maxZoom을 요구함
   let webgl = false;
   try { const c = document.createElement('canvas'); webgl = !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) {}
   if (L.maplibreGL && window.maplibregl && webgl) {
